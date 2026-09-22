@@ -38,3 +38,18 @@ When a wiki page is wrong, you fix the underlying atom and recompile. You never 
 ## What's gitignored
 
 Everything in this folder except `README.md`, `_template.md`, and `.gitkeep` is gitignored. Your atoms are personal content; the framework is what gets shared.
+
+
+## EDGAR branches (local)
+
+| Branch | Purpose |
+|--------|---------|
+| edgar-os | Terrain, paths, hosts, naming |
+| hermes | Agent / desktop / gateway / profiles |
+| mcp | MCP servers and client wiring |
+| infrastructure | Cloudflare, VPS, tunnel, DNS, runtime |
+| agent-ops | Kanban, Honcho, multi-agent ops |
+| product | Commercial sprint / external delivery |
+| identity | Brand and public entrypoints (no secrets) |
+
+See root `SCHEMA.md`.
