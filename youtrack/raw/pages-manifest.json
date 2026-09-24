@@ -1,0 +1,602 @@
+[
+  {
+    "sub": "cloud",
+    "file": "about-youtrack-cloud.md",
+    "title": "About YouTrack Cloud",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/about-youtrack-cloud.html",
+    "bytes": 5492,
+    "rel": "cloud/about-youtrack-cloud.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "access-management.md",
+    "title": "Access Management",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/access-management.html",
+    "bytes": 2096,
+    "rel": "cloud/access-management.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "admin-apps.md",
+    "title": "Apps",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/admin-apps.html",
+    "bytes": 1375,
+    "rel": "cloud/admin-apps.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "agile-board.md",
+    "title": "Agile Boards",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/agile-board.html",
+    "bytes": 2828,
+    "rel": "cloud/agile-board.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "attribute-based-search.md",
+    "title": "Advanced Search",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/attribute-based-search.html",
+    "bytes": 16114,
+    "rel": "cloud/attribute-based-search.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "command-reference.md",
+    "title": "Command Reference",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/command-reference.html",
+    "bytes": 15362,
+    "rel": "cloud/command-reference.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "commands.md",
+    "title": "Update Issues with Commands",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/commands.html",
+    "bytes": 9031,
+    "rel": "cloud/commands.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "configuring-a-project.md",
+    "title": "Configure a Project",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/configuring-a-project.html",
+    "bytes": 12181,
+    "rel": "cloud/configuring-a-project.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "create-and-edit-issues.md",
+    "title": "Create and Update Issues",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/create-and-edit-issues.html",
+    "bytes": 7200,
+    "rel": "cloud/create-and-edit-issues.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "create-new-board.md",
+    "title": "Create an Agile Board",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/create-new-board.html",
+    "bytes": 6809,
+    "rel": "cloud/create-new-board.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "create-new-project.md",
+    "title": "Create a Project",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/create-new-project.html",
+    "bytes": 4858,
+    "rel": "cloud/create-new-project.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "default-workflows.md",
+    "title": "Default Workflows",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/default-workflows.html",
+    "bytes": 2212,
+    "rel": "cloud/default-workflows.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "getting-started-with-agile-board.md",
+    "title": "Get Started with Agile Boards",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/getting-started-with-agile-board.html",
+    "bytes": 1240,
+    "rel": "cloud/getting-started-with-agile-board.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "getting-started-with-youtrack.md",
+    "title": "Getting Started",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/getting-started-with-youtrack.html",
+    "bytes": 8258,
+    "rel": "cloud/getting-started-with-youtrack.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "helpdesk-license.md",
+    "title": "Helpdesk License",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/helpdesk-license.html",
+    "bytes": 1033,
+    "rel": "cloud/helpdesk-license.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "import-from-csv.md",
+    "title": "Import from CSV",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/import-from-csv.html",
+    "bytes": 24555,
+    "rel": "cloud/import-from-csv.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "import-from-github.md",
+    "title": "Import from GitHub",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/import-from-github.html",
+    "bytes": 10533,
+    "rel": "cloud/import-from-github.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "imports.md",
+    "title": "Imports",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/imports.html",
+    "bytes": 1552,
+    "rel": "cloud/imports.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "integrate-project-with-github.md",
+    "title": "Integrate with GitHub",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/integrate-project-with-github.html",
+    "bytes": 20659,
+    "rel": "cloud/integrate-project-with-github.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "introduction-to-youtrack-cloud.md",
+    "title": "Introduction to YouTrack",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/introduction-to-youtrack-cloud.html",
+    "bytes": 607,
+    "rel": "cloud/introduction-to-youtrack-cloud.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "issues.md",
+    "title": "Issues",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/issues.html",
+    "bytes": 1666,
+    "rel": "cloud/issues.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "manage-permanent-token.md",
+    "title": "Manage Permanent Tokens",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/manage-permanent-token.html",
+    "bytes": 5090,
+    "rel": "cloud/manage-permanent-token.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "manage-project-access.md",
+    "title": "Manage Project Members and Access",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/manage-project-access.html",
+    "bytes": 22254,
+    "rel": "cloud/manage-project-access.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "managing-projects.md",
+    "title": "Projects",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/managing-projects.html",
+    "bytes": 2527,
+    "rel": "cloud/managing-projects.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "managing-users.md",
+    "title": "Users",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/managing-users.html",
+    "bytes": 2337,
+    "rel": "cloud/managing-users.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "new-youtrack-cloud-instances.md",
+    "title": "New Instances",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/new-youtrack-cloud-instances.html",
+    "bytes": 6919,
+    "rel": "cloud/new-youtrack-cloud-instances.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "projects-quick-start-guide.md",
+    "title": "Project Admin Quick Start Guide",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/projects-quick-start-guide.html",
+    "bytes": 3029,
+    "rel": "cloud/projects-quick-start-guide.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "reporting-an-issue.md",
+    "title": "Issue Quick Start Guide",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/reporting-an-issue.html",
+    "bytes": 4067,
+    "rel": "cloud/reporting-an-issue.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "search-and-command-attributes.md",
+    "title": "Search Query Reference",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/search-and-command-attributes.html",
+    "bytes": 50689,
+    "rel": "cloud/search-and-command-attributes.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "search-for-issues.md",
+    "title": "Issue Search",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/search-for-issues.html",
+    "bytes": 2800,
+    "rel": "cloud/search-for-issues.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "security.md",
+    "title": "Security",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/security.html",
+    "bytes": 8743,
+    "rel": "cloud/security.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "storage-limits.md",
+    "title": "Storage Limits",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/storage-limits.html",
+    "bytes": 1810,
+    "rel": "cloud/storage-limits.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "switching-subscription-plans.md",
+    "title": "Managing Your License",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/switching-subscription-plans.html",
+    "bytes": 7044,
+    "rel": "cloud/switching-subscription-plans.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "system-admins-quick-start.md",
+    "title": "System Admin Quick Start Guide",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/system-admins-quick-start.html",
+    "bytes": 6953,
+    "rel": "cloud/system-admins-quick-start.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "transition-from-github-issues.md",
+    "title": "Transition from GitHub Issues",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/transition-from-github-issues.html",
+    "bytes": 13835,
+    "rel": "cloud/transition-from-github-issues.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "transition-to-youtrack.md",
+    "title": "Transitioning to YouTrack from Other Tools",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/transition-to-youtrack.html",
+    "bytes": 2998,
+    "rel": "cloud/transition-to-youtrack.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "user-quick-start-guide.md",
+    "title": "New User Quick Start Guide",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/user-quick-start-guide.html",
+    "bytes": 1985,
+    "rel": "cloud/user-quick-start-guide.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "workflow-constructor.md",
+    "title": "Workflow Constructor",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/workflow-constructor.html",
+    "bytes": 15233,
+    "rel": "cloud/workflow-constructor.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "workflow-guide.md",
+    "title": "Workflows",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/workflow-guide.html",
+    "bytes": 5130,
+    "rel": "cloud/workflow-guide.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "workflow-tutorial.md",
+    "title": "Workflow Tutorial",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/workflow-tutorial.html",
+    "bytes": 17872,
+    "rel": "cloud/workflow-tutorial.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "youtrack-cloud-data-center-locations.md",
+    "title": "Data Center Locations",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/youtrack-cloud-data-center-locations.html",
+    "bytes": 2132,
+    "rel": "cloud/youtrack-cloud-data-center-locations.md"
+  },
+  {
+    "sub": "cloud",
+    "file": "youtrack-cloud-database-backups.md",
+    "title": "YouTrack Cloud Database Backups",
+    "url": "https://www.jetbrains.com/help/youtrack/cloud/youtrack-cloud-database-backups.html",
+    "bytes": 3026,
+    "rel": "cloud/youtrack-cloud-database-backups.md"
+  },
+  {
+    "sub": "server",
+    "file": "back-up-the-database.md",
+    "title": "Database Backup",
+    "url": "https://www.jetbrains.com/help/youtrack/server/back-up-the-database.html",
+    "bytes": 6136,
+    "rel": "server/back-up-the-database.md"
+  },
+  {
+    "sub": "server",
+    "file": "installation-and-upgrade.md",
+    "title": "Installation and Upgrade",
+    "url": "https://www.jetbrains.com/help/youtrack/server/installation-and-upgrade.html",
+    "bytes": 2653,
+    "rel": "server/installation-and-upgrade.md"
+  },
+  {
+    "sub": "server",
+    "file": "introduction-to-youtrack-server.md",
+    "title": "Introduction to YouTrack Server",
+    "url": "https://www.jetbrains.com/help/youtrack/server/introduction-to-youtrack-server.html",
+    "bytes": 620,
+    "rel": "server/introduction-to-youtrack-server.md"
+  },
+  {
+    "sub": "server",
+    "file": "license-details.md",
+    "title": "License Details",
+    "url": "https://www.jetbrains.com/help/youtrack/server/license-details.html",
+    "bytes": 3246,
+    "rel": "server/license-details.md"
+  },
+  {
+    "sub": "server",
+    "file": "manage-youtrack-server-license.md",
+    "title": "Managing Your YouTrack Server License",
+    "url": "https://www.jetbrains.com/help/youtrack/server/manage-youtrack-server-license.html",
+    "bytes": 5785,
+    "rel": "server/manage-youtrack-server-license.md"
+  },
+  {
+    "sub": "server",
+    "file": "migrate-from-cloud-to-server.md",
+    "title": "Migrate from Cloud to Server",
+    "url": "https://www.jetbrains.com/help/youtrack/server/migrate-from-cloud-to-server.html",
+    "bytes": 6876,
+    "rel": "server/migrate-from-cloud-to-server.md"
+  },
+  {
+    "sub": "server",
+    "file": "migrate-from-server-to-cloud.md",
+    "title": "Migrate from Server to Cloud",
+    "url": "https://www.jetbrains.com/help/youtrack/server/migrate-from-server-to-cloud.html",
+    "bytes": 4115,
+    "rel": "server/migrate-from-server-to-cloud.md"
+  },
+  {
+    "sub": "server",
+    "file": "migrating-to-youtrack.md",
+    "title": "YouTrack to YouTrack Migration",
+    "url": "https://www.jetbrains.com/help/youtrack/server/migrating-to-youtrack.html",
+    "bytes": 1748,
+    "rel": "server/migrating-to-youtrack.md"
+  },
+  {
+    "sub": "server",
+    "file": "restore-docker-image-installation.md",
+    "title": "Restore Docker Installation",
+    "url": "https://www.jetbrains.com/help/youtrack/server/restore-docker-image-installation.html",
+    "bytes": 5007,
+    "rel": "server/restore-docker-image-installation.md"
+  },
+  {
+    "sub": "server",
+    "file": "run-docker-container-as-service.md",
+    "title": "Run Docker as a Service",
+    "url": "https://www.jetbrains.com/help/youtrack/server/run-docker-container-as-service.html",
+    "bytes": 5307,
+    "rel": "server/run-docker-container-as-service.md"
+  },
+  {
+    "sub": "server",
+    "file": "secure-your-installation.md",
+    "title": "Safeguard Your Installation",
+    "url": "https://www.jetbrains.com/help/youtrack/server/secure-your-installation.html",
+    "bytes": 20894,
+    "rel": "server/secure-your-installation.md"
+  },
+  {
+    "sub": "server",
+    "file": "upgrade-with-docker-image.md",
+    "title": "Upgrade with Docker",
+    "url": "https://www.jetbrains.com/help/youtrack/server/upgrade-with-docker-image.html",
+    "bytes": 18537,
+    "rel": "server/upgrade-with-docker-image.md"
+  },
+  {
+    "sub": "server",
+    "file": "youtrack-docker-installation.md",
+    "title": "Docker Installation",
+    "url": "https://www.jetbrains.com/help/youtrack/server/youtrack-docker-installation.html",
+    "bytes": 23207,
+    "rel": "server/youtrack-docker-installation.md"
+  },
+  {
+    "sub": "server",
+    "file": "youtrack-server-faq.md",
+    "title": "About YouTrack Server",
+    "url": "https://www.jetbrains.com/help/youtrack/server/youtrack-server-faq.html",
+    "bytes": 2408,
+    "rel": "server/youtrack-server-faq.md"
+  },
+  {
+    "sub": "server",
+    "file": "youtrack-supported-environments.md",
+    "title": "Supported Environments",
+    "url": "https://www.jetbrains.com/help/youtrack/server/youtrack-supported-environments.html",
+    "bytes": 6323,
+    "rel": "server/youtrack-supported-environments.md"
+  },
+  {
+    "sub": "api",
+    "file": "Quick-Start-Guide-Workflows-JS.md",
+    "title": "JavaScript Workflow Quick Start",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/Quick-Start-Guide-Workflows-JS.html",
+    "bytes": 19588,
+    "rel": "api/Quick-Start-Guide-Workflows-JS.md"
+  },
+  {
+    "sub": "api",
+    "file": "ai-tools.md",
+    "title": "MCP Tools",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/ai-tools.html",
+    "bytes": 3427,
+    "rel": "api/ai-tools.md"
+  },
+  {
+    "sub": "api",
+    "file": "api-fields-syntax.md",
+    "title": "Fields Syntax",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/api-fields-syntax.html",
+    "bytes": 4583,
+    "rel": "api/api-fields-syntax.md"
+  },
+  {
+    "sub": "api",
+    "file": "api-getting-started.md",
+    "title": "Get Started with REST API",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/api-getting-started.html",
+    "bytes": 1644,
+    "rel": "api/api-getting-started.md"
+  },
+  {
+    "sub": "api",
+    "file": "api-how-to-update-custom-fields-values.md",
+    "title": "Update Issue Custom Fields",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/api-how-to-update-custom-fields-values.html",
+    "bytes": 4066,
+    "rel": "api/api-how-to-update-custom-fields-values.md"
+  },
+  {
+    "sub": "api",
+    "file": "api-howto-create-issue-with-fields.md",
+    "title": "Create an Issue and Set Custom Fields",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/api-howto-create-issue-with-fields.html",
+    "bytes": 6700,
+    "rel": "api/api-howto-create-issue-with-fields.md"
+  },
+  {
+    "sub": "api",
+    "file": "api-howto-create-issue.md",
+    "title": "Create an Issue (API)",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/api-howto-create-issue.html",
+    "bytes": 1979,
+    "rel": "api/api-howto-create-issue.md"
+  },
+  {
+    "sub": "api",
+    "file": "api-log-in-to-youtrack.md",
+    "title": "Log in to YouTrack (API)",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/api-log-in-to-youtrack.html",
+    "bytes": 1448,
+    "rel": "api/api-log-in-to-youtrack.md"
+  },
+  {
+    "sub": "api",
+    "file": "api-query-syntax.md",
+    "title": "Query Syntax",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/api-query-syntax.html",
+    "bytes": 4020,
+    "rel": "api/api-query-syntax.md"
+  },
+  {
+    "sub": "api",
+    "file": "api-url-and-endpoints.md",
+    "title": "REST API URL and Endpoints",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/api-url-and-endpoints.html",
+    "bytes": 4392,
+    "rel": "api/api-url-and-endpoints.md"
+  },
+  {
+    "sub": "api",
+    "file": "api-usecase-commands.md",
+    "title": "Apply Commands to Issues",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/api-usecase-commands.html",
+    "bytes": 4248,
+    "rel": "api/api-usecase-commands.md"
+  },
+  {
+    "sub": "api",
+    "file": "apps-documentation.md",
+    "title": "YouTrack JavaScript Ecosystem",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/apps-documentation.html",
+    "bytes": 1917,
+    "rel": "api/apps-documentation.md"
+  },
+  {
+    "sub": "api",
+    "file": "apps-get-started.md",
+    "title": "Apps",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/apps-get-started.html",
+    "bytes": 4329,
+    "rel": "api/apps-get-started.md"
+  },
+  {
+    "sub": "api",
+    "file": "authentication-with-permanent-token.md",
+    "title": "Permanent Token Authorization",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/authentication-with-permanent-token.html",
+    "bytes": 3279,
+    "rel": "api/authentication-with-permanent-token.md"
+  },
+  {
+    "sub": "api",
+    "file": "custom-ai-tools.md",
+    "title": "Custom MCP Tools",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/custom-ai-tools.html",
+    "bytes": 7654,
+    "rel": "api/custom-ai-tools.md"
+  },
+  {
+    "sub": "api",
+    "file": "predefined-ai-tools.md",
+    "title": "Predefined MCP Tools",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/predefined-ai-tools.html",
+    "bytes": 9981,
+    "rel": "api/predefined-ai-tools.md"
+  },
+  {
+    "sub": "api",
+    "file": "youtrack-rest-api.md",
+    "title": "YouTrack REST API",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html",
+    "bytes": 3586,
+    "rel": "api/youtrack-rest-api.md"
+  },
+  {
+    "sub": "api",
+    "file": "youtrack-workflow-reference.md",
+    "title": "Workflows (Dev)",
+    "url": "https://www.jetbrains.com/help/youtrack/devportal/youtrack-workflow-reference.html",
+    "bytes": 5103,
+    "rel": "api/youtrack-workflow-reference.md"
+  }
+]

@@ -1,0 +1,488 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Optimizely -->
+<script type="text/javascript">
+    window.optimizely = window.optimizely || [];
+
+    function checkConsent() {
+        var hasAnalyticsConsent = false;
+
+        // Find the cookiehub cookie
+        var cookieMatch = document.cookie.match(/cookiehub=([^;]+)/);
+        var cookiehubValue = cookieMatch ? cookieMatch[1] : null;
+
+        if (cookiehubValue) {
+            try {
+                // Decode base64 and parse JSON
+                var jsonString = atob(cookiehubValue);
+                var consentData = JSON.parse(jsonString);
+
+                /*
+                 * Category to purpose mapping for reference:
+                 * Category 1: necessary
+                 * Category 2: preferences
+                 * Category 3: analytics
+                 * Category 4: marketing
+                 * Category 5: uncategorized
+                 */
+
+                // Check for analytics consent (category 3)
+               if (consentData.allAllowed === true ||
+                    (Array.isArray(consentData.categories) && consentData.categories.indexOf(3) !== -1)) {
+                    hasAnalyticsConsent = true;
+                }
+
+            } catch (error) {
+                console.error('Error processing cookiehub consent:', error);
+            }
+        }
+
+        // Set Optimizely based on consent status
+        if (hasAnalyticsConsent) {
+            window.optimizely.push({type: "sendEvents"});
+            clearInterval(pollInterval);
+        } else {
+            window.optimizely.push({type: "holdEvents"});
+        }
+    }
+
+    // Set up polling (will stop after consent is granted)
+    var pollInterval = setInterval(checkConsent, 500);
+
+    // Check consent initially
+    checkConsent();
+</script>
+
+<script src="https://resources.jetbrains.com/storage/optly/26613100737.js">
+    // www.jetbrains.com
+</script>
+<!-- End Optimizely --><!-- Error reporting -->
+<script>(function(){
+  window.reportError = function(msg, file, line, col, err, isUnhandledRejection){};
+  var prevOnError = window.onerror;
+  var onError = function(msg, file, line, col, err) {
+    reportError(msg, file, line, col, err, false);
+    prevOnError && prevOnError.apply(window, arguments);
+    return false;
+  };
+  window.onerror = onError;
+  // Setup reporting for unhandled Promise rejection errors
+  window.addEventListener("unhandledrejection", function(e) {
+    if (!e.reason) return;
+    var l = getSrcLocation(e.reason);
+    reportError(e.reason.message, l.file, l.line, l.col, e.reason, true);
+  });
+  // Setup reporting for console.error and console.warn calls
+  patchConsole('error');
+  patchConsole('warn');
+  // Utility functions
+  function patchConsole(fnName) {
+    var fn = console[fnName];
+    console[fnName] = function() {
+      fn.apply(console, arguments);
+      var l; try {
+        throw new Error('_');
+      } catch (err) {
+        l = getSrcLocation(err, 1);
+      }
+      var msg = 'console.' + fnName + ': ' + Array.prototype.join.call(arguments, ' ');
+      reportError(msg, l.file, l.line, l.col, undefined, false);
+    };
+  }
+  function getSrcLocation(err, sd) {
+    var s = err && err.stack;
+    var l = s && s.split("\n")[1 + (sd|0)];
+    var r = l && (/^\s*at [^(]*\((.*?):(\d+)(:\d+)?\)$/.exec(l) || /^\s*at (.*?):(\d+)(:\d+)?$/.exec(l));
+    return r ? {file: r[1], line: r[2], col: r[3]} : {};
+  }
+})();</script>
+<!-- Error reporting --><!-- Google Tag Manager -->
+<script>(function() {
+  // Initialize Tag Manager queue
+  window.dataLayer = window.dataLayer || [];
+  window.gtmLoaded = false;
+  // Setup reporting for errors that occurred before Tag Manager initialized
+  var prevReportError = window.reportError;
+  var reportError = function(msg, file, line, col, err, isUnhandledRejection) {
+    if (!window.gtmLoaded || isUnhandledRejection) {
+      // Reproduce the behavior of the Tag Manager error handler
+      window.dataLayer.push(makeEvt(msg, file, line));
+    }
+    prevReportError && prevReportError.apply(window, arguments);
+  };
+  window.reportError = reportError;
+  // Utility functions
+  function makeEvt(msg, file, line) {
+    return {
+      event: "gtm.pageError", "gtm.errorMessage": msg,
+      "gtm.errorUrl": file, "gtm.errorLineNumber": line
+    };
+  }
+})();</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;j.addEventListener(
+    'load', function(){window.gtmLoaded=true});f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5P98');</script>
+<!-- End Google Tag Manager -->
+<title>Buy YouTrack: Pricing and Licensing, More Users</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+
+
+<link rel="icon" href="/favicon.ico?r=1234" type="image/x-icon"><!-- 48×48 -->
+<link rel="icon" href="/icon.svg?r=1234" type="image/svg+xml" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?r=1234" sizes="180x180"><!-- 180×180 -->
+<link rel="icon" href="/icon-512.png?r=1234" type="image/png" sizes="512x512">
+<link rel="manifest" href="/site.webmanifest" crossorigin="use-credentials">
+
+<meta name="apple-mobile-web-app-title" content="JetBrains">
+<meta name="application-name" content="JetBrains">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="theme-color" content="#000000">
+<link rel="canonical" href="https://www.jetbrains.com/youtrack/buy/"/><!-- .505-->
+<meta name="description" content="Buy YouTrack: Get a New license, Extend subscription or Upgrade your user pack for YouTrack Cloud &amp; Server."/>
+
+
+    <link rel="alternate" hreflang="x-default" href="https://www.jetbrains.com/youtrack/buy/" />
+
+                        <link rel="alternate" hreflang="en" href="https://www.jetbrains.com/youtrack/buy/" />
+                                                            <link rel="alternate" hreflang="en-CN" href="https://www.jetbrains.com.cn/en-us/youtrack/buy/" />
+                                                                        <link rel="alternate" hreflang="de" href="https://www.jetbrains.com/de-de/youtrack/buy/" />
+                                                                                                    <link rel="alternate" hreflang="es" href="https://www.jetbrains.com/es-es/youtrack/buy/" />
+                                                                                                    <link rel="alternate" hreflang="fr" href="https://www.jetbrains.com/fr-fr/youtrack/buy/" />
+                                                                                                    <link rel="alternate" hreflang="ja" href="https://www.jetbrains.com/ja-jp/youtrack/buy/" />
+                                                                                                    <link rel="alternate" hreflang="ko" href="https://www.jetbrains.com/ko-kr/youtrack/buy/" />
+                                                                                                    <link rel="alternate" hreflang="ru" href="https://www.jetbrains.com/ru-ru/youtrack/buy/" />
+                                                                                                    <link rel="alternate" hreflang="zh-Hans" href="https://www.jetbrains.com/zh-cn/youtrack/buy/" />
+                                            <link rel="alternate" hreflang="zh-CN" href="https://www.jetbrains.com.cn/youtrack/buy/" />
+                                                                                        <link rel="alternate" hreflang="pt-BR" href="https://www.jetbrains.com/pt-br/youtrack/buy/" />
+                                                                                
+
+
+<link rel="preconnect" href="https://resources.jetbrains.com" crossorigin>
+
+<script>
+    var productsData = {"currency": {"symbol": "$", "isPrefix": true, "iso": "USD"}, "countryCode": "US", "countryName": "United States", "vatInfoUrl": "https://www.jetbrains.com/shop/static/html/vat.html", "ALL": {"code": "ALL", "links": {"personal": {"yearly": {"buy": "https://www.jetbrains.com/shop/buy?item=P:N:ALL:Y", "quote": "https://www.jetbrains.com/shop/quote?item=P:N:ALL:Y"}, "monthly": {"buy": "https://www.jetbrains.com/shop/buy?item=P:N:ALL:M", "quote": "https://www.jetbrains.com/shop/quote?item=P:N:ALL:M"}}, "commercial": {"yearly": {"buy": "https://www.jetbrains.com/shop/buy?item=C:N:ALL:Y", "quote": "https://www.jetbrains.com/shop/quote?item=C:N:ALL:Y"}, "monthly": {"buy": "https://www.jetbrains.com/shop/buy?item=C:N:ALL:M", "quote": "https://www.jetbrains.com/shop/quote?item=C:N:ALL:M"}}}, "prices": {"personal": {"yearly": ["$299.00", "$239.00", "$179.00"], "yearlyPerMonth": ["$24.92", "$19.92", "$14.92"], "monthly": ["$29.90"]}, "commercial": {"yearly": ["$979.00"], "yearlyPerMonth": ["$81.58"], "monthly": ["$97.90"]}}, "disc_prices": {"personal": {"yearly": ["0", "0", "0"], "monthly": ["0"]}, "commercial": {"yearly": ["0"], "monthly": ["0"]}}, "percent": {"personal": {"yearly": [0, 20, 40], "monthly": [0]}, "commercial": {"yearly": [0], "monthly": [0]}}, "name": "All Products Pack"}, "YT": {"standalone_new": {"editions": [{"code": "YTDN10A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTDN10A", "disc_price": "0"}, "name": "YouTrack Server License Paid agents. 10 free users", "users": 10, "update": {"renew": "36.00", "formattedPrice": "$36.00", "shopToken": "C:U:YTDN10A", "disc_price": "0"}, "pastDue": {"pastDue": "54.00", "formattedPrice": "$54.00", "shopCode": "C:U:YTDN10A", "disc_price": "0"}}, {"code": "YTDN15", "new": {"license": "900.00", "formattedPrice": "$900.00", "updShopCode": "C:U:YTDN15", "disc_price": "0"}, "name": "YouTrack Server License 15-User Pack", "users": 15, "update": {"renew": "450.00", "formattedPrice": "$450.00", "shopToken": "C:U:YTDN15", "disc_price": "0"}, "pastDue": {"pastDue": "675.00", "formattedPrice": "$675.00", "shopCode": "C:U:YTDN15", "disc_price": "0"}, "NS-A": {"NS-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTDN15", "disc_price": "0"}}, {"code": "YTDN25", "new": {"license": "1500.00", "formattedPrice": "$1,500.00", "updShopCode": "C:U:YTDN25", "disc_price": "0"}, "name": "YouTrack Server License 25-User Pack", "users": 25, "update": {"renew": "750.00", "formattedPrice": "$750.00", "shopToken": "C:U:YTDN25", "disc_price": "0"}, "pastDue": {"pastDue": "1125.00", "formattedPrice": "$1,125.00", "shopCode": "C:U:YTDN25", "disc_price": "0"}, "NS-A": {"NS-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTDN25", "disc_price": "0"}}, {"code": "YTDN50", "new": {"license": "3000.00", "formattedPrice": "$3,000.00", "updShopCode": "C:U:YTDN50", "disc_price": "0"}, "name": "YouTrack Server License 50-User Pack", "users": 50, "update": {"renew": "1500.00", "formattedPrice": "$1,500.00", "shopToken": "C:U:YTDN50", "disc_price": "0"}, "pastDue": {"pastDue": "2250.00", "formattedPrice": "$2,250.00", "shopCode": "C:U:YTDN50", "disc_price": "0"}, "NS-A": {"NS-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTDN50", "disc_price": "0"}}, {"code": "YTDN100", "new": {"license": "6000.00", "formattedPrice": "$6,000.00", "updShopCode": "C:U:YTDN100", "disc_price": "0"}, "name": "YouTrack Server License 100-User Pack", "users": 100, "update": {"renew": "3000.00", "formattedPrice": "$3,000.00", "shopToken": "C:U:YTDN100", "disc_price": "0"}, "pastDue": {"pastDue": "4500.00", "formattedPrice": "$4,500.00", "shopCode": "C:U:YTDN100", "disc_price": "0"}, "NS-A": {"NS-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTDN100", "disc_price": "0"}}, {"code": "YTDN250", "new": {"license": "13000.00", "formattedPrice": "$13,000.00", "updShopCode": "C:U:YTDN250", "disc_price": "0"}, "name": "YouTrack Server License 250-User Pack", "users": 250, "update": {"renew": "6500.00", "formattedPrice": "$6,500.00", "shopToken": "C:U:YTDN250", "disc_price": "0"}, "pastDue": {"pastDue": "9750.00", "formattedPrice": "$9,750.00", "shopCode": "C:U:YTDN250", "disc_price": "0"}, "NS-A": {"NS-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTDN250", "disc_price": "0"}}, {"code": "YTDN500", "new": {"license": "21000.00", "formattedPrice": "$21,000.00", "updShopCode": "C:U:YTDN500", "disc_price": "0"}, "name": "YouTrack Server License 500-User Pack", "users": 500, "update": {"renew": "10500.00", "formattedPrice": "$10,500.00", "shopToken": "C:U:YTDN500", "disc_price": "0"}, "pastDue": {"pastDue": "15750.00", "formattedPrice": "$15,750.00", "shopCode": "C:U:YTDN500", "disc_price": "0"}, "NS-A": {"NS-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTDN500", "disc_price": "0"}}, {"code": "YTDN750", "new": {"license": "27000.00", "formattedPrice": "$27,000.00", "updShopCode": "C:U:YTDN750", "disc_price": "0"}, "name": "YouTrack Server License 750-User Pack", "users": 750, "update": {"renew": "13500.00", "formattedPrice": "$13,500.00", "shopToken": "C:U:YTDN750", "disc_price": "0"}, "pastDue": {"pastDue": "20250.00", "formattedPrice": "$20,250.00", "shopCode": "C:U:YTDN750", "disc_price": "0"}, "NS-A": {"NS-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTDN750", "disc_price": "0"}}, {"code": "YTDN1000", "new": {"license": "33000.00", "formattedPrice": "$33,000.00", "updShopCode": "C:U:YTDN1000", "disc_price": "0"}, "name": "YouTrack Server License 1000-User Pack", "users": 1000, "update": {"renew": "16500.00", "formattedPrice": "$16,500.00", "shopToken": "C:U:YTDN1000", "disc_price": "0"}, "pastDue": {"pastDue": "24750.00", "formattedPrice": "$24,750.00", "shopCode": "C:U:YTDN1000", "disc_price": "0"}, "NS-A": {"NS-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTDN1000", "disc_price": "0"}}, {"code": "YTDN1500", "new": {"license": "45000.00", "formattedPrice": "$45,000.00", "updShopCode": "C:U:YTDN1500", "disc_price": "0"}, "name": "YouTrack Server License 1500-User Pack", "users": 1500, "update": {"renew": "22500.00", "formattedPrice": "$22,500.00", "shopToken": "C:U:YTDN1500", "disc_price": "0"}, "pastDue": {"pastDue": "33750.00", "formattedPrice": "$33,750.00", "shopCode": "C:U:YTDN1500", "disc_price": "0"}, "NS-A": {"NS-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTDN1500", "disc_price": "0"}}, {"code": "YTDN2000", "new": {"license": "54000.00", "formattedPrice": "$54,000.00", "updShopCode": "C:U:YTDN2000", "disc_price": "0"}, "name": "YouTrack Server License 2000-User Pack", "users": 2000, "update": {"renew": "27000.00", "formattedPrice": "$27,000.00", "shopToken": "C:U:YTDN2000", "disc_price": "0"}, "pastDue": {"pastDue": "40500.00", "formattedPrice": "$40,500.00", "shopCode": "C:U:YTDN2000", "disc_price": "0"}, "NS-A": {"NS-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTDN2000", "disc_price": "0"}}, {"code": "YTDN5000", "new": {"license": "120000.00", "formattedPrice": "$120,000.00", "updShopCode": "C:U:YTDN5000", "disc_price": "0"}, "name": "YouTrack Server License 5000-User Pack", "users": 5000, "update": {"renew": "60000.00", "formattedPrice": "$60,000.00", "shopToken": "C:U:YTDN5000", "disc_price": "0"}, "pastDue": {"pastDue": "90000.00", "formattedPrice": "$90,000.00", "shopCode": "C:U:YTDN5000", "disc_price": "0"}, "NS-A": {"NS-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTDN5000", "disc_price": "0"}}, {"code": "YTDN10000", "new": {"license": "240000.00", "formattedPrice": "$240,000.00", "updShopCode": "C:U:YTDN10000", "disc_price": "0"}, "name": "YouTrack Server License 10000-User Pack", "users": 10000, "update": {"renew": "120000.00", "formattedPrice": "$120,000.00", "shopToken": "C:U:YTDN10000", "disc_price": "0"}, "pastDue": {"pastDue": "180000.00", "formattedPrice": "$180,000.00", "shopCode": "C:U:YTDN10000", "disc_price": "0"}, "NS-A": {"NS-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTDN10000", "disc_price": "0"}}], "upgradeTables": [], "group": "YTD", "agents": {"newAgentPrice": {"price": "72.00", "pricePerMonth": "6.00"}, "renewAgentPrice": {"price": "36.00", "pricePerMonth": "3.00"}}}, "incloudPlans": [{"shopTokenNew": "U:N:YTIUSGPR", "shopTokenUpgrade": "U:U:YTIUSGPR", "annual": "54.00", "pricePerMonth": "4.50", "agents": {"price": "66.00", "pricePerMonth": "5.50"}}, {"shopTokenNew": "U:N:YTIUSG", "shopTokenUpgrade": "U:U:YTIUSG", "monthly": "5.40", "agents": {"price": "6.00"}, "updatedPriceLevels": [[1, "0.00"], [11, "5.40"], [100, "5.39"], [105, "5.38"], [110, "5.37"], [115, "5.36"], [120, "5.35"], [125, "5.34"], [130, "5.33"], [135, "5.32"], [140, "5.31"], [145, "5.30"], [150, "5.29"], [155, "5.28"], [160, "5.27"], [165, "5.26"], [170, "5.25"], [175, "5.24"], [180, "5.23"], [185, "5.22"], [190, "5.21"], [195, "5.20"], [200, "5.19"], [205, "5.18"], [210, "5.17"], [215, "5.16"], [220, "5.15"], [225, "5.14"], [230, "5.13"], [235, "5.12"], [240, "5.11"], [245, "5.10"], [250, "5.09"], [255, "5.08"], [260, "5.07"], [265, "5.06"], [270, "5.05"], [275, "5.04"], [280, "5.03"], [285, "5.02"], [290, "5.01"], [295, "5.00"], [300, "4.99"], [302, "4.98"], [304, "4.97"], [306, "4.96"], [308, "4.95"], [310, "4.94"], [312, "4.93"], [314, "4.92"], [316, "4.91"], [318, "4.90"], [320, "4.89"], [322, "4.88"], [324, "4.87"], [326, "4.86"], [328, "4.85"], [330, "4.84"], [332, "4.83"], [334, "4.82"], [336, "4.81"], [338, "4.80"], [340, "4.79"], [342, "4.78"], [344, "4.77"], [346, "4.76"], [348, "4.75"], [350, "4.74"], [352, "4.73"], [354, "4.72"], [356, "4.71"], [358, "4.70"], [360, "4.69"], [362, "4.68"], [364, "4.67"], [366, "4.66"], [368, "4.65"], [370, "4.64"], [372, "4.63"], [374, "4.62"], [376, "4.61"], [378, "4.60"], [380, "4.59"], [382, "4.58"], [384, "4.57"], [386, "4.56"], [388, "4.55"], [390, "4.54"], [392, "4.53"], [394, "4.52"], [396, "4.51"], [398, "4.50"], [400, "4.49"], [402, "4.48"], [404, "4.47"], [406, "4.46"], [408, "4.45"], [410, "4.44"], [412, "4.43"], [414, "4.42"], [416, "4.41"], [418, "4.40"], [420, "4.39"], [422, "4.38"], [424, "4.37"], [426, "4.36"], [428, "4.35"], [430, "4.34"], [432, "4.33"], [434, "4.32"], [436, "4.31"], [438, "4.30"], [440, "4.29"], [442, "4.28"], [444, "4.27"], [446, "4.26"], [448, "4.25"], [450, "4.24"], [452, "4.23"], [454, "4.22"], [456, "4.21"], [458, "4.20"], [460, "4.19"], [462, "4.18"], [464, "4.17"], [466, "4.16"], [468, "4.15"], [470, "4.14"], [472, "4.13"], [474, "4.12"], [476, "4.11"], [478, "4.10"], [480, "4.09"], [482, "4.08"], [484, "4.07"], [486, "4.06"], [488, "4.05"], [490, "4.04"], [492, "4.03"], [494, "4.02"], [496, "4.01"], [498, "4.00"], [500, "3.99"], [504, "3.98"], [508, "3.97"], [512, "3.96"], [516, "3.95"], [520, "3.94"], [524, "3.93"], [528, "3.92"], [532, "3.91"], [536, "3.90"], [540, "3.89"], [544, "3.88"], [548, "3.87"], [552, "3.86"], [556, "3.85"], [560, "3.84"], [564, "3.83"], [568, "3.82"], [572, "3.81"], [576, "3.80"], [580, "3.79"], [584, "3.78"], [588, "3.77"], [592, "3.76"], [596, "3.75"], [600, "3.74"], [604, "3.73"], [608, "3.72"], [612, "3.71"], [616, "3.70"], [620, "3.69"], [624, "3.68"], [628, "3.67"], [632, "3.66"], [636, "3.65"], [640, "3.64"], [644, "3.63"], [648, "3.62"], [652, "3.61"], [656, "3.60"], [660, "3.59"], [664, "3.58"], [668, "3.57"], [672, "3.56"], [676, "3.55"], [680, "3.54"], [684, "3.53"], [688, "3.52"], [692, "3.51"], [696, "3.50"], [700, "3.49"], [704, "3.48"], [708, "3.47"], [712, "3.46"], [716, "3.45"], [720, "3.44"], [724, "3.43"], [728, "3.42"], [732, "3.41"], [736, "3.40"], [740, "3.39"], [744, "3.38"], [748, "3.37"], [754, "3.36"], [760, "3.35"], [766, "3.34"], [772, "3.33"], [778, "3.32"], [784, "3.31"], [790, "3.30"], [796, "3.29"], [802, "3.28"], [808, "3.27"], [814, "3.26"], [820, "3.25"], [826, "3.24"], [832, "3.23"], [838, "3.22"], [844, "3.21"], [850, "3.20"], [856, "3.19"], [862, "3.18"], [868, "3.17"], [874, "3.16"], [880, "3.15"], [886, "3.14"], [892, "3.13"], [898, "3.13"], [904, "3.11"], [910, "3.10"], [916, "3.09"], [922, "3.08"], [928, "3.07"], [934, "3.06"], [940, "3.05"], [946, "3.04"], [952, "3.03"], [958, "3.02"], [964, "3.01"], [970, "3.00"], [976, "2.99"], [982, "2.98"], [988, "2.97"], [994, "2.96"], [1000, "2.95"], [1022, "2.94"], [1044, "2.93"], [1066, "2.92"], [1088, "2.91"], [1110, "2.90"], [1132, "2.89"], [1154, "2.88"], [1176, "2.87"], [1198, "2.86"], [1220, "2.85"], [1242, "2.84"], [1264, "2.83"], [1286, "2.82"], [1308, "2.81"], [1330, "2.80"], [1352, "2.79"], [1374, "2.78"], [1396, "2.77"], [1418, "2.76"], [1440, "2.75"], [1462, "2.74"], [1484, "2.73"], [1506, "2.72"], [1528, "2.71"], [1550, "2.70"], [1572, "2.69"], [1594, "2.68"], [1616, "2.67"], [1638, "2.66"], [1660, "2.65"], [1682, "2.64"], [1704, "2.63"], [1726, "2.62"], [1748, "2.61"], [1770, "2.60"], [1792, "2.59"], [1814, "2.58"], [1836, "2.57"], [1858, "2.56"], [1880, "2.55"], [1902, "2.54"], [1924, "2.53"], [1946, "2.52"], [1968, "2.51"], [1990, "2.50"], [2200, "2.49"], [2400, "2.48"], [2600, "2.47"], [2800, "2.46"], [3000, "2.45"], [3200, "2.44"], [3400, "2.43"], [3600, "2.42"], [3800, "2.41"], [4000, "2.40"], [4200, "2.39"], [4400, "2.38"], [4600, "2.37"], [4800, "2.36"], [5000, "2.35"], [5200, "2.34"], [5400, "2.33"], [5600, "2.32"], [5800, "2.31"], [6000, "2.30"], [6200, "2.29"], [6400, "2.28"], [6600, "2.27"], [6800, "2.26"], [7000, "2.25"], [7200, "2.24"], [7400, "2.23"], [7600, "2.22"], [7800, "2.21"], [8000, "2.20"], [8200, "2.19"], [8400, "2.18"], [8600, "2.17"], [8800, "2.16"], [9000, "2.15"], [9200, "2.14"], [9400, "2.13"], [9600, "2.12"], [9800, "2.11"], [10000, "2.10"]]}], "standalone": {"editions": [{"code": "YTS10A", "new": {"license": "0.00", "formattedPrice": "Free", "shopToken": "C:N:YTS10A:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription Paid agents. 10 free users", "users": 10, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS10A:Y", "disc_price": "0"}}, {"code": "YTS15", "new": {"license": "900.00", "formattedPrice": "$900.00", "shopToken": "C:N:YTS15:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 15-User Pack", "users": 15, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS15:Y", "disc_price": "0"}}, {"code": "YTS15-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS15:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 15-User Pack", "users": 15}, {"code": "YTS25", "new": {"license": "1500.00", "formattedPrice": "$1,500.00", "shopToken": "C:N:YTS25:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 25-User Pack", "users": 25, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS25:Y", "disc_price": "0"}}, {"code": "YTS25-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS25:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 25-User Pack", "users": 25}, {"code": "YTS50", "new": {"license": "3000.00", "formattedPrice": "$3,000.00", "shopToken": "C:N:YTS50:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 50-User Pack", "users": 50, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS50:Y", "disc_price": "0"}}, {"code": "YTS50-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS50:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 50-User Pack", "users": 50}, {"code": "YTS100", "new": {"license": "6000.00", "formattedPrice": "$6,000.00", "shopToken": "C:N:YTS100:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 100-User Pack", "users": 100, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS100:Y", "disc_price": "0"}}, {"code": "YTS100-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS100:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 100-User Pack", "users": 100}, {"code": "YTS250", "new": {"license": "13000.00", "formattedPrice": "$13,000.00", "shopToken": "C:N:YTS250:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 250-User Pack", "users": 250, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS250:Y", "disc_price": "0"}}, {"code": "YTS250-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS250:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 250-User Pack", "users": 250}, {"code": "YTS500", "new": {"license": "21000.00", "formattedPrice": "$21,000.00", "shopToken": "C:N:YTS500:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 500-User Pack", "users": 500, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS500:Y", "disc_price": "0"}}, {"code": "YTS500-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS500:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 500-User Pack", "users": 500}, {"code": "YTS750", "new": {"license": "27000.00", "formattedPrice": "$27,000.00", "shopToken": "C:N:YTS750:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 750-User Pack", "users": 750, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS750:Y", "disc_price": "0"}}, {"code": "YTS750-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS750:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 750-User Pack", "users": 750}, {"code": "YTS1000", "new": {"license": "33000.00", "formattedPrice": "$33,000.00", "shopToken": "C:N:YTS1000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 1000-User Pack", "users": 1000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS1000:Y", "disc_price": "0"}}, {"code": "YTS1000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS1000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 1000-User Pack", "users": 1000}, {"code": "YTS1500", "new": {"license": "45000.00", "formattedPrice": "$45,000.00", "shopToken": "C:N:YTS1500:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 1500-User Pack", "users": 1500, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS1500:Y", "disc_price": "0"}}, {"code": "YTS1500-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS1500:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 1500-User Pack", "users": 1500}, {"code": "YTS2000", "new": {"license": "54000.00", "formattedPrice": "$54,000.00", "shopToken": "C:N:YTS2000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 2000-User Pack", "users": 2000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS2000:Y", "disc_price": "0"}}, {"code": "YTS2000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS2000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 2000-User Pack", "users": 2000}, {"code": "YTS3000", "new": {"license": "81000.00", "formattedPrice": "$81,000.00", "shopToken": "C:N:YTS3000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 3000-User Pack", "users": 3000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS3000:Y", "disc_price": "0"}}, {"code": "YTS3000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS3000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 3000-User Pack", "users": 3000}, {"code": "YTS4000", "new": {"license": "108000.00", "formattedPrice": "$108,000.00", "shopToken": "C:N:YTS4000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 4000-User Pack", "users": 4000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS4000:Y", "disc_price": "0"}}, {"code": "YTS4000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS4000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 4000-User Pack", "users": 4000}, {"code": "YTS5000", "new": {"license": "120000.00", "formattedPrice": "$120,000.00", "shopToken": "C:N:YTS5000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 5000-User Pack", "users": 5000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS5000:Y", "disc_price": "0"}}, {"code": "YTS5000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS5000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 5000-User Pack", "users": 5000}, {"code": "YTS6000", "new": {"license": "144000.00", "formattedPrice": "$144,000.00", "shopToken": "C:N:YTS6000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 6000-User Pack", "users": 6000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS6000:Y", "disc_price": "0"}}, {"code": "YTS6000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS6000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 6000-User Pack", "users": 6000}, {"code": "YTS7000", "new": {"license": "168000.00", "formattedPrice": "$168,000.00", "shopToken": "C:N:YTS7000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 7000-User Pack", "users": 7000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS7000:Y", "disc_price": "0"}}, {"code": "YTS7000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS7000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 7000-User Pack", "users": 7000}, {"code": "YTS8000", "new": {"license": "192000.00", "formattedPrice": "$192,000.00", "shopToken": "C:N:YTS8000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 8000-User Pack", "users": 8000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS8000:Y", "disc_price": "0"}}, {"code": "YTS8000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS8000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 8000-User Pack", "users": 8000}, {"code": "YTS9000", "new": {"license": "216000.00", "formattedPrice": "$216,000.00", "shopToken": "C:N:YTS9000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 9000-User Pack", "users": 9000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS9000:Y", "disc_price": "0"}}, {"code": "YTS9000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS9000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 9000-User Pack", "users": 9000}, {"code": "YTS10000", "new": {"license": "240000.00", "formattedPrice": "$240,000.00", "shopToken": "C:N:YTS10000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 10000-User Pack", "users": 10000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS10000:Y", "disc_price": "0"}}, {"code": "YTS10000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "shopToken": "C:N:YTS10000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 10000-User Pack", "users": 10000}, {"code": "YTS15000", "new": {"license": "342000.00", "formattedPrice": "$342,000.00", "updShopCode": "C:U:YTS15000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 15000-User Pack", "users": 15000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS15000:Y", "disc_price": "0"}}, {"code": "YTS15000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS15000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 15000-User Pack", "users": 15000}, {"code": "YTS20000", "new": {"license": "432000.00", "formattedPrice": "$432,000.00", "updShopCode": "C:U:YTS20000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 20000-User Pack", "users": 20000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS20000:Y", "disc_price": "0"}}, {"code": "YTS20000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS20000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 20000-User Pack", "users": 20000}, {"code": "YTS25000", "new": {"license": "525000.00", "formattedPrice": "$525,000.00", "updShopCode": "C:U:YTS25000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 25000-User Pack", "users": 25000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS25000:Y", "disc_price": "0"}}, {"code": "YTS25000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS25000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 25000-User Pack", "users": 25000}, {"code": "YTS30000", "new": {"license": "604000.00", "formattedPrice": "$604,000.00", "updShopCode": "C:U:YTS30000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 30000-User Pack", "users": 30000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS30000:Y", "disc_price": "0"}}, {"code": "YTS30000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS30000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 30000-User Pack", "users": 30000}, {"code": "YTS35000", "new": {"license": "672000.00", "formattedPrice": "$672,000.00", "updShopCode": "C:U:YTS35000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 35000-User Pack", "users": 35000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS35000:Y", "disc_price": "0"}}, {"code": "YTS35000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS35000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 35000-User Pack", "users": 35000}, {"code": "YTS40000", "new": {"license": "716000.00", "formattedPrice": "$716,000.00", "updShopCode": "C:U:YTS40000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 40000-User Pack", "users": 40000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS40000:Y", "disc_price": "0"}}, {"code": "YTS40000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS40000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 40000-User Pack", "users": 40000}, {"code": "YTS45000", "new": {"license": "777600.00", "formattedPrice": "$777,600.00", "updShopCode": "C:U:YTS45000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 45000-User Pack", "users": 45000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS45000:Y", "disc_price": "0"}}, {"code": "YTS45000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS45000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 45000-User Pack", "users": 45000}, {"code": "YTS50000", "new": {"license": "826000.00", "formattedPrice": "$826,000.00", "updShopCode": "C:U:YTS50000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 50000-User Pack", "users": 50000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS50000:Y", "disc_price": "0"}}, {"code": "YTS50000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS50000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 50000-User Pack", "users": 50000}, {"code": "YTS60000", "new": {"license": "934000.00", "formattedPrice": "$934,000.00", "updShopCode": "C:U:YTS60000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 60000-User Pack", "users": 60000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS60000:Y", "disc_price": "0"}}, {"code": "YTS60000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS60000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 60000-User Pack", "users": 60000}, {"code": "YTS70000", "new": {"license": "1040000.00", "formattedPrice": "$1,040,000.00", "updShopCode": "C:U:YTS70000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 70000-User Pack", "users": 70000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS70000:Y", "disc_price": "0"}}, {"code": "YTS70000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS70000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 70000-User Pack", "users": 70000}, {"code": "YTS80000", "new": {"license": "1146000.00", "formattedPrice": "$1,146,000.00", "updShopCode": "C:U:YTS80000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 80000-User Pack", "users": 80000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS80000:Y", "disc_price": "0"}}, {"code": "YTS80000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS80000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 80000-User Pack", "users": 80000}, {"code": "YTS90000", "new": {"license": "1250000.00", "formattedPrice": "$1,250,000.00", "updShopCode": "C:U:YTS90000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 90000-User Pack", "users": 90000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS90000:Y", "disc_price": "0"}}, {"code": "YTS90000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS90000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 90000-User Pack", "users": 90000}, {"code": "YTS100000", "new": {"license": "1352000.00", "formattedPrice": "$1,352,000.00", "updShopCode": "C:U:YTS100000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 100000-User Pack", "users": 100000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS100000:Y", "disc_price": "0"}}, {"code": "YTS100000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS100000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 100000-User Pack", "users": 100000}, {"code": "YTS110000", "new": {"license": "1444000.00", "formattedPrice": "$1,444,000.00", "updShopCode": "C:U:YTS110000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 110000-User Pack", "users": 110000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS110000:Y", "disc_price": "0"}}, {"code": "YTS110000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS110000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 110000-User Pack", "users": 110000}, {"code": "YTS120000", "new": {"license": "1536000.00", "formattedPrice": "$1,536,000.00", "updShopCode": "C:U:YTS120000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 120000-User Pack", "users": 120000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS120000:Y", "disc_price": "0"}}, {"code": "YTS120000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS120000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 120000-User Pack", "users": 120000}, {"code": "YTS130000", "new": {"license": "1628000.00", "formattedPrice": "$1,628,000.00", "updShopCode": "C:U:YTS130000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 130000-User Pack", "users": 130000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS130000:Y", "disc_price": "0"}}, {"code": "YTS130000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS130000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 130000-User Pack", "users": 130000}, {"code": "YTS140000", "new": {"license": "1715000.00", "formattedPrice": "$1,715,000.00", "updShopCode": "C:U:YTS140000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 140000-User Pack", "users": 140000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS140000:Y", "disc_price": "0"}}, {"code": "YTS140000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS140000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 140000-User Pack", "users": 140000}, {"code": "YTS150000", "new": {"license": "1800000.00", "formattedPrice": "$1,800,000.00", "updShopCode": "C:U:YTS150000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 150000-User Pack", "users": 150000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS150000:Y", "disc_price": "0"}}, {"code": "YTS150000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS150000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 150000-User Pack", "users": 150000}, {"code": "YTS170000", "new": {"license": "1938000.00", "formattedPrice": "$1,938,000.00", "updShopCode": "C:U:YTS170000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 170000-User Pack", "users": 170000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS170000:Y", "disc_price": "0"}}, {"code": "YTS170000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS170000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 170000-User Pack", "users": 170000}, {"code": "YTS200000", "new": {"license": "2136000.00", "formattedPrice": "$2,136,000.00", "updShopCode": "C:U:YTS200000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 200000-User Pack", "users": 200000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS200000:Y", "disc_price": "0"}}, {"code": "YTS200000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS200000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 200000-User Pack", "users": 200000}, {"code": "YTS300000", "new": {"license": "2700000.00", "formattedPrice": "$2,700,000.00", "updShopCode": "C:U:YTS300000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 300000-User Pack", "users": 300000, "ADD-A": {"ADD-A": "72.00", "formattedPrice": "$72.00", "shopCode": "C:U:YTS300000:Y", "disc_price": "0"}}, {"code": "YTS300000-A", "new": {"license": "72.00", "formattedPrice": "$72.00", "updShopCode": "C:U:YTS300000:Y", "disc_price": "0"}, "name": "YouTrack Server Subscription 300000-User Pack", "users": 300000}], "upgradeTables": [], "agents": {"newAgentPrice": {"price": "72.00", "pricePerMonth": "6.00"}}, "group": "YTS"}}};
+</script>
+<script>
+    var bannerInfo = {
+        showBanner: "",
+        discountPercent: null
+    };
+</script>
+
+<script>
+    default_site_language = 'en-us';
+    var current_lang = 'en-us';
+                var i18n_info = {"current_lang": "en-us", "languages": [{"canonical": "en", "code": "en-us", "label": "English", "page_translated": true, "url": "/youtrack/buy/"}, {"canonical": "de", "code": "de-de", "label": "Deutsch", "page_translated": true, "url": "/de-de/youtrack/buy/"}, {"canonical": "es", "code": "es-es", "label": "Espa\u00f1ol", "page_translated": true, "url": "/es-es/youtrack/buy/"}, {"canonical": "fr", "code": "fr-fr", "label": "Fran\u00e7ais", "page_translated": true, "url": "/fr-fr/youtrack/buy/"}, {"canonical": "ja", "code": "ja-jp", "label": "\u65e5\u672c\u8a9e", "page_translated": true, "url": "/ja-jp/youtrack/buy/"}, {"canonical": "ko", "code": "ko-kr", "label": "\ud55c\uad6d\uc5b4", "page_translated": true, "url": "/ko-kr/youtrack/buy/"}, {"canonical": "ru", "code": "ru-ru", "label": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439", "page_translated": true, "url": "/ru-ru/youtrack/buy/"}, {"canonical": "zh-Hans", "code": "zh-cn", "label": "\u7b80\u4f53\u4e2d\u6587", "page_translated": true, "url": "/zh-cn/youtrack/buy/"}, {"canonical": "pt-BR", "code": "pt-br", "label": "Portugu\u00eas do Brasil", "page_translated": true, "url": "/pt-br/youtrack/buy/"}]};
+            var navigationMenu = {"primary": {"items": [{"title": "Products", "id": "products", "banners": [{"isActive": false, "title": "JetBrains Air", "description": "Run AI agents side by side", "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/air/air.svg", "actionLabel": "Learn more", "url": "https://air.dev/", "isUrlShouldBeLocalized": false, "bgColor": "#000000", "bgGradient": "linear-gradient(0deg, #4EC5B9 2.53%, #2F7596 32.56%, #2C6A89 42.24%, #244E67 58.71%, #21435A 65.49%, #16181B 99.4%)", "bgImageSrc": "/img/banners-menu-main/bg-air.png", "horizontalBgImageSrc": "/img/banners-menu-main/bg-air-horizontal.png", "cleaned_url": "https://air.dev/"}, {"isActive": false, "title": "Junie by JetBrains", "description": "Your smart coding agent", "logoSrc": "/img/banners-menu-main/junie.svg", "actionLabel": "Learn more", "url": "https://junie.jetbrains.com/", "isUrlShouldBeLocalized": false, "bgColor": "#2D2D2D", "bgGradient": "linear-gradient(222deg, #2D2D2D 9.59%, #232323 54.35%)", "bgImageSrc": "/img/banners-menu-main/junie-vertical.png", "horizontalBgImageSrc": "/img/banners-menu-main/junie-horizontal.png", "cleaned_url": "https://junie.jetbrains.com/"}], "suggestions": [{"isActive": false, "url": "/products/", "isUrlShouldBeLocalized": true, "title": "Not sure which tool is best for you?", "description": "Whichever technologies you use, there's a JetBrains tool to match", "actionLabel": "Find your tool", "cleaned_url": "/products/"}], "submenu": {"layout": "4 inline inline 2 inline", "columns": [{"title": "JETBRAINS IDEs", "mobileLayout": "forceTwoColumns", "layout": "5 6", "subColumns": [{"items": [{"isActive": false, "title": "All&nbsp;IDEs", "url": "/ides/", "isUrlShouldBeLocalized": true, "cleaned_url": "/ides/"}, {"isActive": false, "title": "CLion", "url": "/clion/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/clion/clion.svg", "cleaned_url": "/clion/"}, {"isActive": false, "title": "DataGrip", "url": "/datagrip/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/datagrip/datagrip.svg", "cleaned_url": "/datagrip/"}, {"isActive": false, "title": "GoLand", "url": "/go/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/goland/goland.svg", "cleaned_url": "/go/"}, {"isActive": false, "title": "IntelliJ&nbsp;IDEA", "url": "/idea/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/intellij-idea/intellij-idea.svg", "cleaned_url": "/idea/"}, {"isActive": false, "title": "PhpStorm", "url": "/phpstorm/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/phpstorm/phpstorm.svg", "cleaned_url": "/phpstorm/"}]}, {"items": [{"isActive": false, "title": "PyCharm", "url": "/pycharm/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/pycharm/pycharm.svg", "cleaned_url": "/pycharm/"}, {"isActive": false, "title": "Rider", "url": "/rider/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/rider/rider.svg", "cleaned_url": "/rider/"}, {"isActive": false, "title": "RubyMine", "url": "/ruby/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/rubymine/rubymine.svg", "cleaned_url": "/ruby/"}, {"isActive": false, "title": "RustRover", "url": "/rust/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/rustrover/rustrover.svg", "cleaned_url": "/rust/"}, {"isActive": false, "title": "WebStorm", "url": "/webstorm/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/webstorm/webstorm.svg", "cleaned_url": "/webstorm/"}, {"isActive": false, "title": "Toolbox&nbsp;App", "url": "/toolbox-app/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/toolbox/toolbox.svg", "cleaned_url": "/toolbox-app/"}]}]}, {"title": "AI TOOLS", "items": [{"isActive": false, "title": "AI\u00a0in\u00a0IDEs", "url": "/ai-ides/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/ai/ai.svg", "cleaned_url": "/ai-ides/"}, {"isActive": false, "title": "Junie", "url": "https://junie.jetbrains.com/", "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/junie/junie.svg", "cleaned_url": "https://junie.jetbrains.com/"}, {"isActive": false, "title": "Air", "url": "https://air.dev/", "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/air/air.svg", "cleaned_url": "https://air.dev/"}, {"isActive": false, "title": "ACP", "url": "/acp/", "isUrlShouldBeLocalized": true, "cleaned_url": "/acp/"}, {"isActive": false, "title": "Mellum", "url": "/mellum/", "isUrlShouldBeLocalized": true, "cleaned_url": "/mellum/"}]}, {"title": ".NET & VISUAL STUDIO", "items": [{"isActive": false, "title": "Rider", "url": "/rider/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/rider/rider.svg", "cleaned_url": "/rider/"}, {"isActive": false, "title": "ReSharper", "url": "/resharper/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/resharper/resharper.svg", "cleaned_url": "/resharper/"}, {"isActive": false, "title": "ReSharper\u00a0C\u2060+\u2060+", "url": "/resharper-cpp/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/resharper-cpp/resharper-cpp.svg", "cleaned_url": "/resharper-cpp/"}, {"isActive": false, "title": "dotCover", "url": "/dotcover/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/dotcover/dotcover.svg", "cleaned_url": "/dotcover/"}, {"isActive": false, "title": "dotMemory", "url": "/dotmemory/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/dotmemory/dotmemory.svg", "cleaned_url": "/dotmemory/"}, {"isActive": false, "title": "dotPeek", "url": "/decompiler/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/dotpeek/dotpeek.svg", "cleaned_url": "/decompiler/"}, {"isActive": false, "title": "dotTrace", "url": "/profiler/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/dottrace/dottrace.svg", "cleaned_url": "/profiler/"}, {"isActive": false, "title": ".NET Tools Plugins", "url": "https://plugins.jetbrains.com/search?isFeaturedSearch=true&products=resharper&products=rider", "cleaned_url": "https://plugins.jetbrains.com/search?isFeaturedSearch=true&products=resharper&products=rider"}]}, {"title": "TEAM TOOLS", "hasSeparator": true, "items": [{"isActive": false, "title": "TeamCity", "url": "/teamcity/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/teamcity/teamcity.svg", "cleaned_url": "/teamcity/"}, {"isActive": false, "title": "Datalore", "url": "/datalore/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/datalore/datalore.svg", "cleaned_url": "/datalore/"}, {"isActive": false, "title": "YouTrack", "url": "/youtrack/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/youtrack/youtrack.svg", "cleaned_url": "/youtrack/"}, {"isActive": false, "title": "Qodana", "url": "/qodana/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/qodana/qodana.svg", "cleaned_url": "/qodana/"}, {"isActive": false, "title": "Databao", "url": "/databao/", "isUrlShouldBeLocalized": true, "cleaned_url": "/databao/"}]}, {"title": "LANGUAGES & FRAMEWORKS", "hasSeparator": true, "items": [{"isActive": false, "title": "Kotlin", "url": "https://kotlinlang.org/", "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/kotlin/kotlin.svg", "cleaned_url": "https://kotlinlang.org/"}, {"isActive": false, "title": "Koog", "url": "/koog/", "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/kotlin/kotlin.svg", "cleaned_url": "/koog/"}, {"isActive": false, "title": "Ktor", "url": "https://ktor.io/", "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/ktor/ktor.svg", "cleaned_url": "https://ktor.io/"}, {"isActive": false, "title": "Exposed", "url": "/exposed/", "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/exposed/exposed.svg", "cleaned_url": "/exposed/"}, {"isActive": false, "title": "MPS", "url": "/mps/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/mps/mps.svg", "cleaned_url": "/mps/"}, {"isActive": false, "title": "Compose Multiplatform", "url": "https://kotlinlang.org/compose-multiplatform/", "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/compose-multiplatform/compose-multiplatform.svg", "cleaned_url": "https://kotlinlang.org/compose-multiplatform/"}]}]}, "priority": 3}, {"title": "For Business", "id": "for-business", "banners": [{"isActive": false, "title": "AI for teams and organizations", "description": "One system for managing AI across every team", "actionLabel": "Learn more", "url": "/agentic-software-development/", "isUrlShouldBeLocalized": true, "logoSrc": "/img/banners-menu-main/jetbrains.svg", "bgColor": "#0082C9", "bgGradient": "linear-gradient(117deg, #0082C9 0%, #5A4ED0 100%)", "cleaned_url": "/agentic-software-development/"}, {"isActive": false, "title": "All Products Pack", "description": "Get all JetBrains desktop tools including 10&nbsp;IDEs,<br />2&nbsp;profilers, and 3&nbsp;extensions", "actionLabel": "Learn more", "url": "/all/", "isUrlShouldBeLocalized": true, "logoSrc": "/img/banners-menu-main/sale.svg", "bgColor": "#FF318C", "bgGradient": "linear-gradient(293.2deg, rgb(253 13 122) 13.45%, rgb(252 100 67) 73.57%, rgb(248 158 7) 100%)", "cleaned_url": "/all/"}], "submenu": {"columns": [{"title": "OFFERS FOR YOUR ORGANIZATION", "layout": "4 4 4", "subColumns": [{"items": [{"isActive": false, "title": "JetBrains Tools for Business", "url": "/business/", "isUrlShouldBeLocalized": true, "description": "Professional AI-powered IDEs for your development teams", "cleaned_url": "/business/"}, {"isActive": false, "title": "All Products Pack", "url": "/all/", "isUrlShouldBeLocalized": true, "description": "All JetBrains developer tools in one subscription", "cleaned_url": "/all/"}, {"isActive": false, "title": "dotUltimate", "url": "/dotnet/business/", "isUrlShouldBeLocalized": true, "description": "Complete developer toolkit for .NET and game development", "cleaned_url": "/dotnet/business/"}]}, {"items": [{"isActive": false, "title": "AI for teams and organizations", "url": "/agentic-software-development/", "isUrlShouldBeLocalized": true, "description": "One system for agentic software development", "cleaned_url": "/agentic-software-development/"}]}]}]}, "priority": 2}, {"title": "Education", "id": "education", "banners": [{"isActive": false, "title": "JetBrains Academy", "description": "Jump-start your career with essential developer skills", "actionLabel": "Discover more", "url": "/academy/", "isUrlShouldBeLocalized": true, "logoSrc": "${RESOURCES_URL_PLACEHOLDER}/storage/logos/web/jetbrains-academy/jetbrains-academy.svg", "bgColor": "#B01DF6", "bgGradient": "linear-gradient(335.07deg, #636CEA 0%, #834CEF 40.63%, #771F89 100%)", "cleaned_url": "/academy/"}], "submenu": {"columns": [{"title": "LEARN", "layout": "12 12 12", "subColumns": [{"items": [{"isActive": false, "title": "Course catalog", "url": "https://academy.jetbrains.com/", "isUrlShouldBeLocalized": false, "description": "130+ courses to learn programming, AI, data science, and more", "cleaned_url": "https://academy.jetbrains.com/"}, {"isActive": false, "title": "University programs", "url": "/education/university-programs/", "isUrlShouldBeLocalized": true, "description": "Study in Europe with JetBrains scholarships", "cleaned_url": "/education/university-programs/"}, {"isActive": false, "title": "Internships", "url": "/careers/internships/", "isUrlShouldBeLocalized": true, "description": "Apply now to join our team", "cleaned_url": "/careers/internships/"}, {"isActive": false, "title": "For teams", "url": "/academy/organizations/", "isUrlShouldBeLocalized": true, "description": "Project-based learning to upskill your team", "cleaned_url": "/academy/organizations/"}]}]}, {"title": "TEACH", "layout": "12 12 12", "subColumns": [{"items": [{"isActive": false, "title": "Teaching with JetBrains IDEs", "url": "/academy/teaching/", "isUrlShouldBeLocalized": true, "description": "Create courses for the next generation of developers", "cleaned_url": "/academy/teaching/"}, {"isActive": false, "title": "Kotlin for education", "url": "https://kotlinlang.org/education/", "description": "Teach computer science with Kotlin", "cleaned_url": "https://kotlinlang.org/education/"}]}]}, {"title": "FREE LICENSES", "layout": "11 11 11", "hasSeparator": true, "items": [{"isActive": false, "title": "For students", "url": "/academy/student-pack/", "isUrlShouldBeLocalized": true, "cleaned_url": "/academy/student-pack/"}, {"isActive": false, "title": "For teachers", "url": "/academy/teacher-pack/#get-started", "isUrlShouldBeLocalized": true, "cleaned_url": "/academy/teacher-pack/#get-started"}, {"isActive": false, "title": "For educational institutions", "url": "/academy/teacher-pack/", "isUrlShouldBeLocalized": true, "cleaned_url": "/academy/teacher-pack/"}, {"isActive": false, "title": "For bootcamps and courses", "url": "/academy/bootcamps/", "isUrlShouldBeLocalized": true, "cleaned_url": "/academy/bootcamps/"}]}, {"title": "COMMUNITY", "layout": "11 11 11", "hasSeparator": true, "items": [{"isActive": false, "title": "ICPC collaboration", "url": "/icpc/", "isUrlShouldBeLocalized": true, "description": "Events, news, and offers", "cleaned_url": "/icpc/"}]}]}, "priority": 1}, {"title": "Solutions", "id": "solutions", "banners": [{"isActive": false, "title": "AI for teams and organizations", "description": "One system for managing AI across every team", "actionLabel": "Learn more", "url": "/agentic-software-development/", "isUrlShouldBeLocalized": true, "logoSrc": "/img/banners-menu-main/jetbrains.svg", "bgColor": "#0082C9", "bgGradient": "linear-gradient(117deg, #0082C9 0%, #5A4ED0 100%)", "cleaned_url": "/agentic-software-development/"}, {"isActive": false, "title": "JetBrains for Data", "description": "Feel the difference in every data task", "actionLabel": "Discover more", "url": "/jetbrains-for-data/", "isUrlShouldBeLocalized": true, "bgColor": "#000", "bgImageSrc": "/img/banners-menu-main/jb-for-data.svg", "horizontalBgImageSrc": "/img/banners-menu-main/jb-for-data-horizontal.svg", "cleaned_url": "/jetbrains-for-data/"}], "submenu": {"columns": [{"title": "BY INDUSTRY & TECHNOLOGY", "layout": "4 4 4", "subColumns": [{"items": [{"isActive": false, "title": "Remote Development", "url": "/remote-development/", "isUrlShouldBeLocalized": true, "description": "Tools for remote development for you and your team", "cleaned_url": "/remote-development/"}, {"isActive": false, "title": "Game Development", "url": "/gamedev/", "isUrlShouldBeLocalized": true, "description": "Tools for game development for any platform", "cleaned_url": "/gamedev/"}, {"isActive": false, "title": "DevOps", "url": "/devops/", "isUrlShouldBeLocalized": true, "description": "Tools and integrations for any infrastructure", "cleaned_url": "/devops/"}]}, {"items": [{"isActive": false, "title": "JetBrains AI Solutions", "url": "/ai/", "isUrlShouldBeLocalized": true, "description": "AI-powered developer tooling", "cleaned_url": "/ai/"}, {"isActive": false, "title": "JetBrains for Data", "url": "/jetbrains-for-data/", "isUrlShouldBeLocalized": true, "description": "Intelligent tools for your entire data workflow", "cleaned_url": "/jetbrains-for-data/"}, {"isActive": false, "title": "Multiplatform Development", "url": "https://kotlinlang.org/multiplatform/", "description": "Flexible cross-platform development with Kotlin", "cleaned_url": "https://kotlinlang.org/multiplatform/"}]}, {"items": [{"isActive": false, "title": "JetBrains Kotlin Ecosystem", "url": "/kotlin-ecosystem/", "isUrlShouldBeLocalized": true, "description": "Unified tech stack to build for your target platforms", "cleaned_url": "/kotlin-ecosystem/"}, {"isActive": false, "title": "Automotive Development", "url": "/automotive/", "isUrlShouldBeLocalized": true, "description": "Tools for automotive development for any platform", "cleaned_url": "/automotive/"}]}]}]}, "priority": 0}, {"title": "Support", "id": "support", "banners": [{"isActive": false, "title": "Download and Install", "actionLabel": "Download and Install", "url": "/products/", "isUrlShouldBeLocalized": true, "logoSrc": "/img/banners-menu-main/download.svg", "bgColor": "#6B57FF", "bgGradient": "linear-gradient(294.91deg, #FF318C -50.1%, #6B57FF 97.43%)", "cleaned_url": "/products/"}, {"isActive": false, "title": "Contact us", "actionLabel": "Contact us", "url": "/company/contacts/", "isUrlShouldBeLocalized": true, "logoSrc": "/img/banners-menu-main/message.svg", "bgColor": "#21D789", "bgGradient": "linear-gradient(283.8deg, #087CFA 5.73%, #21D789 100%)", "cleaned_url": "/company/contacts/"}], "submenu": {"columns": [{"title": "PRODUCT & TECHNICAL SUPPORT", "layout": "12", "subColumns": [{"items": [{"isActive": false, "title": "Support Center", "url": "/support/", "isUrlShouldBeLocalized": true, "cleaned_url": "/support/"}, {"isActive": false, "title": "Product Documentation", "url": "/help/", "isUrlShouldBeLocalized": true, "cleaned_url": "/help/"}, {"isActive": false, "title": "Livestreams", "url": "/company/livestreams/", "isUrlShouldBeLocalized": true, "cleaned_url": "/company/livestreams/"}, {"isActive": false, "title": "Newsletters", "url": "/resources/newsletters/", "isUrlShouldBeLocalized": true, "cleaned_url": "/resources/newsletters/"}, {"isActive": false, "title": "Early Access", "url": "/resources/eap/", "isUrlShouldBeLocalized": true, "cleaned_url": "/resources/eap/"}, {"isActive": false, "title": "Blog", "url": "https://blog.jetbrains.com/", "isUrlShouldBeLocalized": true, "cleaned_url": "https://blog.jetbrains.com/"}]}]}, {"title": "FREQUENT TASKS", "hasSeparator": true, "items": [{"isActive": false, "title": "Manage your account", "url": "https://account.jetbrains.com/profile-details", "cleaned_url": "https://account.jetbrains.com/profile-details"}, {"isActive": false, "title": "Manage your licenses", "url": "https://account.jetbrains.com/licenses", "cleaned_url": "https://account.jetbrains.com/licenses"}, {"isActive": false, "title": "Contact Sales", "url": "/support/sales/", "isUrlShouldBeLocalized": true, "cleaned_url": "/support/sales/"}, {"isActive": false, "title": "Licensing FAQ", "url": "https://sales.jetbrains.com", "isUrlShouldBeLocalized": true, "cleaned_url": "https://sales.jetbrains.com"}]}]}, "priority": 2}, {"isActive": false, "title": "Pricing", "id": "store", "url": "/store/?section=personal&billing=yearly", "isUrlShouldBeLocalized": true, "priority": 3, "cleaned_url": "/store/?section=personal&billing=yearly"}, {"isActive": false, "id": "login", "title": "Login", "url": "https://account.jetbrains.com", "isMobileOnly": true, "cleaned_url": "https://account.jetbrains.com"}]}, "secondary": {"isActive": true, "id": "product_youtrack", "url": "/youtrack/", "title": "YouTrack", "items": [{"isActive": false, "title": "What's new", "version": "2026.2", "url": "/youtrack/whatsnew/", "isItemHidden": true, "items": [{"isActive": false, "title": "What's new 2026.2", "version": "2026.2", "url": "/youtrack/whatsnew/", "cleaned_url": "/youtrack/whatsnew/"}, {"isActive": false, "title": "What's new 2026.1", "version": "2026.1", "url": "/youtrack/whatsnew/2026-1/", "cleaned_url": "/youtrack/whatsnew/2026-1/"}, {"isActive": false, "title": "What's new 2025.3", "version": "2025.3", "url": "/youtrack/whatsnew/2025-3/", "cleaned_url": "/youtrack/whatsnew/2025-3/"}], "cleaned_url": "/youtrack/whatsnew/"}, {"title": "Features", "dropdownItems": [{"isActive": false, "title": "Features", "url": "/youtrack/features/", "cleaned_url": "/youtrack/features/"}, {"isActive": false, "title": "What's new", "url": "/youtrack/whatsnew/", "cleaned_url": "/youtrack/whatsnew/"}]}, {"isActive": false, "title": "Helpdesk", "url": "/youtrack/helpdesk/", "cleaned_url": "/youtrack/helpdesk/"}, {"title": "Comparisons", "dropdownItems": [{"isActive": false, "title": "YouTrack vs. Jira", "url": "/youtrack/compare/jira-vs-youtrack/", "cleaned_url": "/youtrack/compare/jira-vs-youtrack/"}, {"isActive": false, "title": "YouTrack vs. others", "url": "/youtrack/compare/youtrack-competitive-offer/", "cleaned_url": "/youtrack/compare/youtrack-competitive-offer/"}, {"isActive": false, "title": "Product tour", "url": "/youtrack/compare/get-product-tour/", "cleaned_url": "/youtrack/compare/get-product-tour/"}]}, {"title": "Teams", "dropdownItems": [{"isActive": false, "title": "Customer stories", "url": "/youtrack/customers/", "cleaned_url": "/youtrack/customers/"}, {"isActive": false, "title": "Teams", "url": "/youtrack/teams/", "cleaned_url": "/youtrack/teams/"}]}, {"isActive": false, "title": "Features", "url": "/youtrack/features/", "heading": "Features overview", "isItemHidden": true, "items": [{"isActive": false, "title": "Features overview", "url": "/youtrack/features/", "cleaned_url": "/youtrack/features/"}, {"isActive": false, "title": "Whiteboards", "url": "/youtrack/features/whiteboards/", "cleaned_url": "/youtrack/features/whiteboards/"}, {"isActive": false, "title": "Task Management", "url": "/youtrack/features/issue_tracking.html", "cleaned_url": "/youtrack/features/issue_tracking.html"}, {"isActive": false, "title": "Team Collaboration", "url": "/youtrack/features/team_collaboration.html", "cleaned_url": "/youtrack/features/team_collaboration.html"}, {"isActive": false, "title": "AI Assistance", "url": "/youtrack/features/ai_assistant.html", "cleaned_url": "/youtrack/features/ai_assistant.html"}, {"isActive": false, "title": "Apps and Workflows", "url": "/youtrack/features/apps.html", "cleaned_url": "/youtrack/features/apps.html"}, {"isActive": false, "title": "Agile Boards", "url": "/youtrack/features/agile_project_management.html", "cleaned_url": "/youtrack/features/agile_project_management.html"}, {"isActive": false, "title": "Knowledge Base", "url": "/youtrack/features/knowledge_base.html", "cleaned_url": "/youtrack/features/knowledge_base.html"}, {"isActive": false, "title": "Helpdesk Projects", "url": "/youtrack/helpdesk/", "cleaned_url": "/youtrack/helpdesk/"}, {"isActive": false, "title": "Planning", "url": "/youtrack/features/planning.html", "cleaned_url": "/youtrack/features/planning.html"}, {"isActive": false, "title": "Reporting", "url": "/youtrack/features/reporting_analysis.html", "cleaned_url": "/youtrack/features/reporting_analysis.html"}, {"isActive": false, "title": "Time Tracking", "url": "/youtrack/features/time_tracking.html", "cleaned_url": "/youtrack/features/time_tracking.html"}, {"isActive": false, "title": "Gantt Chart", "url": "/youtrack/features/gantt_chart.html", "cleaned_url": "/youtrack/features/gantt_chart.html"}, {"isActive": false, "title": "Dashboards", "url": "/youtrack/features/dashboards.html", "cleaned_url": "/youtrack/features/dashboards.html"}, {"isActive": false, "title": "Customization", "url": "/youtrack/features/customization.html", "cleaned_url": "/youtrack/features/customization.html"}, {"isActive": false, "title": "Integrations", "url": "/youtrack/features/integrations/", "cleaned_url": "/youtrack/features/integrations/"}, {"isActive": false, "title": "YouTrack Mobile", "url": "/youtrack/features/youtrack-mobile.html", "cleaned_url": "/youtrack/features/youtrack-mobile.html"}, {"isActive": false, "title": "Onboarding Pack", "url": "/youtrack/features/onboarding_pack.html", "cleaned_url": "/youtrack/features/onboarding_pack.html"}, {"isActive": false, "title": "Importing issues and documents", "url": "/youtrack/features/imports.html", "cleaned_url": "/youtrack/features/imports.html"}, {"isActive": false, "title": "Experimental Features", "url": "/youtrack/features/experimental_features.html", "cleaned_url": "/youtrack/features/experimental_features.html"}], "cleaned_url": "/youtrack/features/"}, {"isActive": false, "title": "Support", "url": "/youtrack/support/", "cleaned_url": "/youtrack/support/"}, {"isActive": true, "title": "Pricing", "url": "/youtrack/buy/", "cleaned_url": "/youtrack/buy/"}, {"isActive": false, "title": "Book demo", "url": "/youtrack/request-a-demo/", "type": "outlineButton", "cleaned_url": "/youtrack/request-a-demo/"}, {"isActive": false, "title": "Try free", "url": "/youtrack/download/", "type": "button", "overrideBuy": true, "cleaned_url": "/youtrack/download/"}], "cleaned_url": "/youtrack/"}};
+    
+    var is_layout_adaptive = false;
+        is_layout_adaptive = true;
+    
+    var disable_language_picker = false;
+    
+    var localized_domains = [{"defaultLanguage": "en", "domain": "blog.jetbrains.com", "locales": {"de-de": "de", "en-us": "en", "es-es": "es", "fr-fr": "fr", "ja-jp": "ja", "ko-kr": "ko", "pt-br": "pt-br", "ru-ru": "ru", "zh-cn": "zh-hans"}, "pathsLocalization": false, "suffixDefault": false}, {"defaultLanguage": "en-us", "domain": "lp.jetbrains.com", "locales": {"de-de": "de-de", "en-us": "en-us", "es-es": "es-es", "fr-fr": "fr-fr", "ja-jp": "ja-jp", "ko-kr": "ko-kr", "pt-br": "pt-br", "ru-ru": "ru-ru", "zh-cn": "zh-cn"}, "pathsLocalization": true, "suffixDefault": false}, {"defaultLanguage": "en-us", "domain": "sales.jetbrains.com", "locales": {"de-de": "de", "en-us": "en-gb", "es-es": "es", "fr-fr": "fr", "ja-jp": "ja", "ko-kr": "ko", "pt-br": "pt-br", "ru-ru": "ru", "zh-cn": "zh-cn"}, "pathsLocalization": true, "prefixPath": "hc", "suffixDefault": true}];
+
+    var english_only_url_prefixes = [];
+    
+    var is_landing_view = false;
+    
+    var theme = 'light';
+</script>
+
+<script></script>
+
+
+
+        <link href="/_assets/common.1599a1b52d0fab176fa5.css" rel="stylesheet" type="text/css">
+<link href="/_assets/default-page.0802c01ec758d2bf33c8.css" rel="stylesheet" type="text/css">
+<link href="/_assets/youtrack/buy/new-youtrack-buy.entry.c77dc11b6790c4b64c6f.css" rel="stylesheet" type="text/css">
+<script src="/_assets/common.0921d2c75c70bab24824.js" type="text/javascript"></script>
+<script src="/_assets/default-page.99b1540e8a3c185841b9.js" type="text/javascript"></script>
+<script src="/_assets/youtrack/buy/new-youtrack-buy.entry.b6f4b72733431f8b133e.js" type="text/javascript"></script>
+
+                        
+
+
+<!-- Social Media tag Starts -->
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Buy YouTrack: Pricing and Licensing, More Users"/>
+
+    <meta property="og:description" content="Buy YouTrack: Get a New license, Extend subscription or Upgrade your user pack for YouTrack Cloud & Server."/>
+            <meta property="og:image" content="https://resources.jetbrains.com/storage/products/youtrack/img/meta/preview.png"/>
+    
+    <meta property="og:site_name" content="JetBrains"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.jetbrains.com/youtrack/buy/"/>
+    <!-- OpenGraph End -->
+
+    <!-- Schema.org data -->
+                        <script type="application/ld+json">
+                    {"@context": "http://schema.org", "@type": "SoftwareApplication", "applicationCategory": "BusinessApplication", "author": {"@type": "Organization", "name": "JetBrains"}, "datePublished": "2021-06-09T09:00", "downloadUrl": "https://www.jetbrains.com/youtrack/download/get_youtrack.html", "image": "https://resources.jetbrains.com/storage/products/youtrack/img/meta/preview.png", "name": "YouTrack", "operatingSystem": "Windows, macOS, Linux", "publisher": {"@type": "Organization", "name": "JetBrains"}, "requirements": "RAM: 2 GB, Free space: 1.5 GB, Screen Resolution: 1024x768", "screenshot": "https://www.jetbrains.com/youtrack/img/screenshots/70/Issue_list@2x.png", "softwareVersion": "2021.2", "url": "https://www.jetbrains.com/youtrack/"}
+                </script>
+                <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "WebPage",
+                "@id": "https://www.jetbrains.com/youtrack/buy/#webpage",
+                "url": "https://www.jetbrains.com/youtrack/buy/",
+                "name": "Buy YouTrack: Pricing and Licensing, More Users",
+                "description": "Buy YouTrack: Get a New license, Extend subscription or Upgrade your user pack for YouTrack Cloud & Server.",
+                "image": "https://resources.jetbrains.com/storage/products/youtrack/img/meta/youtrack_1280x800.png"
+            }</script>
+    <!-- Schema.org end -->
+
+    <!-- Twitter data -->
+                                <meta name="twitter:description" content="Buy YouTrack: Get a New license, Extend subscription or Upgrade your user pack for YouTrack Cloud & Server.">
+        
+                    <meta name="twitter:title" content="Buy YouTrack: Pricing and Licensing, More Users">
+        
+        
+                                <meta name="twitter:card" content="summary_large_image">
+                                            <meta name="twitter:site" content="@youtrack">
+                                            <meta name="twitter:creator" content="@youtrack">
+                                            <meta name="twitter:image:src" content="https://resources.jetbrains.com/storage/products/youtrack/img/meta/preview.png">
+                                            <meta name="twitter:label1" content="Platforms:">
+                                            <meta name="twitter:data1" content="Windows, macOS, Linux">
+                            <!-- Twitter End -->
+<!-- Social Media tag Ends -->
+            </head>
+
+<body class="nojs  body-adaptive page-color-fuchsia-pink wt-primary-map">
+
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P98" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script>
+/*! modernizr 3.2.0 (Custom Build) | MIT *
+ * http://modernizr.com/download/?-flexbox-flexboxtweener !*/
+!function(e,n,t){function r(e,n){return typeof e===n}function o(){var e,n,t,o,i,s,l;for(var f in v)if(v.hasOwnProperty(f)){if(e=[],n=v[f],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(o=r(n.fn,"function")?n.fn():n.fn,i=0;i<e.length;i++)s=e[i],l=s.split("."),1===l.length?Modernizr[l[0]]=o:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=o),C.push((o?"":"no-")+l.join("-"))}}function i(e,n){return!!~(""+e).indexOf(n)}function s(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function l(e,n){return function(){return e.apply(n,arguments)}}function f(e,n,t){var o;for(var i in e)if(e[i]in n)return t===!1?e[i]:(o=n[e[i]],r(o,"function")?l(o,t||n):o);return!1}function a(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function u(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):b?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function d(){var e=n.body;return e||(e=u(b?"svg":"body"),e.fake=!0),e}function p(e,t,r,o){var i,s,l,f,a="modernizr",p=u("div"),c=d();if(parseInt(r,10))for(;r--;)l=u("div"),l.id=o?o[r]:a+(r+1),p.appendChild(l);return i=u("style"),i.type="text/css",i.id="s"+a,(c.fake?c:p).appendChild(i),c.appendChild(p),i.styleSheet?i.styleSheet.cssText=e:i.appendChild(n.createTextNode(e)),p.id=a,c.fake&&(c.style.background="",c.style.overflow="hidden",f=_.style.overflow,_.style.overflow="hidden",_.appendChild(c)),s=t(p,e),c.fake?(c.parentNode.removeChild(c),_.style.overflow=f,_.offsetHeight):p.parentNode.removeChild(p),!!s}function c(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(a(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var i=[];o--;)i.push("("+a(n[o])+":"+r+")");return i=i.join(" or "),p("@supports ("+i+") { #modernizr { position: absolute; } }",function(e){return"absolute"==getComputedStyle(e,null).position})}return t}function m(e,n,o,l){function f(){d&&(delete E.style,delete E.modElem)}if(l=r(l,"undefined")?!1:l,!r(o,"undefined")){var a=c(e,o);if(!r(a,"undefined"))return a}for(var d,p,m,h,y,v=["modernizr","tspan"];!E.style;)d=!0,E.modElem=u(v.shift()),E.style=E.modElem.style;for(m=e.length,p=0;m>p;p++)if(h=e[p],y=E.style[h],i(h,"-")&&(h=s(h)),E.style[h]!==t){if(l||r(o,"undefined"))return f(),"pfx"==n?h:!0;try{E.style[h]=o}catch(g){}if(E.style[h]!=y)return f(),"pfx"==n?h:!0}return f(),!1}function h(e,n,t,o,i){var s=e.charAt(0).toUpperCase()+e.slice(1),l=(e+" "+x.join(s+" ")+s).split(" ");return r(n,"string")||r(n,"undefined")?m(l,n,o,i):(l=(e+" "+S.join(s+" ")+s).split(" "),f(l,n,t))}function y(e,n,r){return h(e,t,t,n,r)}var v=[],g={_version:"3.2.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){v.push({name:e,fn:n,options:t})},addAsyncTest:function(e){v.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=g,Modernizr=new Modernizr;var C=[],w="Moz O ms Webkit",x=g._config.usePrefixes?w.split(" "):[];g._cssomPrefixes=x;var S=g._config.usePrefixes?w.toLowerCase().split(" "):[];g._domPrefixes=S;var _=n.documentElement,b="svg"===_.nodeName.toLowerCase(),z={elem:u("modernizr")};Modernizr._q.push(function(){delete z.elem});var E={style:z.elem.style};Modernizr._q.unshift(function(){delete E.style}),g.testAllProps=h,g.testAllProps=y,Modernizr.addTest("flexbox",y("flexBasis","1px",!0)),Modernizr.addTest("flexboxtweener",y("flexAlign","end",!0)),o(),delete g.addTest,delete g.addAsyncTest;for(var P=0;P<Modernizr._q.length;P++)Modernizr._q[P]();e.Modernizr=Modernizr}(window,document);
+
+if (!Modernizr.flexbox && !Modernizr.flexboxtweener) {
+
+  var $body = $('body');
+
+  var nodesClasses = {
+    wrapper: 'not-supported-browser',
+    container: 'not-supported-browser__container',
+
+    title: 'not-supported-browser__title',
+    content: 'not-supported-browser__content',
+    logo: 'not-supported-browser__logo'
+  };
+
+  var nodes = {
+    wrapper: $('<div class="' + nodesClasses.wrapper + '"></div>'),
+    title: $('<div class="' + nodesClasses.title + '">Sorry, your browser is not fully supported</div>'),
+    content: $('<div class="' + nodesClasses.content + '">There may be some issues with pages layout in your current browser.<br/>Please use an alternate browser until we resolve the issues.<br/>Thank you.</div>'),
+    container: $('<div class="' + nodesClasses.container + '"></div>'),
+    logo: $('<div class="' + nodesClasses.logo + '"><svg class="sprite-img _jetbrains" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#jetbrains"></use></svg></div>')
+  };
+
+  $body.addClass('overflow-hidden');
+
+
+  nodes.content
+    .prepend(nodes.title)
+    .prepend(nodes.logo);
+
+  nodes.container
+    .append(nodes.content);
+
+  nodes.wrapper
+    .append(nodes.container)
+    .appendTo($body);
+}
+</script>
+<div class="page">
+    
+    <div class="page__header ">
+                    <div class="page__header-language-suggestion" id="language-suggest-bar"></div>
+<div class="page__header-country-suggestion" id="country-suggest-bar"></div>
+
+
+<div class="site-header-container" id="js-site-header-container">
+    <div class="site-header-stub site-header-stub--adaptive">
+        <div class="wt-container site-header-stub__inner">
+            <div class="site-header-stub__menu-main-skeleton-text" style="min-width: 69px"></div>
+            <div class="site-header-stub__menu-main-skeleton-text" style="min-width: 81px"></div>
+            <div class="site-header-stub__menu-main-skeleton-text" style="min-width: 46px"></div>
+            <div class="site-header-stub__menu-main-skeleton-button"></div>
+            <div class="site-header-stub__menu-main-skeleton-button"></div>
+        </div>
+    </div>
+</div>
+
+
+
+  <div class="menu-second " id="js-menu-second">
+    <div class="wt-container">
+        <div id="js-menu-second-mobile-wrapper" class="menu-second-mobile-wrapper wt-display-none wt-display-md-block">
+            <div id="js-menu-second-mobile">
+                <div class="menu-second-mobile wt-row wt-row_column-gap-size_m wt-row_align-items_center wt-row_justify-content_space-between ">
+                    <div class="wt-col-inline menu-second-skeleton-text-2" style="width: 120px"></div>
+                    <div class="wt-col-inline menu-second-skeleton-button" style="width: 80px"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="js-menu-second-desktop"
+             class="menu-second-desktop wt-row wt-row_column-gap-size_s wt-row_align-items_center wt-row_justify-content_space-between wt-row_flex-wrap_nowrap wt-row-sm_flex-wrap_wrap">
+            <div class="wt-col-inline menu-second-title-box-wrapper">
+                <a class="menu-second-title-box"
+                   href="/youtrack/">
+                    
+                    <span class="menu-second-title-box__title wt-h3  ">YouTrack</span>
+                </a>
+            </div>
+
+            <div class="wt-col-auto-fill">
+                <div class="wt-row wt-row_justify-content_flex-end wt-row_align-items_center wt-row_column-gap-size_0">
+                                            
+                                                                    
+                                                                                <div class="wt-col-inline menu-item menu-second-skeleton-text-2 menu-second__link"></div>
+                                                                    
+                                                                                <div class="wt-col-inline menu-item menu-second-skeleton-text-2 menu-second__link"></div>
+                                                                    
+                                                                                <div class="wt-col-inline menu-item menu-second-skeleton-text-2 menu-second__link"></div>
+                                                                    
+                                                                                <div class="wt-col-inline menu-item menu-second-skeleton-text-2 menu-second__link"></div>
+                                                                    
+                                                                    
+                                                                                <div class="wt-col-inline menu-item menu-second-skeleton-text-2 menu-second__link"></div>
+                                                                                                                                                                            
+                                                                                <div class="wt-col-inline menu-item menu-second-skeleton-text-2 menu-second__link"></div>
+                                                                    
+                                                                                <div class="wt-col-inline menu-item menu-second-skeleton-text-2 menu-second__link"></div>
+                                                                    
+                                            
+                    <div class="wt-col-inline menu-second__buttons">
+                        
+                                                    <a href="/youtrack/download/"
+                               class="menu-item menu-second__button menu-second__download-button wt-button wt-button_size_s
+                                 wt-button_mode_primary">
+                                Try free
+                            </a>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+   /* site header stub height is needed to avoid Cumulative Layout Shift (CLS), which is a Web Vital */
+  .site-header-stub {
+    height: var(--site-header-height, 72px);
+    background-color: var(--site-header-bg-color, var(--rs-color-black));
+  }
+
+  @media (max-width: 1000px) {
+    .site-header-stub--adaptive {
+      height: var(--mobile-site-header-height, 48px);
+    }
+  }
+</style>
+
+            </div>
+
+    <div class="page__content " data-js-crawler="content-root">
+        <div id="announce-placeholder" data-product-name="default"></div>
+        <div id="youtrack-buy"></div>
+    </div>
+
+            <div class="page__footer" id="footer-container">
+    <footer class="footer" id="footer"></footer>
+</div>
+    </div>
+
+<script>
+(function () {
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
+  function updateQueryStringParameter(uri, key, value) {
+    var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+    var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+    if (uri.match(re)) {
+      return uri.replace(re, '$1' + key + "=" + value + '$2');
+    }
+    else {
+      return uri + separator + key + "=" + value;
+    }
+  }
+
+  var downloadLink = document.getElementById("download-link");
+  if (downloadLink != null) {
+    var platform = getParameterByName('platform');
+    platform = platform != null ? platform : "windows";
+    var href = downloadLink.getAttribute("href");
+    var code = getParameterByName("code");
+
+    if(code != null) {
+      href = updateQueryStringParameter(href, "code", code)
+    }
+    href = updateQueryStringParameter(href, "platform", platform);
+    downloadLink.setAttribute("href", href);
+  }
+})();
+</script><script>
+(function() {
+  var STORAGE_KEY_NAME = 'firefoxDisappearedSVGWorkaround';
+  var STORAGE_KEY_VALUE = '1';
+
+  var isFirefox = /firefox/i.test(navigator.userAgent);
+  if (!isFirefox || isFirefox && sessionStorage.getItem(STORAGE_KEY_NAME) === STORAGE_KEY_VALUE) {
+    return;
+  }
+
+  var arrayFrom = function (arrayLike) {
+    return Array.prototype.slice.call(arrayLike, 0);
+  };
+
+  function workaround() {
+    var uses = document.querySelectorAll('.page svg use');
+    var badNodesCount = 0;
+
+    arrayFrom(uses).forEach(function (node) {
+      var rect = node.getBoundingClientRect();
+      if (rect.width === 0 && rect.height === 0)
+        badNodesCount++;
+    });
+
+    if (badNodesCount === uses.length) {
+      sessionStorage.setItem(STORAGE_KEY_NAME, STORAGE_KEY_VALUE);
+      if (typeof dataLayer !== 'undefined')
+        dataLayer.push({'firefoxDisappearedSVGWorkaround': STORAGE_KEY_VALUE});
+
+      window.location.replace(window.location.href);
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', workaround);
+
+})();
+</script>          <link href="/_assets/banner-rotator.entry.c7eb1cdba00e9aa8548e.css" rel="stylesheet" type="text/css">
+      <script src="/_assets/banner-rotator.entry.185f24559506435ff9ab.js" type="text/javascript"></script>
+  </body>
+</html>

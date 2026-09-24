@@ -1,0 +1,1101 @@
+# Developer Portal for YouTrack and Hub Documentation
+
+## Topics
+
+- [Developer Portal](youtrack-dev-portal.html.md): 
+        Access YouTrack and Hub developer resources for REST API integrations and the
+        YouTrack JavaScript ecosystem.
+- [YouTrack JavaScript Ecosystem](apps-documentation.html.md): Explore the YouTrack JavaScript ecosystem and find guides for apps, MCP tools, workflows, the JavaScript API, and import scripts.
+- [YouTrack JavaScript Runtime Environment](app-architecture.html.md): Understand how YouTrack packages and runs JavaScript for apps, workflows, MCP tools, and import scripts.
+- [Apps](apps-get-started.html.md): Build YouTrack apps with widgets, backend modules, workflow rules, settings, storage, and custom MCP tools.
+- [App Quick Start Guide](apps-quick-start-guide.html.md): Create your first YouTrack app with the app generator, define its manifest and modules, test it in YouTrack, and prepare it for Marketplace publishing.
+- [App Package Overview](app-overview.html.md): Review the structure of a YouTrack app package, including its manifest, modules, data storage, and configuration.
+- [App Manifest](app-manifest.html.md): Use the app manifest reference to define metadata, module configuration, compatibility, widget settings, and other fields in a YouTrack app package.
+- [Widgets](apps-widgets.html.md): Learn how app widgets work in YouTrack, how they are declared in the manifest, and how to place them at supported extension points in the UI.
+- [App Settings](app-settings.html.md): Learn how to define custom app settings with a JSON schema, configure values at global or project scope, and access them from app scripts.
+- [Extension Properties](apps-extension-properties.html.md): Learn how to define extension properties for YouTrack apps so you can store custom values on core entities and use them in app scripts and modules.
+- [App Permissions](app-permissions.html.md): Use the app permissions reference to control widget visibility by YouTrack permission key and choose the right access requirements for each module.
+- [Authentication for Apps](apps-authentication.html.md): Learn how authentication works for YouTrack apps, when scripts run without extra credentials, and which permissions are required to upload and use apps.
+- [App Visibility](app-visibility.html.md): Understand how app visibility settings restrict access for users and groups at the global and project levels without requiring extra developer setup.
+- [Global and Project Scopes](apps-global-project-level.html.md): Understand how global and project scopes affect app widgets, HTTP handlers, permissions, and where modules can be enabled and accessed in YouTrack.
+- [Enhanced DX for TypeScript Apps](apps-enhanced-dx-typescript.html.md): Use the experimental TypeScript-based Enhanced DX toolchain for YouTrack apps with file-based routing,
+        generated API types, and automatic upload during development.
+- [Apps FAQ](apps-faq.html.md): Find answers to common questions about YouTrack apps, including workflows, widgets, integrations, scopes, MCP tools, and Marketplace distribution.
+- [Install an App from Marketplace](install-apps-from-marketplace.html.md): Install YouTrack apps from JetBrains Marketplace, keep Marketplace update links, and learn when to upload a ZIP file instead.
+- [Launch Checklist](app-launch-checklist.html.md): Review the launch checklist for a YouTrack app to confirm the manifest, settings, source files, and packaged ZIP are ready for upload and use.
+- [App Use Cases](apps-use-cases.html.md): Explore step-by-step YouTrack app tutorials that show how to solve practical product use cases with widgets, handlers, and app configuration.
+- [App Use Case: Simple Timer](app-uc-simple-timer.html.md): Build a simple timer app for YouTrack that adds an issue widget and HTTP handlers to track, save, and manage time spent on tasks.
+- [App Reference](apps-reference.html.md): Browse the app reference to find the APIs and module docs you need for building widgets, HTTP handlers, and other YouTrack app components.
+- [Extension Points for Widgets](apps-reference-extension-points.html.md): Find the available widget extension points in the YouTrack UI, their scopes, and the places where your app can embed custom views and actions.
+- [Conditional Widgets](apps-widget-guards.html.md): Use widget guard functions to show YouTrack app widgets only when specific entity conditions are met, and map guards to the right extension point data.
+- [HTTP Handlers](apps-reference-http-handlers.html.md): Learn how to build custom HTTP handlers for YouTrack apps, expose scoped endpoints, process requests, and return data through the extended REST API.
+- [Host API](apps-host-api.html.md): Use the Host API reference to register app widgets, send requests to YouTrack, call custom HTTP handlers, manage app URLs, store app data locally in the browser, and exchange data with the host application.
+- [MCP Tools](ai-tools.html.md): Learn how YouTrack MCP tools let AI clients read and update YouTrack data, and find the docs for predefined tools, custom tools, and security.
+- [Predefined MCP Tools](predefined-ai-tools.html.md): Review the predefined MCP tools that YouTrack exposes to AI clients, including their behavior, security model, and supported issue operations.
+- [Custom MCP Tools](custom-ai-tools.html.md): Create custom MCP tools for YouTrack by adding aiTool scripts to an app package, exposing them through the MCP server, and configuring access safely.
+- [Workflows](youtrack-workflow-reference.html.md): Create and manage pure workflows while using the same rule model and JavaScript API available to workflow rules in apps.
+- [JavaScript Workflow Quick Start Guide](Quick-Start-Guide-Workflows-JS.html.md): Follow the JavaScript workflow quick start to create your first YouTrack workflow, understand rule structure, and automate issue updates with code.
+- [Create a Workflow](Create-Workflow.html.md): Create a new YouTrack workflow in the JavaScript editor, add rule modules, and start building automation logic for your projects.
+- [Edit a Workflow](Edit-Workflow.html.md): Edit an existing YouTrack workflow, update its modules in the built-in editor, and apply changes safely to the projects where it is attached.
+- [Workflow Rule Types](Workflow-Rules.html.md): Compare the workflow rule types in YouTrack so you can choose when to use on-change, action, scheduled, state-machine, and custom script modules.
+- [Transactions](workflow-transactions.html.md): Understand workflow transactions in YouTrack so you know how rule execution, updates, and rollback behavior are handled during automation.
+- [Rule-specific Properties](rule-specific-properties.html.md): Check the rule-specific properties reference to configure guards, actions, searches, schedules, and other settings for each YouTrack workflow rule type.
+- [On-change Rules](on-change-rules.html.md): Use on-change rules in YouTrack workflows to react automatically when issues or articles are created, updated, removed, or restored.
+- [On-schedule Rules](on-schedule-rules.html.md): Use scheduled rules in YouTrack workflows to run recurring searches, process matching issues automatically, and trigger time-based automation.
+- [State-machine Rules](state-machine-per-issue-type.html.md): Build state-machine rules in YouTrack workflows to control allowed transitions, required actions, and process-specific behavior for issue states.
+- [Action Rules](action-rules.html.md): Use action rules in YouTrack workflows to add commands and menu actions that let users trigger custom automation when they need it.
+- [SLA Rules](sla-rules.html.md): Learn about SLA rules in YouTrack, with practical examples, related concepts, and setup guidance.
+- [Custom Scripts](custom-scripts.html.md): Organize shared logic in custom scripts for YouTrack workflows so multiple rules can reuse helper functions, constants, and common code.
+- [Use Cases for Workflows](Workflow-Use-Cases.html.md): Explore practical workflow use cases for YouTrack, from assignments and reporting to visibility rules, time tracking, and helpdesk automation.
+- [Restrict Issue Visibility with Workflows](restrict-issue-visibility-workflow.html.md): Restrict issue visibility in YouTrack with a workflow that applies sharing rules automatically when permission settings alone are too coarse.
+- [Prevent Unwanted Updates](prevent-unwanted-updates-workflows.html.md): Prevent unwanted issue updates in YouTrack with workflows that enforce business rules for fields even when standard visibility settings are not enough.
+- [Prevent Issue Deletion with Workflows](prevent-issue-deletion-workflow.html.md): Prevent users from deleting issues in YouTrack with an on-change workflow rule that reacts to issue deletion.
+- [Streamline Issue Reporting](streamline-issue-reporting-workflows.html.md): Streamline issue reporting in YouTrack with workflows that guide reporters, apply defaults, and enforce cleaner issue creation processes.
+- [Automate Work Handoffs](automate-work-handoffs.html.md): Automate work handoffs in YouTrack with workflows that enforce state transitions and assign issues to the next responsible person.
+- [Generate Issues Automatically](generate-issues-automatically-workflows.html.md): Learn how to generate issues automatically in YouTrack with workflows when you need recurring tasks or standard issue sets created on schedule.
+- [Update Fields on Issue Update](update-fields-on-issue-update.html.md): Automate issue field updates in YouTrack with workflows that react to changes on the issue itself and keep related values in sync.
+- [Propagate Values Between Issues](propagate-values-between-issues-workflow.html.md): Propagate values between related issues in YouTrack with workflows that copy field changes across parent, subtask, or other linked issue relationships.
+- [Track Spent Time](track-spent-time-workflow.html.md): Track spent time in YouTrack with workflows that create work items automatically and help teams log effort more consistently during issue progress.
+- [Generate Time Reports](generate-time-reports-workflow.html.md): Use workflows to generate time reports in YouTrack so teams can collect, summarize, and review tracked effort across projects and work types.
+- [Enhance Helpdesk Support](enhance-helpdesk-support-workflows.html.md): See how a YouTrack workflow can balance Helpdesk workload by assigning new tickets automatically to the support engineer with the fewest open items.
+- [Send Internal Newsletters](send-internal-newsletters-workflow.html.md): See how YouTrack workflows can send internal newsletters to explain process changes and notify internal teams about updates to their projects.
+- [Deactivate Voting for Issues](deactivate-voting.html.md): Learn about deactivate voting for issues in YouTrack, with practical examples, related concepts, and setup guidance.
+- [Web-based Workflow Editor](Web-based-Workflow-Editor.html.md): Use the web-based workflow editor in YouTrack to create and modify JavaScript workflow modules directly in the administration interface.
+- [Using an External Code Editor](js-workflow-external-editor.html.md): Set up an external code editor for YouTrack workflows so you can write, package, and upload workflow code with your preferred development tools.
+- [Default Workflows](Default-Workflows.html.md): Browse the bundled default workflows in YouTrack to see which rules are auto-attached, what each workflow automates, and when to customize them.
+- [Assignee Visibility](Workflow-Assignee-Visibility-Group.html.md): Use the Assignee Visibility workflow to warn users when they assign an issue to someone outside the group that can view it.
+- [Clear Fix Versions](Workflow-Clear-Fix-Version.html.md): Use the Clear Fix Versions workflow to remove fix version values automatically when an issue enters states where a planned fix no longer applies.
+- [Clone Article](clone-article-workflow.html.md): Use the Clone Article workflow to create a draft copy of a knowledge base article with its tags, attachments, and visibility settings intact.
+- [Clone Issue](Clone-Issue.html.md): Use the Clone Issue workflow to duplicate existing issues in YouTrack with built-in actions that speed up recurring issue creation.
+- [Comments](Workflow-Prevent-Commenting-Already-Resolved-and-Verified-Issues.html.md): Use the Comments workflow to block new comments on issues that are already resolved and verified so closed discussions stay closed.
+- [Default Description](Workflow-Default-Description.html.md): Use the Default Description workflow to insert a predefined issue template automatically when new issues are reported in YouTrack.
+- [Dependencies](Workflow-Dependencies.html.md): Use the Dependencies workflow to stop issues from being marked fixed while unresolved blocking dependencies still exist.
+- [Due Date](Workflow-Due-Date.html.md): Use the Due Date workflow to require deadlines for relevant issues and support processes where timely resolution matters.
+- [Duplicates](Workflow-Duplicates.html.md): Use the Duplicates workflow to keep duplicate issue handling consistent when users link repeated reports to an original issue.
+- [Forgotten Attachment](Workflow-Forgotten-Attachment.html.md): Use the Forgotten Attachment workflow to remind users to add files when issue text or comments mention an attachment but none is included.
+- [Helpdesk](workflow-helpdesk.html.md): Explore the Helpdesk workflow bundle for YouTrack, including rules for ticket merging, pending reminders, issue conversion, reassignment, and reply handling.
+- [Issue Property Combinations](Workflow-Issue-Properties-Combinations.html.md): Use the Issue Property Combinations workflow to block unwanted combinations of field values that should never appear together in an issue.
+- [In Progress Work Timer](Workflow-Work-Timer.html.md): Use the In Progress Work Timer workflow to measure time spent in the In Progress state and log work items automatically.
+- [Kanban](Workflow-Kanban.html.md): Use the Kanban workflow to support pull-based task flow and staged handoffs across columns in a team process modeled on Kanban.
+- [Notify Reporter to Approve Fix](Workflow-Notify-Reporter-to-Approve-Fix.html.md): Use the Notify Reporter to Approve Fix workflow to request confirmation from reporters before an issue moves fully through the fix process.
+- [Notify When Dependency Resolved](Workflow-Notify-Dependant.html.md): Use the Notify When Dependency Resolved workflow to alert an assignee when another issue they depend on has been resolved.
+- [One Vote Comment](Workflow-One-Vote-Comment.html.md): Use the One Vote Comment workflow to turn comment signals like +1 into real votes so issue popularity is tracked more accurately.
+- [Pomodoro Timer](Workflow-Pomodoro-Timer.html.md): Use the Pomodoro Timer workflow to track focused work sessions in YouTrack with timer behavior aligned to the Pomodoro technique.
+- [Process Spam](workflow-process-spam.html.md): Use the Process Spam workflow in YouTrack Helpdesk to close spam tickets when tagged and remove inactive spam automatically after 30 days.
+- [Profanity Blocker](Workflow-Spam-Blacklist.html.md): Use the Profanity Blocker workflow to stop issue descriptions and comments that contain words from a configurable blacklist.
+- [Referred Issues](Workflow-Referred-Issues.html.md): Use the Referred Issues workflow to create refers-to links automatically when an issue ID is mentioned in a description or comment.
+- [Replace Links](Workflow-Replace-Links.html.md): Use the Replace Links workflow to prevent conflicting link types between the same issues by replacing existing links automatically.
+- [Scrum](Workflow-Scrum.html.md): Use the Scrum workflow bundle to support sprint-oriented processes in YouTrack with rules tailored to Scrum team practices.
+- [Set Fix Versions](Workflow-Set-Fix-Version.html.md): Use the Set Fix Versions workflow to require a fix version whenever developers resolve an issue in YouTrack.
+- [SLA Priority](Workflow-Auto-Raise-Priority.html.md): Use the SLA Priority workflow to raise issue priority automatically when an item remains unresolved longer than the configured time limit.
+- [Slack Notifications](slack-notifications-workflow.html.md): Use the Slack Notifications workflow to post issue creation, resolution, and reopening updates from YouTrack directly to Slack.
+- [Stopwatch-style Work Timer](Workflow-Standalone-Work-Timer.html.md): Use the Stopwatch-style Work Timer workflow to log time on issues with a dedicated timer field instead of relying on state changes.
+- [Subsystem Assignee](Workflow-Subsystem-Assignee.html.md): Use the Subsystem Assignee workflow to assign issues automatically based on the owner of the subsystem selected in the issue.
+- [Subtask Inherit Assignee](Workflow-Subtask-Inherit-Assignee.html.md): Use the Subtask Inherit Assignee workflow to keep subtasks aligned with the assignee of their parent task automatically.
+- [Subtask Inherit Fix Versions](Workflow-Subtask-Inherit-Fix-Versions.html.md): Use the Subtask Inherit Fix Versions workflow to copy fix version changes from a parent task down to its subtasks.
+- [Subtask Inherit Subsystem](Workflow-Subtask-Inherit-Subsystem.html.md): Use the Subtask Inherit Subsystem workflow to update subtasks automatically when the subsystem on the parent task changes.
+- [Subtasks](Workflow-Subtasks.html.md): Use the Subtasks workflow to update a parent task automatically when the state of its linked subtasks changes.
+- [Task Assignee](Workflow-Task-Assignee.html.md): Use the Task Assignee workflow to set the assignee automatically when someone moves an unassigned issue into In Progress.
+- [Time Management](Workflow-Time-Management.html.md): Use the Time Management workflow to trigger notifications and state changes based on how long issues remain in specific workflow states.
+- [Untag on Reopen](Workflow-Untag-on-Reopen.html.md): Use the Untag on Reopen workflow to remove tags automatically when an issue is reopened from a resolved state.
+- [Update Fixed in Build](Workflow-Update-Fixed-in-Build.html.md): Use the Update Fixed in Build workflow to automate how the Fixed in build field is set and maintained during issue resolution.
+- [Vote Blocker](Workflow-Do-Not-Vote-for-Resolved-Issue.html.md): Use the Vote Blocker workflow to prevent users from adding votes to issues that have already been resolved.
+- [Watcher by Votes](Workflow-Watcher-by-Votes.html.md): Use the Watcher by Votes workflow to add watchers automatically when an issue reaches a configured vote threshold.
+- [Won't Fix Build](Workflow-Wont-Fix-Build.html.md): Use the Won't Fix Build workflow to set Fixed in build to Never automatically when an issue is marked Won't fix.
+- [Custom Workflow Repository](Custom-Workflow-Repository.html.md): Browse the custom workflow repository to find reusable YouTrack workflows from JetBrains and the community that you can adapt to your process.
+- [Building Integrations with Slack](Slack-Integration-HTML.html.md): Build a Slack integration with YouTrack workflows by posting issue notifications through incoming webhooks for selected project events.
+- [Localized Workflow Messages](Workflow-Localization.html.md): Learn how localized workflow messages work in YouTrack so you can customize notifications and understand how default workflow text is translated.
+- [Troubleshooting Workflows](troubleshooting-workflows.html.md): Diagnose common YouTrack workflow problems, including rule conflicts, missing requirements, reload issues, and errors when attaching workflows.
+- [Remote Debugger](remote-debugger.html.md): Learn about remote debugger in YouTrack, with practical examples, related concepts, and setup guidance.
+- [YouTrack JavaScript API](Workflows-in-JavaScript.html.md): Use the shared YouTrack JavaScript API in app backend modules and pure workflow rules.
+- [Context](context.html.md): Use the workflow context reference to see which objects and entities are available to each YouTrack rule type during execution.
+- [Asynchronous Functions](async-functions.html.md): Learn how to declare the asyncFunctions object, schedule named follow-up work with the ctx.invokeAsync() method, pass short-lived state, and use async HTTP calls in YouTrack scripts.
+- [Requirements](requirements.html.md): Declare the fields, field values, and system-wide entities required by a workflow rule or app HTTP handler.
+- [Use the YouTrack JavaScript API](using-workflow-api.html.md): Use the YouTrack JavaScript API to access issues, users, fields, links, sets, and other entities from supported backend modules.
+- [Make Outbound HTTP Requests](JS-Workflow-REST-API.html.md): Use the backend JavaScript HTTP module to call external APIs from workflows, supported app modules, and import clients.
+- [Working with Dates and Times](workflow-working-with-dates-times.html.md): Work with dates, times, and periods in YouTrack workflows by comparing timestamps, parsing and formatting values, and calculating time-based automation.
+- [Working with Periods](working-with-periods.html.md): Work with period values in YouTrack workflows by creating period objects, updating period fields, comparing durations, and calculating time spent.
+- [YouTrack Workflow API](YouTrack-Api-Documentation.html.md): Use the JavaScript Workflow API to read and update YouTrack entities and define workflow rules.
+- [Change Log](Workflow-Change-Log.html.md): Review additions and changes to the YouTrack Workflow API by product version.
+- [date-time](v1-date-time.html.md): Create, parse, format, and compare dates and times in workflows, apps, and import scripts.
+- [entities](v1-entities.html.md): Access YouTrack entity types and declare workflow rules in workflows and apps.
+- [AbstractVcsItem](v1-AbstractVcsItem.html.md): Represents VCS-related items such as commits and pull requests for workflows and apps.
+- [Agile](v1-Agile.html.md): Represents an agile board and the set of sprints that belong to the board for workflows and apps.
+- [AppGlobalStorage](v1-AppGlobalStorage.html.md): Store app-level extension properties that are available across YouTrack projects.
+- [Article](v1-Article.html.md): Represents an article in YouTrack for workflows and apps.
+- [ArticleAttachment](v1-ArticleAttachment.html.md): Represents a file that is attached to an article for workflows and apps.
+- [ArticleComment](v1-ArticleComment.html.md): Represents a comment that is added to an article or an article draft for workflows and apps.
+- [BaseArticle](v1-BaseArticle.html.md): The base class for article for workflows and apps.
+- [BaseArticleAttachment](v1-BaseArticleAttachment.html.md): Work with the shared properties and methods of article attachments in workflows and apps.
+- [BaseArticleComment](v1-BaseArticleComment.html.md): The base class for article comment for workflows and apps.
+- [BaseComment](v1-BaseComment.html.md): Work with the shared properties and methods of issue and article comments in workflows and apps.
+- [BaseEntity](v1-BaseEntity.html.md): The common ancestor for all entity types for workflows and apps.
+- [BaseWorkItem](v1-BaseWorkItem.html.md): The base class for issue work items for workflows and apps.
+- [Build](v1-Build.html.md): Represents a value that is stored in a custom field that stores a build type for workflows and apps.
+- [BundleElementCondition](v1-BundleElementCondition.html.md): Represents a value-based condition for a custom field in a specific project for workflows and apps.
+- [BundleProjectCustomField](v1-BundleProjectCustomField.html.md): Represents a custom field in a project that stores a predefined set of values for workflows and apps.
+- [Calendar](v1-Calendar.html.md): Represents a group of business hours settings in a helpdesk project for workflows and apps.
+- [Calendar24x7](v1-Calendar24x7.html.md): Represents a group of 24x7 business hours settings in a helpdesk project for workflows and apps.
+- [ChangesProcessor](v1-ChangesProcessor.html.md): An entity that retrieves VCS changes and creates their representation in YouTrack for workflows and apps.
+- [Channel](v1-Channel.html.md): Represents a channel used by customers to reach out to the helpdesk for support for workflows and apps.
+- [EnumField](v1-EnumField.html.md): Represents a value in a custom field that stores a predefined set of values for workflows and apps.
+- [FeedbackForm](v1-FeedbackForm.html.md): Represents an online form used in a helpdesk project for workflows and apps.
+- [Field](v1-Field.html.md): Represents a value that is stored in a custom field for workflows and apps.
+- [FieldBasedBundleValuesCondition](v1-FieldBasedBundleValuesCondition.html.md): Represents a value-based condition for a custom field in a specific project for workflows and apps.
+- [FieldBasedUserValuesCondition](v1-FieldBasedUserValuesCondition.html.md): Represents a value-based condition for a custom field that stores references to users for workflows and apps.
+- [FieldBasedValuesCondition](v1-FieldBasedValuesCondition.html.md): Represents the base entity for a value-based condition for a custom field in a project for workflows and apps.
+- [Fields](v1-Fields.html.md): Represents the custom fields that are used in an issue for workflows and apps.
+- [Gantt](v1-Gantt.html.md): Represents a Gantt chart for workflows and apps.
+- [GroupProjectCustomField](v1-GroupProjectCustomField.html.md): Represents a custom field in a project that stores a UserGroup type for workflows and apps.
+- [Issue](v1-Issue.html.md): Work with issues, fields, links, comments, attachments, drafts, workflow rules, and transaction changes.
+- [IssueAttachment](v1-IssueAttachment.html.md): Represents a file that is attached to an issue for workflows and apps.
+- [IssueComment](v1-IssueComment.html.md): Represents a comment that is added to an issue for workflows and apps.
+- [IssueLinkPrototype](v1-IssueLinkPrototype.html.md): Represents an issue link type for workflows and apps.
+- [IssueTag](v1-IssueTag.html.md): Deprecated for workflows and apps.
+- [IssueWorkItem](v1-IssueWorkItem.html.md): Represents a work item that has been added to an issue for workflows and apps.
+- [Iterator](v1-Iterator.html.md): An object that enables traversal through the elements in a collection for workflows and apps.
+- [JsonForArticleAddAttachment](v1-JsonForArticleAddAttachment.html.md): Configure an attachment to add to an article from a workflow or app.
+- [JsonForArticleAddComment](v1-JsonForArticleAddComment.html.md): Configure a comment to add to an article from a workflow or app.
+- [JsonForArticleConstructor](v1-JsonForArticleConstructor.html.md): Configure the data used to create an article from a workflow or app.
+- [JsonForIssueAddAttachment](v1-JsonForIssueAddAttachment.html.md): Configure an attachment to add to an issue from a workflow or app.
+- [JsonForIssueAddComment](v1-JsonForIssueAddComment.html.md): Configure a comment to add to an issue from a workflow or app.
+- [JsonForIssueAddWorkItem](v1-JsonForIssueAddWorkItem.html.md): Configure a work item to add to an issue from a workflow or app.
+- [JsonForIssueCommentAddAttachment](v1-JsonForIssueCommentAddAttachment.html.md): Configure an attachment to add to an issue comment from a workflow or app.
+- [JsonForIssueConstructor](v1-JsonForIssueConstructor.html.md): Configure the data used to create an issue from a workflow or app.
+- [JsonForUserNotify](v1-JsonForUserNotify.html.md): Configure an email notification to send to a user from a workflow or app.
+- [MailboxChannel](v1-MailboxChannel.html.md): Represents an email channel used in a helpdesk project for workflows and apps.
+- [OwnedField](v1-OwnedField.html.md): Represents a value in a custom field that has a user associated with it, a so-called owner for workflows and apps.
+- [PeriodProjectCustomField](v1-PeriodProjectCustomField.html.md): Represents a custom field in a project that stores a value as a period type for workflows and apps.
+- [PersistentFile](v1-PersistentFile.html.md): Represents the common ancestor for all persistent files that are available in YouTrack for workflows and apps.
+- [Project](v1-Project.html.md): Represents a YouTrack project for workflows and apps.
+- [ProjectCustomField](v1-ProjectCustomField.html.md): Represents a custom field that is available in a project for workflows and apps.
+- [ProjectTeam](v1-ProjectTeam.html.md): Represents a project team for workflows and apps.
+- [ProjectType](v1-ProjectType.html.md): Represents a classification that determines which basic features are available for use in a project for workflows and apps.
+- [ProjectVersion](v1-ProjectVersion.html.md): Represents a value in a custom field that stores a version type for workflows and apps.
+- [PullRequest](v1-PullRequest.html.md): Represents a pull or merge request that is attached to an issue for workflows and apps.
+- [PullRequestState](v1-PullRequestState.html.md): Represents a pull request state for workflows and apps.
+- [Requirement](v1-Requirement.html.md): A single element in a set of Requirements for workflows and apps.
+- [Requirements](v1-Requirements.html.md): Learn how workflow requirements identify the fields, values, users, and other entities that a rule needs to run.
+- [SavedQuery](v1-SavedQuery.html.md): Represents a saved search for workflows and apps.
+- [Set](v1-Set.html.md): The Set object stores unique values of any type, whether primitive values or object references for workflows and apps.
+- [SimpleCalendar](v1-SimpleCalendar.html.md): Represents a work days calendar in YouTrack for workflows and apps.
+- [SimpleProjectCustomField](v1-SimpleProjectCustomField.html.md): Base class for custom fields that store simple values like strings and numbers for workflows and apps.
+- [Sprint](v1-Sprint.html.md): Represents a sprint that is associated with an agile board for workflows and apps.
+- [State](v1-State.html.md): Represents a value in a custom field that stores a state type for workflows and apps.
+- [Tag](v1-Tag.html.md): Represents a tag for workflows and apps.
+- [TextProjectCustomField](v1-TextProjectCustomField.html.md): Represents a custom field that stores a string of characters as text for workflows and apps.
+- [User](v1-User.html.md): Represents a user account in YouTrack for workflows and apps.
+- [UserAttributes](v1-UserAttributes.html.md): Represents the collection of custom attributes that have been added to user profiles for workflows and apps.
+- [UserCondition](v1-UserCondition.html.md): Represents a value-based condition for a custom field in a specific project, where the field stores references to a user for workflows and apps.
+- [UserGroup](v1-UserGroup.html.md): Represents a group of users for workflows and apps.
+- [UserProjectCustomField](v1-UserProjectCustomField.html.md): Represents a custom field in a project that stores values as a user type for workflows and apps.
+- [UserType](v1-UserType.html.md): Identify user account classifications that control helpdesk features and licensing.
+- [VcsChange](v1-VcsChange.html.md): Represents a commit that is attached to an issue for workflows and apps.
+- [VcsServer](v1-VcsServer.html.md): Represents a VCS server for workflows and apps.
+- [WatchFolder](v1-WatchFolder.html.md): Represents a common ancestor of classes that represent tags and saved searches for workflows and apps.
+- [WorkItemAttributeValue](v1-WorkItemAttributeValue.html.md): Value of a work item attribute for workflows and apps.
+- [WorkItemAttributes](v1-WorkItemAttributes.html.md): Represents the collection of custom attributes that have been declared for work items on a project level for workflows and apps.
+- [WorkItemProjectAttribute](v1-WorkItemProjectAttribute.html.md): Work item attribute configured for the project for workflows and apps.
+- [WorkItemType](v1-WorkItemType.html.md): Represents a work type that can be assigned to a work item for workflows and apps.
+- [http](v1-http.html.md): Configure HTTP connections and exchange data with external services from workflows and apps.
+- [Connection](v1-Connection.html.md): Configure HTTP connections and send synchronous or asynchronous requests from workflows, apps, and import scripts.
+- [REQUEST_TYPES](v1-REQUEST_TYPES.html.md): Use constants for supported HTTP request methods in workflows, apps, and import scripts.
+- [Response](v1-Response.html.md): A class that creates a definition for an HTTP response for workflows and apps.
+- [license](v1-license.html.md): Read YouTrack license information from workflows and apps.
+- [LicenseInfo](v1-LicenseInfo.html.md): Information about the current YouTrack license for workflows and apps.
+- [notifications](v1-notifications.html.md): Send email notifications from workflows and apps.
+- [search](v1-search.html.md): Search for issues by YouTrack query, context, extension properties, and user permissions.
+- [strings](v1-strings.html.md): Format strings and localized messages in workflows and apps.
+- [workflow](v1-workflow.html.md): Define on-change, action, scheduled, state-machine, and SLA workflow rules.
+- [Import Scripts](youtrack-import-scripts.html.md): Learn how YouTrack import scripts help you migrate data from external trackers, customize predefined imports, and build custom import logic in JavaScript.
+- [Get Started with Import Scripts](get-started-custom-import-scripts.html.md): Get started with custom import scripts for YouTrack by learning the concepts, supported entities, setup flow, and example script structure.
+- [How Import Scripts Work](how-import-scripts-work.html.md): Understand how YouTrack import scripts fetch source data, transform it into JSON, and create projects, users, fields, and issues during import.
+- [Imported Entities](imported-entities.html.md): See which entities YouTrack import scripts can import, which ones are unsupported, and when you need the YouTrack or Hub REST API instead.
+- [Working with Import Scripts](working-with-import-scripts.html.md): Learn how to create, edit, configure, and run custom import scripts in YouTrack by using the built-in import setup and script editor.
+- [Demo Import Script](demo-import-script.html.md): Explore the demo import script package in YouTrack to understand how a custom import client is structured and how source data is transformed.
+- [Connect to an External Tool](connect-to-external-tool.html.md): Connect a YouTrack import script to an external tool by using configuration parameters, authentication values, and the supported connection pattern.
+- [YouTrack Import API](YouTrack-Import-Api-Documentation.html.md): Build custom import scripts that map data from external sources to YouTrack entities.
+- [Article](Import-Article.html.md): Represents an article entity for custom import scripts.
+- [Attachment](Import-Attachment.html.md): Represents an attachment entity for custom import scripts.
+- [AttachmentContentWithMetadata](Import-AttachmentContentWithMetadata.html.md): Represents the content of an attachment with metadata for custom import scripts.
+- [AttachmentMetaData](Import-AttachmentMetaData.html.md): Represents the metadata of an attachment for custom import scripts.
+- [Build](Import-Build.html.md): Represents a value of a custom field of build type for custom import scripts.
+- [Comment](Import-Comment.html.md): Represents a comment entity for custom import scripts.
+- [DateFieldValue](Import-DateFieldValue.html.md): Represents a value of a custom field of date type for custom import scripts.
+- [DateTimeFieldValue](Import-DateTimeFieldValue.html.md): Represents a value of a custom field of date and time type for custom import scripts.
+- [DemoClient](Import-DemoClient.html.md): Use DemoClient as a model for custom import clients that connect to an external source and return projects, issues, users, articles, and updates to YouTrack.
+- [DocumentFieldValue](Import-DocumentFieldValue.html.md): Represents a value for a custom field in an issue or an article for custom import scripts.
+- [DocumentFieldValues](Import-DocumentFieldValues.html.md): Represents field values for custom import scripts.
+- [DocumentFieldValuesStringPresentation](Import-DocumentFieldValuesStringPresentation.html.md): Represents a string presentation for a custom field value in an issue or an article for custom import scripts.
+- [DocumentFields](Import-DocumentFields.html.md): Represents predefined fields of a document that could be either issue or article for custom import scripts.
+- [DocumentInfo](Import-DocumentInfo.html.md): The base class containing information about an issue or an article for custom import scripts.
+- [EnumElement](Import-EnumElement.html.md): Represents a value of a custom field of enum type for custom import scripts.
+- [EnumerableFieldPresentation](Import-EnumerableFieldPresentation.html.md): Represents a presentation of an enum custom field for custom import scripts.
+- [FieldChange](Import-FieldChange.html.md): Represents a field change entity for custom import scripts.
+- [FieldValue](Import-FieldValue.html.md): The ancestor for custom field value entities for custom import scripts.
+- [FloatFieldValue](Import-FloatFieldValue.html.md): Represents a value of a custom field of float type for custom import scripts.
+- [GroupProjectField](Import-GroupProjectField.html.md): Represents a group project custom field entity for custom import scripts.
+- [HistoryItem](Import-HistoryItem.html.md): Represents a change in the document history for custom import scripts.
+- [IntegerFieldValue](Import-IntegerFieldValue.html.md): Represents a value of a custom field of integer type for custom import scripts.
+- [Issue](Import-Issue.html.md): Represents an issue entity for custom import scripts.
+- [LinkType](Import-LinkType.html.md): Represents an issue link type entity for custom import scripts.
+- [LinkValue](Import-LinkValue.html.md): Represents a link from one issue to another for custom import scripts.
+- [OwnedValue](Import-OwnedValue.html.md): Represents a value of a custom field of ownedField type for custom import scripts.
+- [PeriodFieldValue](Import-PeriodFieldValue.html.md): Represents a value of a custom field of period type for custom import scripts.
+- [Project](Import-Project.html.md): Represents a project entity for custom import scripts.
+- [ProjectField](Import-ProjectField.html.md): Represents a project custom field entity for custom import scripts.
+- [ProjectFieldInfo](Import-ProjectFieldInfo.html.md): The base class containing information about a project custom field for custom import scripts.
+- [ProjectInfo](Import-ProjectInfo.html.md): The base class containing information about a project for custom import scripts.
+- [ProjectValue](Import-ProjectValue.html.md): Represents the project that is set in an issue or article that belongs to this project for custom import scripts.
+- [Reference](Import-Reference.html.md): Represents a reference entity for custom import scripts.
+- [ServerInfo](Import-ServerInfo.html.md): Represents a set of server properties for custom import scripts.
+- [StringFieldValue](Import-StringFieldValue.html.md): Represents a value of a custom field of string type for custom import scripts.
+- [SubItem](Import-SubItem.html.md): The base class for authored entities that are associated with an issue for custom import scripts.
+- [Tag](Import-Tag.html.md): Represents an issue tag entity for custom import scripts.
+- [TextFieldValue](Import-TextFieldValue.html.md): Represents a value of a custom field of text type for custom import scripts.
+- [User](Import-User.html.md): Represents a user entity for custom import scripts.
+- [UserGroup](Import-UserGroup.html.md): Represents a user group entity for custom import scripts.
+- [Version](Import-Version.html.md): Represents a value of a custom field of version type for custom import scripts.
+- [WorkItem](Import-WorkItem.html.md): Represents a work item entity for custom import scripts.
+- [YouTrack REST API](youtrack-rest-api.html.md): Start with the YouTrack REST API overview to learn what the API supports, how it is organized, and where to find reference and use-case docs.
+- [Get Started with REST API](api-getting-started.html.md): Get started with the YouTrack REST API by checking prerequisites, choosing authentication, and learning the request patterns used throughout the docs.
+- [Log in to YouTrack](api-log-in-to-youtrack.html.md): Learn which authentication methods YouTrack supports for API access, when to use permanent tokens or OAuth 2.0, and how each approach works for external clients.
+- [Permanent Token Authorization](authentication-with-permanent-token.html.md): Learn about permanent token authorization in YouTrack, with practical examples, related concepts, and configuration guidance.
+- [Manage Permanent Tokens](Manage-Permanent-Token.html.md): Learn about managing permanent tokens in YouTrack, with practical examples, related concepts, and setup guidance.
+- [OAuth 2.0 Authorization](OAuth-authorization-in-youtrack.html.md): Reference for OAuth 2.0 endpoints, clients, supported flows, and registration options in YouTrack.
+- [REST API URL and Endpoints](api-url-and-endpoints.html.md): Learn how YouTrack REST API URLs are formed for Server, Cloud, and custom endpoints so you can call the right resources reliably.
+- [OpenAPI Specification (OAS)](youtrack-openapi-specification.html.md): Download or inspect the YouTrack OpenAPI specification to explore endpoints, schemas, and generated client options for the REST API.
+- [Fields Syntax](api-fields-syntax.html.md): Use the fields syntax in the YouTrack REST API to request only the entity attributes and nested data your integration actually needs.
+- [Query Syntax](api-query-syntax.html.md): Use YouTrack REST API query syntax to search issues and other entities with filters, keywords, ranges, and field-based conditions.
+- [Request Headers](yt-api-headers.html.md): Use the request headers reference for the YouTrack REST API to send the right content types, authorization data, and compatibility headers.
+- [Custom Fields in REST API](api-concept-custom-fields.html.md): Understand how custom fields are modeled in the YouTrack REST API so you can read, create, and update field values correctly.
+- [Pagination](api-concept-pagination.html.md): Learn how pagination works in the YouTrack REST API so you can retrieve large result sets safely and efficiently.
+- [Users, Groups, and Access Management](api-users-yt-vs-hub.html.md): Learn when to use the YouTrack REST API versus the Hub REST API for users, groups, roles, and access-management operations.
+- [Hub REST API Endpoints and Entities Deprecated in YouTrack 2026.1](hub-rest-api-deprecated-endpoints-2026-1.html.md): Learn which Hub REST API endpoints and entities no longer return or update YouTrack data starting with YouTrack 2026.1, and which YouTrack REST API endpoints and entities to use instead.
+- [$type](api-concept-type.html.md): Understand how the $type attribute works in the YouTrack REST API so you can send correct payloads and interpret polymorphic entities.
+- [Postman Collection for the YouTrack REST API](youtrack-postman-collection.html.md): Use the YouTrack Postman collection to explore REST API requests faster, test endpoints, and adapt sample calls for your own workflows and integrations.
+- [REST API Reference](rest-api-reference.html.md): Use the YouTrack REST API reference to navigate resources, endpoints, entity docs, and versioned API changes when building integrations and automations.
+- [REST API Changelog](api-changelog.html.md)
+- [Entities](api-entities.html.md): Browse the generated YouTrack REST API entities reference to see the data models, fields, and relationships used by API resources and responses.
+- [AccessScope](api-entity-AccessScope.html.md)
+- [GlobalScope](api-entity-GlobalScope.html.md)
+- [OrganizationScope](api-entity-OrganizationScope.html.md)
+- [ProjectScope](api-entity-ProjectScope.html.md)
+- [ActivityCategory](api-entity-ActivityCategory.html.md)
+- [ActivityCursorPage](api-entity-ActivityCursorPage.html.md)
+- [ActivityItem](api-entity-ActivityItem.html.md)
+- [CreatedDeletedActivityItem](api-entity-CreatedDeletedActivityItem.html.md)
+- [AttachmentActivityItem](api-entity-AttachmentActivityItem.html.md)
+- [CommentActivityItem](api-entity-CommentActivityItem.html.md)
+- [IssueCreatedActivityItem](api-entity-IssueCreatedActivityItem.html.md)
+- [PullRequestChangeActivityItem](api-entity-PullRequestChangeActivityItem.html.md)
+- [VcsChangeActivityItem](api-entity-VcsChangeActivityItem.html.md)
+- [WorkItemActivityItem](api-entity-WorkItemActivityItem.html.md)
+- [CustomFieldActivityItem](api-entity-CustomFieldActivityItem.html.md)
+- [TextCustomFieldActivityItem](api-entity-TextCustomFieldActivityItem.html.md)
+- [MultiValueActivityItem](api-entity-MultiValueActivityItem.html.md)
+- [CommentAttachmentsActivityItem](api-entity-CommentAttachmentsActivityItem.html.md)
+- [LinksActivityItem](api-entity-LinksActivityItem.html.md)
+- [SprintActivityItem](api-entity-SprintActivityItem.html.md)
+- [TagsActivityItem](api-entity-TagsActivityItem.html.md)
+- [VisibilityActivityItem](api-entity-VisibilityActivityItem.html.md)
+- [VisibilityGroupActivityItem](api-entity-VisibilityGroupActivityItem.html.md)
+- [VisibilityUserActivityItem](api-entity-VisibilityUserActivityItem.html.md)
+- [VotersActivityItem](api-entity-VotersActivityItem.html.md)
+- [WorkItemTypeActivityItem](api-entity-WorkItemTypeActivityItem.html.md)
+- [SingleValueActivityItem](api-entity-SingleValueActivityItem.html.md)
+- [ProjectActivityItem](api-entity-ProjectActivityItem.html.md)
+- [SimpleValueActivityItem](api-entity-SimpleValueActivityItem.html.md)
+- [IssueResolvedActivityItem](api-entity-IssueResolvedActivityItem.html.md)
+- [TextMarkupActivityItem](api-entity-TextMarkupActivityItem.html.md)
+- [UsesMarkupActivityItem](api-entity-UsesMarkupActivityItem.html.md)
+- [WorkItemAuthorActivityItem](api-entity-WorkItemAuthorActivityItem.html.md)
+- [WorkItemDurationActivityItem](api-entity-WorkItemDurationActivityItem.html.md)
+- [Agile](api-entity-Agile.html.md)
+- [AgileColumn](api-entity-AgileColumn.html.md)
+- [AgileSharingSettings](api-entity-AgileSharingSettings.html.md)
+- [AgileStatus](api-entity-AgileStatus.html.md)
+- [AppearanceSettings](api-entity-AppearanceSettings.html.md)
+- [ArticleAttachment](api-entity-ArticleAttachment.html.md)
+- [ArticleComment](api-entity-ArticleComment.html.md)
+- [AssignedRole](api-entity-AssignedRole.html.md)
+- [BackupError](api-entity-BackupError.html.md)
+- [BackupFile](api-entity-BackupFile.html.md)
+- [BackupStatus](api-entity-BackupStatus.html.md)
+- [BaseArticle](api-entity-BaseArticle.html.md)
+- [Article](api-entity-Article.html.md)
+- [BaseWorkItem](api-entity-BaseWorkItem.html.md)
+- [IssueWorkItem](api-entity-IssueWorkItem.html.md)
+- [Bundle](api-entity-Bundle.html.md)
+- [BaseBundle](api-entity-BaseBundle.html.md)
+- [BuildBundle](api-entity-BuildBundle.html.md)
+- [EnumBundle](api-entity-EnumBundle.html.md)
+- [OwnedBundle](api-entity-OwnedBundle.html.md)
+- [StateBundle](api-entity-StateBundle.html.md)
+- [VersionBundle](api-entity-VersionBundle.html.md)
+- [UserBundle](api-entity-UserBundle.html.md)
+- [BundleElement](api-entity-BundleElement.html.md)
+- [BuildBundleElement](api-entity-BuildBundleElement.html.md)
+- [LocalizableBundleElement](api-entity-LocalizableBundleElement.html.md)
+- [EnumBundleElement](api-entity-EnumBundleElement.html.md)
+- [StateBundleElement](api-entity-StateBundleElement.html.md)
+- [OwnedBundleElement](api-entity-OwnedBundleElement.html.md)
+- [VersionBundleElement](api-entity-VersionBundleElement.html.md)
+- [ChangesProcessor](api-entity-ChangesProcessor.html.md)
+- [JenkinsChangesProcessor](api-entity-JenkinsChangesProcessor.html.md)
+- [TeamcityChangesProcessor](api-entity-TeamcityChangesProcessor.html.md)
+- [VcsHostingChangesProcessor](api-entity-VcsHostingChangesProcessor.html.md)
+- [BitBucketChangesProcessor](api-entity-BitBucketChangesProcessor.html.md)
+- [BitbucketStandaloneChangesProcessor](api-entity-BitbucketStandaloneChangesProcessor.html.md)
+- [GitHubChangesProcessor](api-entity-GitHubChangesProcessor.html.md)
+- [GitLabChangesProcessor](api-entity-GitLabChangesProcessor.html.md)
+- [GiteaChangesProcessor](api-entity-GiteaChangesProcessor.html.md)
+- [GogsChangesProcessor](api-entity-GogsChangesProcessor.html.md)
+- [SpaceChangesProcessor](api-entity-SpaceChangesProcessor.html.md)
+- [ColorCoding](api-entity-ColorCoding.html.md)
+- [FieldBasedColorCoding](api-entity-FieldBasedColorCoding.html.md)
+- [ProjectBasedColorCoding](api-entity-ProjectBasedColorCoding.html.md)
+- [ColumnSettings](api-entity-ColumnSettings.html.md)
+- [CommandList](api-entity-CommandList.html.md)
+- [CommandVisibility](api-entity-CommandVisibility.html.md)
+- [CommandLimitedVisibility](api-entity-CommandLimitedVisibility.html.md)
+- [CommandUnlimitedVisibility](api-entity-CommandUnlimitedVisibility.html.md)
+- [CustomField](api-entity-CustomField.html.md)
+- [CustomFieldCondition](api-entity-CustomFieldCondition.html.md)
+- [FieldBasedCondition](api-entity-FieldBasedCondition.html.md)
+- [CustomFieldDefaults](api-entity-CustomFieldDefaults.html.md)
+- [BundleCustomFieldDefaults](api-entity-BundleCustomFieldDefaults.html.md)
+- [BuildBundleCustomFieldDefaults](api-entity-BuildBundleCustomFieldDefaults.html.md)
+- [EnumBundleCustomFieldDefaults](api-entity-EnumBundleCustomFieldDefaults.html.md)
+- [OwnedBundleCustomFieldDefaults](api-entity-OwnedBundleCustomFieldDefaults.html.md)
+- [StateBundleCustomFieldDefaults](api-entity-StateBundleCustomFieldDefaults.html.md)
+- [VersionBundleCustomFieldDefaults](api-entity-VersionBundleCustomFieldDefaults.html.md)
+- [UserCustomFieldDefaults](api-entity-UserCustomFieldDefaults.html.md)
+- [DatabaseAttributeValue](api-entity-DatabaseAttributeValue.html.md)
+- [AgileColumnFieldValue](api-entity-AgileColumnFieldValue.html.md)
+- [SwimlaneEntityAttributeValue](api-entity-SwimlaneEntityAttributeValue.html.md)
+- [DatabaseBackupSettings](api-entity-DatabaseBackupSettings.html.md)
+- [DateFormatDescriptor](api-entity-DateFormatDescriptor.html.md)
+- [DuplicateVote](api-entity-DuplicateVote.html.md)
+- [DurationValue](api-entity-DurationValue.html.md)
+- [EmailSettings](api-entity-EmailSettings.html.md)
+- [Event](api-entity-Event.html.md)
+- [ExternalArticle](api-entity-ExternalArticle.html.md)
+- [ExternalIssue](api-entity-ExternalIssue.html.md)
+- [FieldStyle](api-entity-FieldStyle.html.md)
+- [FieldType](api-entity-FieldType.html.md)
+- [FilterField](api-entity-FilterField.html.md)
+- [CustomFilterField](api-entity-CustomFilterField.html.md)
+- [PredefinedFilterField](api-entity-PredefinedFilterField.html.md)
+- [GeneralUserProfile](api-entity-GeneralUserProfile.html.md)
+- [GlobalSettings](api-entity-GlobalSettings.html.md)
+- [GlobalTimeTrackingSettings](api-entity-GlobalTimeTrackingSettings.html.md)
+- [Issue](api-entity-Issue.html.md)
+- [IssueAttachment](api-entity-IssueAttachment.html.md)
+- [IssueComment](api-entity-IssueComment.html.md)
+- [IssueCountResponse](api-entity-IssueCountResponse.html.md)
+- [IssueCustomField](api-entity-IssueCustomField.html.md)
+- [MultiValueIssueCustomField](api-entity-MultiValueIssueCustomField.html.md)
+- [MultiBuildIssueCustomField](api-entity-MultiBuildIssueCustomField.html.md)
+- [MultiEnumIssueCustomField](api-entity-MultiEnumIssueCustomField.html.md)
+- [MultiGroupIssueCustomField](api-entity-MultiGroupIssueCustomField.html.md)
+- [MultiOwnedIssueCustomField](api-entity-MultiOwnedIssueCustomField.html.md)
+- [MultiUserIssueCustomField](api-entity-MultiUserIssueCustomField.html.md)
+- [MultiVersionIssueCustomField](api-entity-MultiVersionIssueCustomField.html.md)
+- [PeriodIssueCustomField](api-entity-PeriodIssueCustomField.html.md)
+- [SimpleIssueCustomField](api-entity-SimpleIssueCustomField.html.md)
+- [DateIssueCustomField](api-entity-DateIssueCustomField.html.md)
+- [SingleValueIssueCustomField](api-entity-SingleValueIssueCustomField.html.md)
+- [SingleBuildIssueCustomField](api-entity-SingleBuildIssueCustomField.html.md)
+- [SingleEnumIssueCustomField](api-entity-SingleEnumIssueCustomField.html.md)
+- [SingleGroupIssueCustomField](api-entity-SingleGroupIssueCustomField.html.md)
+- [SingleOwnedIssueCustomField](api-entity-SingleOwnedIssueCustomField.html.md)
+- [SingleUserIssueCustomField](api-entity-SingleUserIssueCustomField.html.md)
+- [SingleVersionIssueCustomField](api-entity-SingleVersionIssueCustomField.html.md)
+- [StateIssueCustomField](api-entity-StateIssueCustomField.html.md)
+- [StateMachineIssueCustomField](api-entity-StateMachineIssueCustomField.html.md)
+- [TextIssueCustomField](api-entity-TextIssueCustomField.html.md)
+- [IssueFolder](api-entity-IssueFolder.html.md)
+- [Project](api-entity-Project.html.md)
+- [WatchFolder](api-entity-WatchFolder.html.md)
+- [SavedQuery](api-entity-SavedQuery.html.md)
+- [StarWatchFolder](api-entity-StarWatchFolder.html.md)
+- [Tag](api-entity-Tag.html.md)
+- [IssueTag](api-entity-IssueTag.html.md)
+- [IssueKey](api-entity-IssueKey.html.md)
+- [IssueLink](api-entity-IssueLink.html.md)
+- [IssueLinkType](api-entity-IssueLinkType.html.md)
+- [IssueTimeTracking](api-entity-IssueTimeTracking.html.md)
+- [IssueVoters](api-entity-IssueVoters.html.md)
+- [IssueWatcher](api-entity-IssueWatcher.html.md)
+- [IssueWatchers](api-entity-IssueWatchers.html.md)
+- [License](api-entity-License.html.md)
+- [LocaleDescriptor](api-entity-LocaleDescriptor.html.md)
+- [LocaleSettings](api-entity-LocaleSettings.html.md)
+- [Logo](api-entity-Logo.html.md)
+- [NotificationSettings](api-entity-NotificationSettings.html.md)
+- [NotificationsUserProfile](api-entity-NotificationsUserProfile.html.md)
+- [OnlineUsers](api-entity-OnlineUsers.html.md)
+- [Organization](api-entity-Organization.html.md)
+- [ParsedCommand](api-entity-ParsedCommand.html.md)
+- [PeriodFieldFormat](api-entity-PeriodFieldFormat.html.md)
+- [PeriodValue](api-entity-PeriodValue.html.md)
+- [Permission](api-entity-Permission.html.md)
+- [ProjectColor](api-entity-ProjectColor.html.md)
+- [ProjectCustomField](api-entity-ProjectCustomField.html.md)
+- [BundleProjectCustomField](api-entity-BundleProjectCustomField.html.md)
+- [BuildProjectCustomField](api-entity-BuildProjectCustomField.html.md)
+- [EnumProjectCustomField](api-entity-EnumProjectCustomField.html.md)
+- [OwnedProjectCustomField](api-entity-OwnedProjectCustomField.html.md)
+- [StateProjectCustomField](api-entity-StateProjectCustomField.html.md)
+- [UserProjectCustomField](api-entity-UserProjectCustomField.html.md)
+- [VersionProjectCustomField](api-entity-VersionProjectCustomField.html.md)
+- [GroupProjectCustomField](api-entity-GroupProjectCustomField.html.md)
+- [PeriodProjectCustomField](api-entity-PeriodProjectCustomField.html.md)
+- [SimpleProjectCustomField](api-entity-SimpleProjectCustomField.html.md)
+- [TextProjectCustomField](api-entity-TextProjectCustomField.html.md)
+- [ProjectTimeTrackingSettings](api-entity-ProjectTimeTrackingSettings.html.md)
+- [PullRequest](api-entity-PullRequest.html.md)
+- [PullRequestChange](api-entity-PullRequestChange.html.md)
+- [PullRequestState](api-entity-PullRequestState.html.md)
+- [Reaction](api-entity-Reaction.html.md)
+- [RestCorsSettings](api-entity-RestCorsSettings.html.md)
+- [Role](api-entity-Role.html.md)
+- [SearchSuggestions](api-entity-SearchSuggestions.html.md)
+- [Sprint](api-entity-Sprint.html.md)
+- [SprintsSettings](api-entity-SprintsSettings.html.md)
+- [StorageEntry](api-entity-StorageEntry.html.md)
+- [Suggestion](api-entity-Suggestion.html.md)
+- [SwimlaneSettings](api-entity-SwimlaneSettings.html.md)
+- [AttributeBasedSwimlaneSettings](api-entity-AttributeBasedSwimlaneSettings.html.md)
+- [IssueBasedSwimlaneSettings](api-entity-IssueBasedSwimlaneSettings.html.md)
+- [SwimlaneValue](api-entity-SwimlaneValue.html.md)
+- [SystemSettings](api-entity-SystemSettings.html.md)
+- [TagSharingSettings](api-entity-TagSharingSettings.html.md)
+- [Telemetry](api-entity-Telemetry.html.md)
+- [TextFieldValue](api-entity-TextFieldValue.html.md)
+- [TimeTrackingUserProfile](api-entity-TimeTrackingUserProfile.html.md)
+- [TimeZoneDescriptor](api-entity-TimeZoneDescriptor.html.md)
+- [User](api-entity-User.html.md)
+- [Me](api-entity-Me.html.md)
+- [VcsUnresolvedUser](api-entity-VcsUnresolvedUser.html.md)
+- [UserGroup](api-entity-UserGroup.html.md)
+- [AllUsersGroup](api-entity-AllUsersGroup.html.md)
+- [NestedGroup](api-entity-NestedGroup.html.md)
+- [ProjectTeam](api-entity-ProjectTeam.html.md)
+- [RegisteredUsersGroup](api-entity-RegisteredUsersGroup.html.md)
+- [UserProfiles](api-entity-UserProfiles.html.md)
+- [UserType](api-entity-UserType.html.md)
+- [VcsChange](api-entity-VcsChange.html.md)
+- [VcsServer](api-entity-VcsServer.html.md)
+- [JenkinsServer](api-entity-JenkinsServer.html.md)
+- [TeamcityServer](api-entity-TeamcityServer.html.md)
+- [VcsHostingServer](api-entity-VcsHostingServer.html.md)
+- [BitBucketServer](api-entity-BitBucketServer.html.md)
+- [BitbucketStandaloneServer](api-entity-BitbucketStandaloneServer.html.md)
+- [GitHubServer](api-entity-GitHubServer.html.md)
+- [GitLabServer](api-entity-GitLabServer.html.md)
+- [GiteaServer](api-entity-GiteaServer.html.md)
+- [GogsServer](api-entity-GogsServer.html.md)
+- [SpaceServer](api-entity-SpaceServer.html.md)
+- [Visibility](api-entity-Visibility.html.md)
+- [LimitedVisibility](api-entity-LimitedVisibility.html.md)
+- [UnlimitedVisibility](api-entity-UnlimitedVisibility.html.md)
+- [WIPLimit](api-entity-WIPLimit.html.md)
+- [WatchFolderSharingSettings](api-entity-WatchFolderSharingSettings.html.md)
+- [WorkItemAttribute](api-entity-WorkItemAttribute.html.md)
+- [WorkItemAttributePrototype](api-entity-WorkItemAttributePrototype.html.md)
+- [WorkItemAttributeValue](api-entity-WorkItemAttributeValue.html.md)
+- [WorkItemProjectAttribute](api-entity-WorkItemProjectAttribute.html.md)
+- [WorkItemType](api-entity-WorkItemType.html.md)
+- [WorkTimeSettings](api-entity-WorkTimeSettings.html.md)
+- [Resources](api-resources.html.md): Browse the generated YouTrack REST API resources reference to find available endpoints, supported operations, and the entities each resource exposes.
+- [Activity Items](resource-api-activities.html.md)
+- [Operations with Specific ActivityItem](operations-api-activities.html.md)
+- [Issue Activities Page](resource-api-activitiesPage.html.md)
+- [Operations with Specific Issue Activities Page](operations-api-activitiesPage.html.md)
+- [Build Bundles](resource-api-admin-customFieldSettings-bundles-build.html.md)
+- [Operations with Specific BuildBundle](operations-api-admin-customFieldSettings-bundles-build.html.md)
+- [Values in the Build Bundle](resource-api-admin-customFieldSettings-bundles-build-bundleID-values.html.md)
+- [Operations with Specific Values in the Build Bundle](operations-api-admin-customFieldSettings-bundles-build-bundleID-values.html.md)
+- [Enum Bundles](resource-api-admin-customFieldSettings-bundles-enum.html.md)
+- [Operations with Specific EnumBundle](operations-api-admin-customFieldSettings-bundles-enum.html.md)
+- [Values in the Enum Bundle](resource-api-admin-customFieldSettings-bundles-enum-bundleID-values.html.md)
+- [Operations with Specific Values in the Enum Bundle](operations-api-admin-customFieldSettings-bundles-enum-bundleID-values.html.md)
+- [Owned Bundles](resource-api-admin-customFieldSettings-bundles-ownedField.html.md)
+- [Operations with Specific OwnedBundle](operations-api-admin-customFieldSettings-bundles-ownedField.html.md)
+- [Values in the Owned Bundle](resource-api-admin-customFieldSettings-bundles-ownedField-bundleID-values.html.md)
+- [Operations with Specific Values in the Owned Bundle](operations-api-admin-customFieldSettings-bundles-ownedField-bundleID-values.html.md)
+- [State Bundles](resource-api-admin-customFieldSettings-bundles-state.html.md)
+- [Operations with Specific StateBundle](operations-api-admin-customFieldSettings-bundles-state.html.md)
+- [Values in the State Bundle](resource-api-admin-customFieldSettings-bundles-state-bundleID-values.html.md)
+- [Operations with Specific Values in the State Bundle](operations-api-admin-customFieldSettings-bundles-state-bundleID-values.html.md)
+- [User Bundles](resource-api-admin-customFieldSettings-bundles-user.html.md)
+- [Operations with Specific UserBundle](operations-api-admin-customFieldSettings-bundles-user.html.md)
+- [Aggregated Users in the Bundle](resource-api-admin-customFieldSettings-bundles-user-bundleID-aggregatedUsers.html.md)
+- [Groups in the User Bundle](resource-api-admin-customFieldSettings-bundles-user-bundleID-groups.html.md)
+- [Operations with Specific Groups in the User Bundle](operations-api-admin-customFieldSettings-bundles-user-bundleID-groups.html.md)
+- [Individual Users in the Bundle](resource-api-admin-customFieldSettings-bundles-user-bundleID-individuals.html.md)
+- [Operations with Specific Individual Users in the Bundle](operations-api-admin-customFieldSettings-bundles-user-bundleID-individuals.html.md)
+- [Version Bundles](resource-api-admin-customFieldSettings-bundles-version.html.md)
+- [Operations with Specific VersionBundle](operations-api-admin-customFieldSettings-bundles-version.html.md)
+- [Values in the Version Bundle](resource-api-admin-customFieldSettings-bundles-version-bundleID-values.html.md)
+- [Operations with Specific Values in the Version Bundle](operations-api-admin-customFieldSettings-bundles-version-bundleID-values.html.md)
+- [Custom Fields](resource-api-admin-customFieldSettings-customFields.html.md)
+- [Operations with Specific CustomField](operations-api-admin-customFieldSettings-customFields.html.md)
+- [Custom Field Defaults](resource-api-admin-customFieldSettings-customFields-fieldID-fieldDefaults.html.md)
+- [Operations with Specific CustomFieldDefaults](operations-api-admin-customFieldSettings-customFields-fieldID-fieldDefaults.html.md)
+- [Project Custom Fields](resource-api-admin-customFieldSettings-customFields-fieldID-instances.html.md)
+- [Field Types](resource-api-admin-customFieldSettings-types.html.md)
+- [Backup Files](resource-api-admin-databaseBackup-backups.html.md)
+- [Operations with Specific BackupFile](operations-api-admin-databaseBackup-backups.html.md)
+- [Database Backup Settings](resource-api-admin-databaseBackup-settings.html.md)
+- [Operations with Specific DatabaseBackupSettings](operations-api-admin-databaseBackup-settings.html.md)
+- [Backup Status](resource-api-admin-databaseBackup-settings-backupStatus.html.md)
+- [Operations with Specific BackupStatus](operations-api-admin-databaseBackup-settings-backupStatus.html.md)
+- [Global Settings](resource-api-admin-globalSettings.html.md)
+- [Operations with Specific GlobalSettings](operations-api-admin-globalSettings.html.md)
+- [Appearance Settings](resource-api-admin-globalSettings-appearanceSettings.html.md)
+- [Operations with Specific AppearanceSettings](operations-api-admin-globalSettings-appearanceSettings.html.md)
+- [License](resource-api-admin-globalSettings-license.html.md)
+- [Operations with Specific License](operations-api-admin-globalSettings-license.html.md)
+- [Locale Settings](resource-api-admin-globalSettings-localeSettings.html.md)
+- [Operations with Specific LocaleSettings](operations-api-admin-globalSettings-localeSettings.html.md)
+- [Notification Settings](resource-api-admin-globalSettings-notificationSettings.html.md)
+- [Operations with Specific NotificationSettings](operations-api-admin-globalSettings-notificationSettings.html.md)
+- [Rest Cors Settings](resource-api-admin-globalSettings-restSettings.html.md)
+- [Operations with Specific RestCorsSettings](operations-api-admin-globalSettings-restSettings.html.md)
+- [System Settings](resource-api-admin-globalSettings-systemSettings.html.md)
+- [Operations with Specific SystemSettings](operations-api-admin-globalSettings-systemSettings.html.md)
+- [Organizations](resource-api-admin-organizations.html.md)
+- [Operations with Specific Organization](operations-api-admin-organizations.html.md)
+- [Projects](resource-api-admin-projects.html.md)
+- [Operations with Specific Project](operations-api-admin-projects.html.md)
+- [Project Articles](resource-api-admin-projects-projectID-articles.html.md)
+- [Project Custom Fields](resource-api-admin-projects-projectID-customFields.html.md)
+- [Operations with Specific ProjectCustomField](operations-api-admin-projects-projectID-customFields.html.md)
+- [Issues](resource-api-admin-projects-projectID-issues.html.md)
+- [Operations with Specific Issue](operations-api-admin-projects-projectID-issues.html.md)
+- [Project Team](resource-api-admin-projects-projectID-team.html.md)
+- [Operations with Specific ProjectTeam](operations-api-admin-projects-projectID-team.html.md)
+- [User Groups](resource-api-admin-projects-projectID-team-groups.html.md)
+- [Operations with Specific UserGroup](operations-api-admin-projects-projectID-team-groups.html.md)
+- [Users](resource-api-admin-projects-projectID-team-ownUsers.html.md)
+- [Operations with Specific User](operations-api-admin-projects-projectID-team-ownUsers.html.md)
+- [Users](resource-api-admin-projects-projectID-team-users.html.md)
+- [Project Time Tracking Settings](resource-api-admin-projects-projectID-timeTrackingSettings.html.md)
+- [Operations with Specific ProjectTimeTrackingSettings](operations-api-admin-projects-projectID-timeTrackingSettings.html.md)
+- [Work Item Types](resource-api-admin-projects-projectID-timeTrackingSettings-workItemTypes.html.md)
+- [Operations with Specific WorkItemType](operations-api-admin-projects-projectID-timeTrackingSettings-workItemTypes.html.md)
+- [Telemetry data](resource-api-admin-telemetry.html.md)
+- [Operations with Specific Telemetry data](operations-api-admin-telemetry.html.md)
+- [Global Time Tracking Settings](resource-api-admin-timeTrackingSettings.html.md)
+- [Operations with Specific GlobalTimeTrackingSettings](operations-api-admin-timeTrackingSettings.html.md)
+- [Work Item Types](resource-api-admin-timeTrackingSettings-workItemTypes.html.md)
+- [Operations with Specific WorkItemType](operations-api-admin-timeTrackingSettings-workItemTypes.html.md)
+- [Work Time Settings](resource-api-admin-timeTrackingSettings-workTimeSettings.html.md)
+- [Operations with Specific WorkTimeSettings](operations-api-admin-timeTrackingSettings-workTimeSettings.html.md)
+- [Agiles](resource-api-agiles.html.md)
+- [Operations with Specific Agile](operations-api-agiles.html.md)
+- [Sprints](resource-api-agiles-agileID-sprints.html.md)
+- [Operations with Specific Sprint](operations-api-agiles-agileID-sprints.html.md)
+- [Articles](resource-api-articles.html.md)
+- [Operations with Specific Article](operations-api-articles.html.md)
+- [Article Attachments](resource-api-articles-articleID-attachments.html.md)
+- [Operations with Specific ArticleAttachment](operations-api-articles-articleID-attachments.html.md)
+- [Sub-articles](resource-api-articles-articleID-childArticles.html.md)
+- [Operations with Specific Sub-articles](operations-api-articles-articleID-childArticles.html.md)
+- [Article Comments](resource-api-articles-articleID-comments.html.md)
+- [Operations with Specific ArticleComment](operations-api-articles-articleID-comments.html.md)
+- [Reactions](resource-api-articles-articleID-comments-commentID-reactions.html.md)
+- [Operations with Specific Reaction](operations-api-articles-articleID-comments-commentID-reactions.html.md)
+- [Parent Article](resource-api-articles-articleID-parentArticle.html.md)
+- [Operations with Specific Parent Article](operations-api-articles-articleID-parentArticle.html.md)
+- [Tags](resource-api-articles-articleID-tags.html.md)
+- [Operations with Specific Tag](operations-api-articles-articleID-tags.html.md)
+- [Assigned Roles](resource-api-assignedRoles.html.md)
+- [Operations with Specific AssignedRole](operations-api-assignedRoles.html.md)
+- [Commands](resource-api-commands.html.md)
+- [Command Suggestions](resource-api-commands-assist.html.md)
+- [User Groups](resource-api-groups.html.md)
+- [Operations with Specific UserGroup](operations-api-groups.html.md)
+- [Users](resource-api-groups-groupID-ownUsers.html.md)
+- [Operations with Specific User](operations-api-groups-groupID-ownUsers.html.md)
+- [Nested Groups](resource-api-groups-groupID-subGroups.html.md)
+- [Users](resource-api-groups-groupID-users.html.md)
+- [Issue Link Types](resource-api-issueLinkTypes.html.md)
+- [Operations with Specific IssueLinkType](operations-api-issueLinkTypes.html.md)
+- [Issue Tag](resource-api-issueTags.html.md)
+- [Issues](resource-api-issues.html.md)
+- [Operations with Specific Issue](operations-api-issues.html.md)
+- [Issue Activity Items](resource-api-issues-issueID-activities.html.md)
+- [Operations with Specific Issue Activity Items](operations-api-issues-issueID-activities.html.md)
+- [Activity Cursor Page](resource-api-issues-issueID-activitiesPage.html.md)
+- [Operations with Specific ActivityCursorPage](operations-api-issues-issueID-activitiesPage.html.md)
+- [Issue Attachments](resource-api-issues-issueID-attachments.html.md)
+- [Operations with Specific IssueAttachment](operations-api-issues-issueID-attachments.html.md)
+- [Issue Comments](resource-api-issues-issueID-comments.html.md)
+- [Operations with Specific IssueComment](operations-api-issues-issueID-comments.html.md)
+- [Reactions](resource-api-issues-issueID-comments-commentID-reactions.html.md)
+- [Operations with Specific Reaction](operations-api-issues-issueID-comments-commentID-reactions.html.md)
+- [Issue Custom Fields](resource-api-issues-issueID-customFields.html.md)
+- [Operations with Specific IssueCustomField](operations-api-issues-issueID-customFields.html.md)
+- [Issue Links](resource-api-issues-issueID-links.html.md)
+- [Operations with Specific IssueLink](operations-api-issues-issueID-links.html.md)
+- [Link Issues](resource-api-issues-issueID-links-linkID-issues.html.md)
+- [Operations with Specific Link Issues](operations-api-issues-issueID-links-linkID-issues.html.md)
+- [Issue Project](resource-api-issues-issueID-project.html.md)
+- [Operations with Specific Issue Project](operations-api-issues-issueID-project.html.md)
+- [Issue Sprints](resource-api-issues-issueID-sprints.html.md)
+- [Tags](resource-api-issues-issueID-tags.html.md)
+- [Operations with Specific Tag](operations-api-issues-issueID-tags.html.md)
+- [Issue Time Tracking](resource-api-issues-issueID-timeTracking.html.md)
+- [Operations with Specific IssueTimeTracking](operations-api-issues-issueID-timeTracking.html.md)
+- [Issue Work Items](resource-api-issues-issueID-timeTracking-workItems.html.md)
+- [Operations with Specific IssueWorkItem](operations-api-issues-issueID-timeTracking-workItems.html.md)
+- [Issue VCS Changes and Pull Requests](resource-api-issues-issueID-vcsChanges.html.md)
+- [Operations with Specific Issue VCS Changes and Pull Requests](operations-api-issues-issueID-vcsChanges.html.md)
+- [Issue Count](resource-api-issuesGetter-count.html.md)
+- [Permissions](resource-api-permissions.html.md)
+- [Roles](resource-api-roles.html.md)
+- [Operations with Specific Role](operations-api-roles.html.md)
+- [Saved Queries](resource-api-savedQueries.html.md)
+- [Operations with Specific SavedQuery](operations-api-savedQueries.html.md)
+- [Search Suggestions](resource-api-search-assist.html.md)
+- [Tags](resource-api-tags.html.md)
+- [Operations with Specific Tag](operations-api-tags.html.md)
+- [Issues](resource-api-tags-tagID-issues.html.md)
+- [Users](resource-api-users.html.md)
+- [Operations with Specific User](operations-api-users.html.md)
+- [General User Profile](resource-api-users-userID-profiles-general.html.md)
+- [Operations with Specific GeneralUserProfile](operations-api-users-userID-profiles-general.html.md)
+- [Notifications User Profile](resource-api-users-userID-profiles-notifications.html.md)
+- [Operations with Specific NotificationsUserProfile](operations-api-users-userID-profiles-notifications.html.md)
+- [Time Tracking User Profile](resource-api-users-userID-profiles-timetracking.html.md)
+- [Operations with Specific TimeTrackingUserProfile](operations-api-users-userID-profiles-timetracking.html.md)
+- [Saved Queries](resource-api-users-userID-savedQueries.html.md)
+- [Tags](resource-api-users-userID-tags.html.md)
+- [My User Profile](resource-api-users-me.html.md)
+- [Operations with Specific My User Profile](operations-api-users-me.html.md)
+- [Issue Work Items](resource-api-workItems.html.md)
+- [Operations with Specific IssueWorkItem](operations-api-workItems.html.md)
+- [REST API Use Cases](api-use-cases.html.md): Browse practical YouTrack REST API use cases that show how to solve common integration tasks with real requests and response patterns.
+- [Project Setup](api-usecase-project-setup.html.md): Find YouTrack REST API use cases for retrieving project data and managing project team membership.
+- [Get a Project ID](api-usecase-get-project-id.html.md): Follow this YouTrack REST API use case to get the entity ID of a project by name or short name.
+- [Get Project and Organization Data](api-usecase-get-project-and-organization-data.html.md): Follow this YouTrack REST API use case to retrieve project and organization data, including projects that belong to organizations.
+- [Add a User to a Project Team](api-usecase-add-user-to-team.html.md): Follow this YouTrack REST API use case to add a user to a project team, with example requests, payloads, and the expected results.
+- [Issues](api-usecase-issues.html.md): Find YouTrack REST API use cases for creating, linking, updating, and inspecting issues.
+- [Create an Issue](api-howto-create-issue.html.md): Follow this YouTrack REST API use case to create an issue, with example requests, payloads, and the expected results.
+- [Create an Issue and Set Custom Fields](api-howto-create-issue-with-fields.html.md): Follow this YouTrack REST API use case to create an issue and set custom fields, with example requests, payloads, and the expected results.
+- [Link Issues](api-howto-link-issues.html.md): Follow this YouTrack REST API use case to link issues, with example requests, payloads, and the expected results.
+- [Get Issue History](api-usecase-issue-history.html.md): Follow this YouTrack REST API use case to get issue history, with example requests, payloads, and the expected results.
+- [Apply Commands to Issues](api-usecase-commands.html.md): Follow this YouTrack REST API use case to apply commands to issues, with example requests, payloads, and the expected results.
+- [Issue Custom Fields](api-usecase-issue-custom-fields.html.md): Find YouTrack REST API use cases for reading, updating, and clearing custom field values in issues.
+- [Get a List of Issues with All Values](api-howto-get-issues-with-all-values.html.md): Follow this YouTrack REST API use case to get issues list with all values, with example requests, payloads, and the expected results.
+- [Get a Value for an Issue Custom Field](api-howto-get-value-for-specific-cf.html.md): Follow this YouTrack REST API use case to get value for an issue custom field, with example requests, payloads, and the expected results.
+- [Update Issue Custom Fields](api-how-to-update-custom-fields-values.html.md): Follow this YouTrack REST API use case to update issue custom fields, with example requests, payloads, and the expected results.
+- [Update a Text Field Value](api-usecase-update-text-field-value.html.md): Follow this YouTrack REST API use case to update a text field value, with example requests, payloads, and the expected results.
+- [Clear Values of Custom Fields](api-how-to-clear-custom-fields-values.html.md): Follow this YouTrack REST API use case to clear values of Custom Fields, with example requests, payloads, and the expected results.
+- [Custom Fields and Sets](api-usecase-custom-fields-and-sets.html.md): Find YouTrack REST API use cases for configuring custom fields and managing sets of values.
+- [Create an Enum Custom Field and Add It to a Project](api-usecase-create-enum-custom-field.html.md): Follow this YouTrack REST API use case to create an enum custom field with values and add it to a project.
+- [Set a Default Value for a Custom Field](api-usecase-set-default-value-for-project-field.html.md): Follow this YouTrack REST API use case to set a default value for a custom field in a project.
+- [Create a Set of Values](api-usecase-create-bundle.html.md): Follow this YouTrack REST API use case to create a reusable set of values that can be assigned to a custom field.
+- [Add a Value to a Set](api-usecase-add-value-to-bundle.html.md): Follow this YouTrack REST API use case to add value to a set, with example requests, payloads, and the expected results.
+- [Delete a Value from a Set](api-usecase-delete-value-from-bundle.html.md): Follow this YouTrack REST API use case to delete a value from a set of values for a custom field.
+- [Archive a Value in a Set](api-usecase-archive-value-in-bundle.html.md): Follow this YouTrack REST API use case to archive a value in a set of values for a custom field.
+- [Archive a Version Value](api-usecase-archive-version-value.html.md): Follow this YouTrack REST API use case to archive a value in a version bundle.
+- [Replace the Set of Values for a Custom Field](api-usecase-replace-field-bundle.html.md): Follow this YouTrack REST API use case to replace the set of values that is available for a custom field in a project.
+- [Tags](api-usecase-tags.html.md): Find YouTrack REST API use cases for reading, creating, applying, and removing issue tags.
+- [Tag or Untag Issues](api-usecase-add-remove-tags.html.md): Follow this YouTrack REST API use case to tag or untag issues, with example requests, payloads, and the expected
+    results.
+- [Work with Issue Tags](api-usecase-work-with-tags.html.md): Follow this YouTrack REST API use case to work with issue tags, with example requests, payloads, and the expected results.
+- [Attachments](api-usecase-attachments.html.md): Find YouTrack REST API use cases for uploading, downloading, and deleting issue attachments.
+- [Attach Files to an Issue](api-usecase-attach-files.html.md): Follow this YouTrack REST API use case to attach files to an issue, with example requests, payloads, and the expected results.
+- [Download an Issue Attachment](api-usecase-download-issue-attachment.html.md): Follow this YouTrack REST API use case to download an issue attachment, with example requests, payloads, and the expected results.
+- [Delete an Issue Attachment](api-usecase-delete-issue-attachment.html.md): Use the YouTrack REST API to delete a specific attachment from an issue.
+- [Administration](api-usecase-administration.html.md): Find YouTrack REST API use cases for administrative maintenance tasks.
+- [Get a Database Backup](api-usecase-backup.html.md): Follow this YouTrack REST API use case to get a database backup, with example requests, payloads, and the expected results.
+- [REST API Troubleshooting](api-troubleshooting.html.md): Troubleshoot common YouTrack REST API errors by checking typical request mistakes, understanding response messages, and applying the recommended fixes.
+- [400 Bad Request When Adding a Custom Field Value to a Set](api-troubleshoot-incorrect-request-url.html.md): Troubleshoot 400 bad request when adding a custom field value to a set by identifying the root cause in the request and correcting the field values, payload structure, or endpoint usage.
+- [400 Bad Request When Creating a User](api-troubleshoot-create-user-endpoint.html.md): Troubleshoot 400 bad request when creating a user by checking whether the request uses the user-management endpoint supported by your YouTrack version.
+- [400 Bad Request When Project ID Is Numeric](api-troubleshoot-numeric-project-id.html.md): Troubleshoot 400 bad request when creating a project by replacing a numeric project ID with a value that contains letters.
+- [400 Bad Request When Creating an Issue Without Required Field Value](api-troubleshoot-missing-type.html.md): Troubleshoot 400 bad request when creating an issue without required field value by identifying the root cause in the request and correcting the field values, payload structure, or endpoint usage.
+- [400 Bad Request When Updating a Conditional Field](api-troubleshoot-updating-conditional-field.html.md): Troubleshoot 400 bad request when updating a conditional field by identifying the root cause in the request and correcting the field values, payload structure, or endpoint usage.
+- [400 Bad Request When Using a Ring ID](api-troubleshoot-ring-id.html.md): Troubleshoot 400 bad request when a YouTrack REST API request uses a Ring ID instead of the expected YouTrack entity ID.
+- [400 Bad Request When Uploading an Attachment](api-troubleshoot-attachment-boundary.html.md): Troubleshoot 400 bad request when uploading an attachment by letting the HTTP client set the multipart content type with the boundary parameter.
+- [404 Not Found Caused by an Incorrect Request URL](api-troubleshoot-incorrect-issue-url.html.md): Troubleshoot 404 not found by checking the REST API request URL for unsupported paths and encoded whitespace characters.
+- [500 Server Error When Updating a Custom Field](api-troubleshoot-incorrect-field-type.html.md): Troubleshoot 500 server error when updating a custom field by identifying the root cause in the request and correcting the field values, payload structure, or endpoint usage.
+- [500 Server Error When Adding a Field to a Project](api-troubleshoot-custom-field-prototype.html.md): Troubleshoot 500 server error when adding a field to a project by identifying the root cause in the request and correcting the field values, payload structure, or endpoint usage.
+- [Color Indices List](Color-Indices.html.md): Use the color indices list in the YouTrack REST API when you need valid color values for entities that support indexed colors.
+- [Hub REST API](Hub-REST-API.html.md): Start with the Hub REST API overview to learn how Hub manages authentication, authorization, users, groups, and related service access.
+- [Hub REST API Guide](hub-rest-api-guide.html.md): Use the Hub REST API guide to understand how Hub endpoints, resources, and request patterns work when integrating with Hub-backed services.
+- [Log in to Hub](log-in-to-hub-rest-api.html.md): Learn about authentication to JetBrains Hub, with practical examples, related concepts, and setup guidance.
+- [Permanent Token Authorization in Hub](hub-api-permanent-token.html.md): Learn about permanent token authorization in Hub, with practical examples, related concepts, and setup guidance.
+- [OAuth 2.0 Authorization in Hub](OAuth-authorization-in-hub.html.md): Learn about OAuth 2.0 authorization in Hub in Hub, with practical examples, related concepts, and setup guidance.
+- [Implicit](Implicit.html.md): Learn about implicit grant flow in YouTrack, with practical examples, related concepts, and setup guidance.
+- [Authorization Code](Authorization-Code.html.md): Learn about authorization code in Hub, with practical examples, related concepts, and setup guidance.
+- [Refresh Token](Refresh-Token.html.md): Learn about refreshing access tokens in YouTrack, with practical examples, related concepts, and setup guidance.
+- [Resource Owner Password Credentials](Resource-Owner-Password-Credentials.html.md): Learn about resource owner password credentials in YouTrack, with practical examples, related concepts, and setup guidance.
+- [Client Credentials](Client-Credentials.html.md): Learn about client credentials in YouTrack, with practical examples, related concepts, and setup guidance.
+- [Extension Grants](extension-grants.html.md): Learn about extension grants in YouTrack, with practical examples, related concepts, and setup guidance.
+- [OAuth 2.0 Errors](OAuth-2.0-Errors.html.md): Learn about OAuth 2.0 errors in YouTrack, with practical examples, related concepts, and setup guidance.
+- [REST API URL and OAuth 2.0 Endpoints](Hub-Rest-Api-URL.html.md): Learn how Hub REST API URLs and OAuth 2.0 endpoints are structured so you can authenticate clients and call the correct Hub resources.
+- [Hub OpenAPI Specification (OAS)](hub-openapi-specification.html.md): Download or inspect the Hub OpenAPI specification to explore Hub endpoints, schemas, and client-generation options.
+- [Hub API Field Syntax](hub-api-fields-syntax.html.md): Use Hub API field syntax to request only the Hub entity attributes and nested objects your client needs from each response.
+- [Sort Syntax in Hub](hub-api-sort-syntax.html.md): Use Hub API sort syntax to order Hub collections by supported attributes when listing users, groups, and other entities.
+- [Hub API Query Syntax](hub-api-query-syntax.html.md): Use Hub API query syntax to filter and search Hub entities with supported query expressions and field conditions.
+- [Hub REST API Reference](hub-rest-api-reference.html.md): Use the Hub REST API reference to navigate Hub resources, endpoints, and entity docs for authentication and access-management integrations.
+- [Auth Modules](HUB-REST-API_Auth-Modules.html.md)
+- [Auto Join Groups of Auth Module](HUB-REST-API_Auth-Modules_Auto-Join-Groups-of-Auth-Module.html.md)
+- [Add Auto Join Group to Auto Join Groups of a Auth Module](HUB-REST-API_Auth-Modules_Auto-Join-Groups-of-Auth-Module_Add-Auto-Join-Group-to-Auto-Join-Groups-of-a-Auth-Module.html.md)
+- [Get All Auto Join Groups of a Auth Module](HUB-REST-API_Auth-Modules_Auto-Join-Groups-of-Auth-Module_Get-All-Auto-Join-Groups-of-a-Auth-Module.html.md)
+- [Get Auto Join Group from Auto Join Groups of a Auth Module](HUB-REST-API_Auth-Modules_Auto-Join-Groups-of-Auth-Module_Get-Auto-Join-Group-from-Auto-Join-Groups-of-a-Auth-Module.html.md)
+- [Remove Auto Join Group from Auto Join Groups of a Auth Module](HUB-REST-API_Auth-Modules_Auto-Join-Groups-of-Auth-Module_Remove-Auto-Join-Group-from-Auto-Join-Groups-of-a-Auth-Module.html.md)
+- [Create New Auth Module](HUB-REST-API_Auth-Modules_Create-New-Auth-Module.html.md)
+- [Custom Attribute Mappings of Auth Module](HUB-REST-API_Auth-Modules_Custom-Attribute-Mappings-of-Auth-Module.html.md)
+- [Add Custom Attribute Mapping to Custom Attribute Mappings of a Auth Module](HUB-REST-API_Auth-Modules_Custom-Attribute-Mappings-of-Auth-Module_Add-Custom-Attribute-Mapping-to-Custom-Attribute-Mappings-of-a-Auth-Module.html.md)
+- [Get All Custom Attribute Mappings of a Auth Module](HUB-REST-API_Auth-Modules_Custom-Attribute-Mappings-of-Auth-Module_Get-All-Custom-Attribute-Mappings-of-a-Auth-Module.html.md)
+- [Get Custom Attribute Mapping from Custom Attribute Mappings of a Auth Module](HUB-REST-API_Auth-Modules_Custom-Attribute-Mappings-of-Auth-Module_Get-Custom-Attribute-Mapping-from-Custom-Attribute-Mappings-of-a-Auth-Module.html.md)
+- [Remove Custom Attribute Mapping from Custom Attribute Mappings of a Auth Module](HUB-REST-API_Auth-Modules_Custom-Attribute-Mappings-of-Auth-Module_Remove-Custom-Attribute-Mapping-from-Custom-Attribute-Mappings-of-a-Auth-Module.html.md)
+- [Delete Existing Auth Module](HUB-REST-API_Auth-Modules_Delete-Existing-Auth-Module.html.md)
+- [External Group Mappings of Auth Module](HUB-REST-API_Auth-Modules_External-Group-Mappings-of-Auth-Module.html.md)
+- [Add External Group Mapping to External Group Mappings of a Auth Module](HUB-REST-API_Auth-Modules_External-Group-Mappings-of-Auth-Module_Add-External-Group-Mapping-to-External-Group-Mappings-of-a-Auth-Module.html.md)
+- [Get All External Group Mappings of a Auth Module](HUB-REST-API_Auth-Modules_External-Group-Mappings-of-Auth-Module_Get-All-External-Group-Mappings-of-a-Auth-Module.html.md)
+- [Get External Group Mapping from External Group Mappings of a Auth Module](HUB-REST-API_Auth-Modules_External-Group-Mappings-of-Auth-Module_Get-External-Group-Mapping-from-External-Group-Mappings-of-a-Auth-Module.html.md)
+- [Remove External Group Mapping from External Group Mappings of a Auth Module](HUB-REST-API_Auth-Modules_External-Group-Mappings-of-Auth-Module_Remove-External-Group-Mapping-from-External-Group-Mappings-of-a-Auth-Module.html.md)
+- [Get All Auth Modules](HUB-REST-API_Auth-Modules_Get-All-Auth-Modules.html.md)
+- [Get Auth Module](HUB-REST-API_Auth-Modules_Get-Auth-Module.html.md)
+- [Get Idpconnectioninfo](HUB-REST-API_Auth-Modules_Get-Idpconnectioninfo.html.md)
+- [Get Idpgroups](HUB-REST-API_Auth-Modules_Get-Idpgroups.html.md)
+- [Get QueryAssist](HUB-REST-API_Auth-Modules_Get-QueryAssist.html.md)
+- [Group Mappings of Auth Module](HUB-REST-API_Auth-Modules_Group-Mappings-of-Auth-Module.html.md)
+- [Add Group Mapping to Group Mappings of a Auth Module](HUB-REST-API_Auth-Modules_Group-Mappings-of-Auth-Module_Add-Group-Mapping-to-Group-Mappings-of-a-Auth-Module.html.md)
+- [Get All Group Mappings of a Auth Module](HUB-REST-API_Auth-Modules_Group-Mappings-of-Auth-Module_Get-All-Group-Mappings-of-a-Auth-Module.html.md)
+- [Get Group Mapping from Group Mappings of a Auth Module](HUB-REST-API_Auth-Modules_Group-Mappings-of-Auth-Module_Get-Group-Mapping-from-Group-Mappings-of-a-Auth-Module.html.md)
+- [Remove Group Mapping from Group Mappings of a Auth Module](HUB-REST-API_Auth-Modules_Group-Mappings-of-Auth-Module_Remove-Group-Mapping-from-Group-Mappings-of-a-Auth-Module.html.md)
+- [Post Idpfulldataload](HUB-REST-API_Auth-Modules_Post-Idpfulldataload.html.md)
+- [Post Idprefreshconnectioninfo](HUB-REST-API_Auth-Modules_Post-Idprefreshconnectioninfo.html.md)
+- [Post Resolve](HUB-REST-API_Auth-Modules_Post-Resolve.html.md)
+- [Post ScheduleBy Authmodules Id Synchronization Schedule](HUB-REST-API_Auth-Modules_Post-ScheduleBy-Authmodules-Id-Synchronization-Schedule.html.md)
+- [Post ScheduleBy Authmodules Synchronization Schedule](HUB-REST-API_Auth-Modules_Post-ScheduleBy-Authmodules-Synchronization-Schedule.html.md)
+- [Post Strength](HUB-REST-API_Auth-Modules_Post-Strength.html.md)
+- [Post TestLogin](HUB-REST-API_Auth-Modules_Post-TestLogin.html.md)
+- [Post {operation}](HUB-REST-API_Auth-Modules_Post-operation.html.md)
+- [Update Existing Auth Module](HUB-REST-API_Auth-Modules_Update-Existing-Auth-Module.html.md)
+- [Certificates](HUB-REST-API_Certificates.html.md)
+- [Create New Certificate](HUB-REST-API_Certificates_Create-New-Certificate.html.md)
+- [Delete Existing Certificate](HUB-REST-API_Certificates_Delete-Existing-Certificate.html.md)
+- [Get All Certificates](HUB-REST-API_Certificates_Get-All-Certificates.html.md)
+- [Get Certificate](HUB-REST-API_Certificates_Get-Certificate.html.md)
+- [Get QueryAssist](HUB-REST-API_Certificates_Get-QueryAssist.html.md)
+- [Update Existing Certificate](HUB-REST-API_Certificates_Update-Existing-Certificate.html.md)
+- [Events](HUB-REST-API_Events.html.md)
+- [Create New Event](HUB-REST-API_Events_Create-New-Event.html.md)
+- [Delete Existing Event](HUB-REST-API_Events_Delete-Existing-Event.html.md)
+- [Get All Events](HUB-REST-API_Events_Get-All-Events.html.md)
+- [Get Event](HUB-REST-API_Events_Get-Event.html.md)
+- [Get QueryAssist](HUB-REST-API_Events_Get-QueryAssist.html.md)
+- [Update Existing Event](HUB-REST-API_Events_Update-Existing-Event.html.md)
+- [Hub Features](HUB-REST-API_Hub-Features.html.md)
+- [Get All Hub Features](HUB-REST-API_Hub-Features_Get-All-Hub-Features.html.md)
+- [Get Enabled](HUB-REST-API_Hub-Features_Get-Enabled.html.md)
+- [Get Hub Feature](HUB-REST-API_Hub-Features_Get-Hub-Feature.html.md)
+- [Get QueryAssist](HUB-REST-API_Hub-Features_Get-QueryAssist.html.md)
+- [Update Existing Hub Feature](HUB-REST-API_Hub-Features_Update-Existing-Hub-Feature.html.md)
+- [JSON Scheme](HUB-REST-API_JSON-Scheme.html.md)
+- [Key Stores](HUB-REST-API_Key-Stores.html.md)
+- [Create New Key Store](HUB-REST-API_Key-Stores_Create-New-Key-Store.html.md)
+- [Delete Existing Key Store](HUB-REST-API_Key-Stores_Delete-Existing-Key-Store.html.md)
+- [Get All Key Stores](HUB-REST-API_Key-Stores_Get-All-Key-Stores.html.md)
+- [Get Key Store](HUB-REST-API_Key-Stores_Get-Key-Store.html.md)
+- [Get QueryAssist](HUB-REST-API_Key-Stores_Get-QueryAssist.html.md)
+- [Update Existing Key Store](HUB-REST-API_Key-Stores_Update-Existing-Key-Store.html.md)
+- [Metrics](HUB-REST-API_Metrics.html.md)
+- [Get All Metrics](HUB-REST-API_Metrics_Get-All-Metrics.html.md)
+- [Get Metrics](HUB-REST-API_Metrics_Get-Metrics.html.md)
+- [Get OpenMetrics](HUB-REST-API_Metrics_Get-OpenMetrics.html.md)
+- [Get QueryAssist](HUB-REST-API_Metrics_Get-QueryAssist.html.md)
+- [Orgs](HUB-REST-API_Orgs.html.md)
+- [Authmodules of Org](HUB-REST-API_Orgs_Authmodules-of-Org.html.md)
+- [Add Authmodule to Authmodules of a Org](HUB-REST-API_Orgs_Authmodules-of-Org_Add-Authmodule-to-Authmodules-of-a-Org.html.md)
+- [Get All Authmodules of a Org](HUB-REST-API_Orgs_Authmodules-of-Org_Get-All-Authmodules-of-a-Org.html.md)
+- [Get Authmodule from Authmodules of a Org](HUB-REST-API_Orgs_Authmodules-of-Org_Get-Authmodule-from-Authmodules-of-a-Org.html.md)
+- [Remove Authmodule from Authmodules of a Org](HUB-REST-API_Orgs_Authmodules-of-Org_Remove-Authmodule-from-Authmodules-of-a-Org.html.md)
+- [Certificates of Org](HUB-REST-API_Orgs_Certificates-of-Org.html.md)
+- [Add Certificate to Certificates of a Org](HUB-REST-API_Orgs_Certificates-of-Org_Add-Certificate-to-Certificates-of-a-Org.html.md)
+- [Get All Certificates of a Org](HUB-REST-API_Orgs_Certificates-of-Org_Get-All-Certificates-of-a-Org.html.md)
+- [Get Certificate from Certificates of a Org](HUB-REST-API_Orgs_Certificates-of-Org_Get-Certificate-from-Certificates-of-a-Org.html.md)
+- [Remove Certificate from Certificates of a Org](HUB-REST-API_Orgs_Certificates-of-Org_Remove-Certificate-from-Certificates-of-a-Org.html.md)
+- [Create New Org](HUB-REST-API_Orgs_Create-New-Org.html.md)
+- [Delete Existing Org](HUB-REST-API_Orgs_Delete-Existing-Org.html.md)
+- [Get ](HUB-REST-API_Orgs_Get.html.md)
+- [Get All Orgs](HUB-REST-API_Orgs_Get-All-Orgs.html.md)
+- [Get Org](HUB-REST-API_Orgs_Get-Org.html.md)
+- [Get QueryAssist](HUB-REST-API_Orgs_Get-QueryAssist.html.md)
+- [Keystores of Org](HUB-REST-API_Orgs_Keystores-of-Org.html.md)
+- [Add Keystore to Keystores of a Org](HUB-REST-API_Orgs_Keystores-of-Org_Add-Keystore-to-Keystores-of-a-Org.html.md)
+- [Get All Keystores of a Org](HUB-REST-API_Orgs_Keystores-of-Org_Get-All-Keystores-of-a-Org.html.md)
+- [Get Keystore from Keystores of a Org](HUB-REST-API_Orgs_Keystores-of-Org_Get-Keystore-from-Keystores-of-a-Org.html.md)
+- [Remove Keystore from Keystores of a Org](HUB-REST-API_Orgs_Keystores-of-Org_Remove-Keystore-from-Keystores-of-a-Org.html.md)
+- [Profile Attribute Prototypes of Org](HUB-REST-API_Orgs_Profile-Attribute-Prototypes-of-Org.html.md)
+- [Add Profile Attribute Prototype to Profile Attribute Prototypes of a Org](HUB-REST-API_Orgs_Profile-Attribute-Prototypes-of-Org_Add-Profile-Attribute-Prototype-to-Profile-Attribute-Prototypes-of-a-Org.html.md)
+- [Get All Profile Attribute Prototypes of a Org](HUB-REST-API_Orgs_Profile-Attribute-Prototypes-of-Org_Get-All-Profile-Attribute-Prototypes-of-a-Org.html.md)
+- [Get Profile Attribute Prototype from Profile Attribute Prototypes of a Org](HUB-REST-API_Orgs_Profile-Attribute-Prototypes-of-Org_Get-Profile-Attribute-Prototype-from-Profile-Attribute-Prototypes-of-a-Org.html.md)
+- [Remove Profile Attribute Prototype from Profile Attribute Prototypes of a Org](HUB-REST-API_Orgs_Profile-Attribute-Prototypes-of-Org_Remove-Profile-Attribute-Prototype-from-Profile-Attribute-Prototypes-of-a-Org.html.md)
+- [Services of Org](HUB-REST-API_Orgs_Services-of-Org.html.md)
+- [Add Service to Services of a Org](HUB-REST-API_Orgs_Services-of-Org_Add-Service-to-Services-of-a-Org.html.md)
+- [Get All Services of a Org](HUB-REST-API_Orgs_Services-of-Org_Get-All-Services-of-a-Org.html.md)
+- [Get Service from Services of a Org](HUB-REST-API_Orgs_Services-of-Org_Get-Service-from-Services-of-a-Org.html.md)
+- [Remove Service from Services of a Org](HUB-REST-API_Orgs_Services-of-Org_Remove-Service-from-Services-of-a-Org.html.md)
+- [Update Existing Org](HUB-REST-API_Orgs_Update-Existing-Org.html.md)
+- [Userdetails of Org](HUB-REST-API_Orgs_Userdetails-of-Org.html.md)
+- [Add Userdetail to Userdetails of a Org](HUB-REST-API_Orgs_Userdetails-of-Org_Add-Userdetail-to-Userdetails-of-a-Org.html.md)
+- [Get All Userdetails of a Org](HUB-REST-API_Orgs_Userdetails-of-Org_Get-All-Userdetails-of-a-Org.html.md)
+- [Get Userdetail from Userdetails of a Org](HUB-REST-API_Orgs_Userdetails-of-Org_Get-Userdetail-from-Userdetails-of-a-Org.html.md)
+- [Remove Userdetail from Userdetails of a Org](HUB-REST-API_Orgs_Userdetails-of-Org_Remove-Userdetail-from-Userdetails-of-a-Org.html.md)
+- [Usergroups of Org](HUB-REST-API_Orgs_Usergroups-of-Org.html.md)
+- [Add Usergroup to Usergroups of a Org](HUB-REST-API_Orgs_Usergroups-of-Org_Add-Usergroup-to-Usergroups-of-a-Org.html.md)
+- [Get All Usergroups of a Org](HUB-REST-API_Orgs_Usergroups-of-Org_Get-All-Usergroups-of-a-Org.html.md)
+- [Get Usergroup from Usergroups of a Org](HUB-REST-API_Orgs_Usergroups-of-Org_Get-Usergroup-from-Usergroups-of-a-Org.html.md)
+- [Remove Usergroup from Usergroups of a Org](HUB-REST-API_Orgs_Usergroups-of-Org_Remove-Usergroup-from-Usergroups-of-a-Org.html.md)
+- [Workspaces of Org](HUB-REST-API_Orgs_Workspaces-of-Org.html.md)
+- [Add Workspace to Workspaces of a Org](HUB-REST-API_Orgs_Workspaces-of-Org_Add-Workspace-to-Workspaces-of-a-Org.html.md)
+- [Get All Workspaces of a Org](HUB-REST-API_Orgs_Workspaces-of-Org_Get-All-Workspaces-of-a-Org.html.md)
+- [Get Workspace from Workspaces of a Org](HUB-REST-API_Orgs_Workspaces-of-Org_Get-Workspace-from-Workspaces-of-a-Org.html.md)
+- [Remove Workspace from Workspaces of a Org](HUB-REST-API_Orgs_Workspaces-of-Org_Remove-Workspace-from-Workspaces-of-a-Org.html.md)
+- [Permissions](HUB-REST-API_Permissions.html.md)
+- [Create New Permission](HUB-REST-API_Permissions_Create-New-Permission.html.md)
+- [Delete Existing Permission](HUB-REST-API_Permissions_Delete-Existing-Permission.html.md)
+- [Get All Permissions](HUB-REST-API_Permissions_Get-All-Permissions.html.md)
+- [Get Cache](HUB-REST-API_Permissions_Get-Cache.html.md)
+- [Get Permission](HUB-REST-API_Permissions_Get-Permission.html.md)
+- [Get QueryAssist](HUB-REST-API_Permissions_Get-QueryAssist.html.md)
+- [Update Existing Permission](HUB-REST-API_Permissions_Update-Existing-Permission.html.md)
+- [Profile Attribute Prototypes](HUB-REST-API_Profile-Attribute-Prototypes.html.md)
+- [Create New Profile Attribute Prototype](HUB-REST-API_Profile-Attribute-Prototypes_Create-New-Profile-Attribute-Prototype.html.md)
+- [Delete Existing Profile Attribute Prototype](HUB-REST-API_Profile-Attribute-Prototypes_Delete-Existing-Profile-Attribute-Prototype.html.md)
+- [Get All Profile Attribute Prototypes](HUB-REST-API_Profile-Attribute-Prototypes_Get-All-Profile-Attribute-Prototypes.html.md)
+- [Get Profile Attribute Prototype](HUB-REST-API_Profile-Attribute-Prototypes_Get-Profile-Attribute-Prototype.html.md)
+- [Get QueryAssist](HUB-REST-API_Profile-Attribute-Prototypes_Get-QueryAssist.html.md)
+- [Update Existing Profile Attribute Prototype](HUB-REST-API_Profile-Attribute-Prototypes_Update-Existing-Profile-Attribute-Prototype.html.md)
+- [Project Roles](HUB-REST-API_Project-Roles.html.md)
+- [Get All Project Roles](HUB-REST-API_Project-Roles_Get-All-Project-Roles.html.md)
+- [Get Project Role](HUB-REST-API_Project-Roles_Get-Project-Role.html.md)
+- [Get QueryAssist](HUB-REST-API_Project-Roles_Get-QueryAssist.html.md)
+- [Projects](HUB-REST-API_Projects.html.md)
+- [Create New Project](HUB-REST-API_Projects_Create-New-Project.html.md)
+- [Delete Existing Project](HUB-REST-API_Projects_Delete-Existing-Project.html.md)
+- [Get All Projects](HUB-REST-API_Projects_Get-All-Projects.html.md)
+- [Get Global](HUB-REST-API_Projects_Get-Global.html.md)
+- [Get IconBy Default](HUB-REST-API_Projects_Get-IconBy-Default.html.md)
+- [Get IconBy Key Name](HUB-REST-API_Projects_Get-IconBy-Key-Name.html.md)
+- [Get Project](HUB-REST-API_Projects_Get-Project.html.md)
+- [Get QueryAssist](HUB-REST-API_Projects_Get-QueryAssist.html.md)
+- [Transitive Project Roles of Project](HUB-REST-API_Projects_Transitive-Project-Roles-of-Project.html.md)
+- [Get All Transitive Project Roles of a Project](HUB-REST-API_Projects_Transitive-Project-Roles-of-Project_Get-All-Transitive-Project-Roles-of-a-Project.html.md)
+- [Get Transitive Project Role from Transitive Project Roles of a Project](HUB-REST-API_Projects_Transitive-Project-Roles-of-Project_Get-Transitive-Project-Role-from-Transitive-Project-Roles-of-a-Project.html.md)
+- [Update Existing Project](HUB-REST-API_Projects_Update-Existing-Project.html.md)
+- [Roles](HUB-REST-API_Roles.html.md)
+- [Create New Role](HUB-REST-API_Roles_Create-New-Role.html.md)
+- [Delete Existing Role](HUB-REST-API_Roles_Delete-Existing-Role.html.md)
+- [Get All Roles](HUB-REST-API_Roles_Get-All-Roles.html.md)
+- [Get QueryAssist](HUB-REST-API_Roles_Get-QueryAssist.html.md)
+- [Get Role](HUB-REST-API_Roles_Get-Role.html.md)
+- [Permissions of Role](HUB-REST-API_Roles_Permissions-of-Role.html.md)
+- [Add Permission to Permissions of a Role](HUB-REST-API_Roles_Permissions-of-Role_Add-Permission-to-Permissions-of-a-Role.html.md)
+- [Get All Permissions of a Role](HUB-REST-API_Roles_Permissions-of-Role_Get-All-Permissions-of-a-Role.html.md)
+- [Get Permission from Permissions of a Role](HUB-REST-API_Roles_Permissions-of-Role_Get-Permission-from-Permissions-of-a-Role.html.md)
+- [Remove Permission from Permissions of a Role](HUB-REST-API_Roles_Permissions-of-Role_Remove-Permission-from-Permissions-of-a-Role.html.md)
+- [Post Merge](HUB-REST-API_Roles_Post-Merge.html.md)
+- [Post Reset](HUB-REST-API_Roles_Post-Reset.html.md)
+- [Post Servicepermissions](HUB-REST-API_Roles_Post-Servicepermissions.html.md)
+- [Update Existing Role](HUB-REST-API_Roles_Update-Existing-Role.html.md)
+- [Service Provider Metadatas](HUB-REST-API_Service-Provider-Metadatas.html.md)
+- [Create New Service Provider Metadata](HUB-REST-API_Service-Provider-Metadatas_Create-New-Service-Provider-Metadata.html.md)
+- [Delete Existing Service Provider Metadata](HUB-REST-API_Service-Provider-Metadatas_Delete-Existing-Service-Provider-Metadata.html.md)
+- [Get All Service Provider Metadatas](HUB-REST-API_Service-Provider-Metadatas_Get-All-Service-Provider-Metadatas.html.md)
+- [Get QueryAssist](HUB-REST-API_Service-Provider-Metadatas_Get-QueryAssist.html.md)
+- [Get Service Provider Metadata](HUB-REST-API_Service-Provider-Metadatas_Get-Service-Provider-Metadata.html.md)
+- [Update Existing Service Provider Metadata](HUB-REST-API_Service-Provider-Metadatas_Update-Existing-Service-Provider-Metadata.html.md)
+- [Services](HUB-REST-API_Services.html.md)
+- [Create New Service](HUB-REST-API_Services_Create-New-Service.html.md)
+- [Default Roles of Service](HUB-REST-API_Services_Default-Roles-of-Service.html.md)
+- [Add Default Role to Default Roles of a Service](HUB-REST-API_Services_Default-Roles-of-Service_Add-Default-Role-to-Default-Roles-of-a-Service.html.md)
+- [Get All Default Roles of a Service](HUB-REST-API_Services_Default-Roles-of-Service_Get-All-Default-Roles-of-a-Service.html.md)
+- [Get Default Role from Default Roles of a Service](HUB-REST-API_Services_Default-Roles-of-Service_Get-Default-Role-from-Default-Roles-of-a-Service.html.md)
+- [Remove Default Role from Default Roles of a Service](HUB-REST-API_Services_Default-Roles-of-Service_Remove-Default-Role-from-Default-Roles-of-a-Service.html.md)
+- [Delete Existing Service](HUB-REST-API_Services_Delete-Existing-Service.html.md)
+- [Get All Services](HUB-REST-API_Services_Get-All-Services.html.md)
+- [Get Header](HUB-REST-API_Services_Get-Header.html.md)
+- [Get QueryAssist](HUB-REST-API_Services_Get-QueryAssist.html.md)
+- [Get Service](HUB-REST-API_Services_Get-Service.html.md)
+- [Permissions of Service](HUB-REST-API_Services_Permissions-of-Service.html.md)
+- [Add Permission to Permissions of a Service](HUB-REST-API_Services_Permissions-of-Service_Add-Permission-to-Permissions-of-a-Service.html.md)
+- [Get All Permissions of a Service](HUB-REST-API_Services_Permissions-of-Service_Get-All-Permissions-of-a-Service.html.md)
+- [Get Permission from Permissions of a Service](HUB-REST-API_Services_Permissions-of-Service_Get-Permission-from-Permissions-of-a-Service.html.md)
+- [Remove Permission from Permissions of a Service](HUB-REST-API_Services_Permissions-of-Service_Remove-Permission-from-Permissions-of-a-Service.html.md)
+- [Post InvalidateCache](HUB-REST-API_Services_Post-InvalidateCache.html.md)
+- [Project Roles of Service](HUB-REST-API_Services_Project-Roles-of-Service.html.md)
+- [Add Project Role to Project Roles of a Service](HUB-REST-API_Services_Project-Roles-of-Service_Add-Project-Role-to-Project-Roles-of-a-Service.html.md)
+- [Get All Project Roles of a Service](HUB-REST-API_Services_Project-Roles-of-Service_Get-All-Project-Roles-of-a-Service.html.md)
+- [Get Project Role from Project Roles of a Service](HUB-REST-API_Services_Project-Roles-of-Service_Get-Project-Role-from-Project-Roles-of-a-Service.html.md)
+- [Remove Project Role from Project Roles of a Service](HUB-REST-API_Services_Project-Roles-of-Service_Remove-Project-Role-from-Project-Roles-of-a-Service.html.md)
+- [Untrusted Redirect U R Is of Service](HUB-REST-API_Services_Untrusted-Redirect-U-R-Is-of-Service.html.md)
+- [Add Untrusted Redirect U R I to Untrusted Redirect U R Is of a Service](HUB-REST-API_Services_Untrusted-Redirect-U-R-Is-of-Service_Add-Untrusted-Redirect-U-R-I-to-Untrusted-Redirect-U-R-Is-of-a-Service.html.md)
+- [Delete Reject](HUB-REST-API_Services_Untrusted-Redirect-U-R-Is-of-Service_Delete-Reject.html.md)
+- [Get All Untrusted Redirect U R Is of a Service](HUB-REST-API_Services_Untrusted-Redirect-U-R-Is-of-Service_Get-All-Untrusted-Redirect-U-R-Is-of-a-Service.html.md)
+- [Get Untrusted Redirect U R I from Untrusted Redirect U R Is of a Service](HUB-REST-API_Services_Untrusted-Redirect-U-R-Is-of-Service_Get-Untrusted-Redirect-U-R-I-from-Untrusted-Redirect-U-R-Is-of-a-Service.html.md)
+- [Post Accept](HUB-REST-API_Services_Untrusted-Redirect-U-R-Is-of-Service_Post-Accept.html.md)
+- [Remove Untrusted Redirect U R I from Untrusted Redirect U R Is of a Service](HUB-REST-API_Services_Untrusted-Redirect-U-R-Is-of-Service_Remove-Untrusted-Redirect-U-R-I-from-Untrusted-Redirect-U-R-Is-of-a-Service.html.md)
+- [Update Existing Service](HUB-REST-API_Services_Update-Existing-Service.html.md)
+- [Viewers of Service](HUB-REST-API_Services_Viewers-of-Service.html.md)
+- [Add Viewer to Viewers of a Service](HUB-REST-API_Services_Viewers-of-Service_Add-Viewer-to-Viewers-of-a-Service.html.md)
+- [Get All Viewers of a Service](HUB-REST-API_Services_Viewers-of-Service_Get-All-Viewers-of-a-Service.html.md)
+- [Get Viewer from Viewers of a Service](HUB-REST-API_Services_Viewers-of-Service_Get-Viewer-from-Viewers-of-a-Service.html.md)
+- [Remove Viewer from Viewers of a Service](HUB-REST-API_Services_Viewers-of-Service_Remove-Viewer-from-Viewers-of-a-Service.html.md)
+- [Settings(/health)](HUB-REST-API_Settings-health.html.md)
+- [Get All Settings](HUB-REST-API_Settings-health_Get-All-Settings.html.md)
+- [Get Liveness](HUB-REST-API_Settings-health_Get-Liveness.html.md)
+- [Get QueryAssist](HUB-REST-API_Settings-health_Get-QueryAssist.html.md)
+- [Get Readiness](HUB-REST-API_Settings-health_Get-Readiness.html.md)
+- [Get Settings](HUB-REST-API_Settings-health_Get-Settings.html.md)
+- [Get Startup](HUB-REST-API_Settings-health_Get-Startup.html.md)
+- [Settings(/settings)](HUB-REST-API_Settings-settings.html.md)
+- [Create New Setting](HUB-REST-API_Settings-settings_Create-New-Setting.html.md)
+- [Delete ](HUB-REST-API_Settings-settings_Delete.html.md)
+- [Delete Existing Setting](HUB-REST-API_Settings-settings_Delete-Existing-Setting.html.md)
+- [Get All Settings](HUB-REST-API_Settings-settings_Get-All-Settings.html.md)
+- [Get Locales](HUB-REST-API_Settings-settings_Get-Locales.html.md)
+- [Get QueryAssist](HUB-REST-API_Settings-settings_Get-QueryAssist.html.md)
+- [Get Setting](HUB-REST-API_Settings-settings_Get-Setting.html.md)
+- [Post BackupData](HUB-REST-API_Settings-settings_Post-BackupData.html.md)
+- [Post Message](HUB-REST-API_Settings-settings_Post-Message.html.md)
+- [Post Reset](HUB-REST-API_Settings-settings_Post-Reset.html.md)
+- [Post Test](HUB-REST-API_Settings-settings_Post-Test.html.md)
+- [Update Existing Setting](HUB-REST-API_Settings-settings_Update-Existing-Setting.html.md)
+- [User Details](HUB-REST-API_User-Details.html.md)
+- [Create New User Detail](HUB-REST-API_User-Details_Create-New-User-Detail.html.md)
+- [Delete Existing User Detail](HUB-REST-API_User-Details_Delete-Existing-User-Detail.html.md)
+- [Get All User Details](HUB-REST-API_User-Details_Get-All-User-Details.html.md)
+- [Get QueryAssist](HUB-REST-API_User-Details_Get-QueryAssist.html.md)
+- [Get User Detail](HUB-REST-API_User-Details_Get-User-Detail.html.md)
+- [Post Revoke](HUB-REST-API_User-Details_Post-Revoke.html.md)
+- [Update Existing User Detail](HUB-REST-API_User-Details_Update-Existing-User-Detail.html.md)
+- [User Groups](HUB-REST-API_User-Groups.html.md)
+- [Create New User Group](HUB-REST-API_User-Groups_Create-New-User-Group.html.md)
+- [Delete Existing User Group](HUB-REST-API_User-Groups_Delete-Existing-User-Group.html.md)
+- [Get All User Groups](HUB-REST-API_User-Groups_Get-All-User-Groups.html.md)
+- [Get Forest](HUB-REST-API_User-Groups_Get-Forest.html.md)
+- [Get QueryAssist](HUB-REST-API_User-Groups_Get-QueryAssist.html.md)
+- [Get Root](HUB-REST-API_User-Groups_Get-Root.html.md)
+- [Get User Group](HUB-REST-API_User-Groups_Get-User-Group.html.md)
+- [Post Merge](HUB-REST-API_User-Groups_Post-Merge.html.md)
+- [Project Roles of User Group](HUB-REST-API_User-Groups_Project-Roles-of-User-Group.html.md)
+- [Add Project Role to Project Roles of a User Group](HUB-REST-API_User-Groups_Project-Roles-of-User-Group_Add-Project-Role-to-Project-Roles-of-a-User-Group.html.md)
+- [Get All Project Roles of a User Group](HUB-REST-API_User-Groups_Project-Roles-of-User-Group_Get-All-Project-Roles-of-a-User-Group.html.md)
+- [Get Project Role from Project Roles of a User Group](HUB-REST-API_User-Groups_Project-Roles-of-User-Group_Get-Project-Role-from-Project-Roles-of-a-User-Group.html.md)
+- [Remove Project Role from Project Roles of a User Group](HUB-REST-API_User-Groups_Project-Roles-of-User-Group_Remove-Project-Role-from-Project-Roles-of-a-User-Group.html.md)
+- [Sourced Project Roles of User Group](HUB-REST-API_User-Groups_Sourced-Project-Roles-of-User-Group.html.md)
+- [Get All Sourced Project Roles of a User Group](HUB-REST-API_User-Groups_Sourced-Project-Roles-of-User-Group_Get-All-Sourced-Project-Roles-of-a-User-Group.html.md)
+- [Get Sourced Project Role from Sourced Project Roles of a User Group](HUB-REST-API_User-Groups_Sourced-Project-Roles-of-User-Group_Get-Sourced-Project-Role-from-Sourced-Project-Roles-of-a-User-Group.html.md)
+- [Subgroups of User Group](HUB-REST-API_User-Groups_Subgroups-of-User-Group.html.md)
+- [Add Subgroup to Subgroups of a User Group](HUB-REST-API_User-Groups_Subgroups-of-User-Group_Add-Subgroup-to-Subgroups-of-a-User-Group.html.md)
+- [Get All Subgroups of a User Group](HUB-REST-API_User-Groups_Subgroups-of-User-Group_Get-All-Subgroups-of-a-User-Group.html.md)
+- [Get Subgroup from Subgroups of a User Group](HUB-REST-API_User-Groups_Subgroups-of-User-Group_Get-Subgroup-from-Subgroups-of-a-User-Group.html.md)
+- [Remove Subgroup from Subgroups of a User Group](HUB-REST-API_User-Groups_Subgroups-of-User-Group_Remove-Subgroup-from-Subgroups-of-a-User-Group.html.md)
+- [Transitive Project Roles of User Group](HUB-REST-API_User-Groups_Transitive-Project-Roles-of-User-Group.html.md)
+- [Get All Transitive Project Roles of a User Group](HUB-REST-API_User-Groups_Transitive-Project-Roles-of-User-Group_Get-All-Transitive-Project-Roles-of-a-User-Group.html.md)
+- [Get Transitive Project Role from Transitive Project Roles of a User Group](HUB-REST-API_User-Groups_Transitive-Project-Roles-of-User-Group_Get-Transitive-Project-Role-from-Transitive-Project-Roles-of-a-User-Group.html.md)
+- [Update Existing User Group](HUB-REST-API_User-Groups_Update-Existing-User-Group.html.md)
+- [Updaters of User Group](HUB-REST-API_User-Groups_Updaters-of-User-Group.html.md)
+- [Add Updater to Updaters of a User Group](HUB-REST-API_User-Groups_Updaters-of-User-Group_Add-Updater-to-Updaters-of-a-User-Group.html.md)
+- [Get All Updaters of a User Group](HUB-REST-API_User-Groups_Updaters-of-User-Group_Get-All-Updaters-of-a-User-Group.html.md)
+- [Get Updater from Updaters of a User Group](HUB-REST-API_User-Groups_Updaters-of-User-Group_Get-Updater-from-Updaters-of-a-User-Group.html.md)
+- [Remove Updater from Updaters of a User Group](HUB-REST-API_User-Groups_Updaters-of-User-Group_Remove-Updater-from-Updaters-of-a-User-Group.html.md)
+- [Users of User Group](HUB-REST-API_User-Groups_Users-of-User-Group.html.md)
+- [Add User to Users of a User Group](HUB-REST-API_User-Groups_Users-of-User-Group_Add-User-to-Users-of-a-User-Group.html.md)
+- [Get All Users of a User Group](HUB-REST-API_User-Groups_Users-of-User-Group_Get-All-Users-of-a-User-Group.html.md)
+- [Get User from Users of a User Group](HUB-REST-API_User-Groups_Users-of-User-Group_Get-User-from-Users-of-a-User-Group.html.md)
+- [Remove User from Users of a User Group](HUB-REST-API_User-Groups_Users-of-User-Group_Remove-User-from-Users-of-a-User-Group.html.md)
+- [Viewers of User Group](HUB-REST-API_User-Groups_Viewers-of-User-Group.html.md)
+- [Add Viewer to Viewers of a User Group](HUB-REST-API_User-Groups_Viewers-of-User-Group_Add-Viewer-to-Viewers-of-a-User-Group.html.md)
+- [Get All Viewers of a User Group](HUB-REST-API_User-Groups_Viewers-of-User-Group_Get-All-Viewers-of-a-User-Group.html.md)
+- [Get Viewer from Viewers of a User Group](HUB-REST-API_User-Groups_Viewers-of-User-Group_Get-Viewer-from-Viewers-of-a-User-Group.html.md)
+- [Remove Viewer from Viewers of a User Group](HUB-REST-API_User-Groups_Viewers-of-User-Group_Remove-Viewer-from-Viewers-of-a-User-Group.html.md)
+- [Users](HUB-REST-API_Users.html.md)
+- [Application Passwords of User](HUB-REST-API_Users_Application-Passwords-of-User.html.md)
+- [Add Application Password to Application Passwords of a User](HUB-REST-API_Users_Application-Passwords-of-User_Add-Application-Password-to-Application-Passwords-of-a-User.html.md)
+- [Get All Application Passwords of a User](HUB-REST-API_Users_Application-Passwords-of-User_Get-All-Application-Passwords-of-a-User.html.md)
+- [Get Application Password from Application Passwords of a User](HUB-REST-API_Users_Application-Passwords-of-User_Get-Application-Password-from-Application-Passwords-of-a-User.html.md)
+- [Remove Application Password from Application Passwords of a User](HUB-REST-API_Users_Application-Passwords-of-User_Remove-Application-Password-from-Application-Passwords-of-a-User.html.md)
+- [Approved Scopes of User](HUB-REST-API_Users_Approved-Scopes-of-User.html.md)
+- [Get All Approved Scopes of a User](HUB-REST-API_Users_Approved-Scopes-of-User_Get-All-Approved-Scopes-of-a-User.html.md)
+- [Get Approved Scope from Approved Scopes of a User](HUB-REST-API_Users_Approved-Scopes-of-User_Get-Approved-Scope-from-Approved-Scopes-of-a-User.html.md)
+- [Remove Approved Scope from Approved Scopes of a User](HUB-REST-API_Users_Approved-Scopes-of-User_Remove-Approved-Scope-from-Approved-Scopes-of-a-User.html.md)
+- [Create New User](HUB-REST-API_Users_Create-New-User.html.md)
+- [Delete EndUserAgreementConsent](HUB-REST-API_Users_Delete-EndUserAgreementConsent.html.md)
+- [Delete Existing User](HUB-REST-API_Users_Delete-Existing-User.html.md)
+- [Delete Registration](HUB-REST-API_Users_Delete-Registration.html.md)
+- [Delete TwoFactorAuthentication](HUB-REST-API_Users_Delete-TwoFactorAuthentication.html.md)
+- [Favorite Projects of User](HUB-REST-API_Users_Favorite-Projects-of-User.html.md)
+- [Add Favorite Project to Favorite Projects of a User](HUB-REST-API_Users_Favorite-Projects-of-User_Add-Favorite-Project-to-Favorite-Projects-of-a-User.html.md)
+- [Get All Favorite Projects of a User](HUB-REST-API_Users_Favorite-Projects-of-User_Get-All-Favorite-Projects-of-a-User.html.md)
+- [Get Favorite Project from Favorite Projects of a User](HUB-REST-API_Users_Favorite-Projects-of-User_Get-Favorite-Project-from-Favorite-Projects-of-a-User.html.md)
+- [Remove Favorite Project from Favorite Projects of a User](HUB-REST-API_Users_Favorite-Projects-of-User_Remove-Favorite-Project-from-Favorite-Projects-of-a-User.html.md)
+- [Get All Users](HUB-REST-API_Users_Get-All-Users.html.md)
+- [Get Guest](HUB-REST-API_Users_Get-Guest.html.md)
+- [Get Personal Data](HUB-REST-API_Users_Get-Personal-Data.html.md)
+- [Get QueryAssist](HUB-REST-API_Users_Get-QueryAssist.html.md)
+- [Get Registration](HUB-REST-API_Users_Get-Registration.html.md)
+- [Get User](HUB-REST-API_Users_Get-User.html.md)
+- [Groups of User](HUB-REST-API_Users_Groups-of-User.html.md)
+- [Add Group to Groups of a User](HUB-REST-API_Users_Groups-of-User_Add-Group-to-Groups-of-a-User.html.md)
+- [Get All Groups of a User](HUB-REST-API_Users_Groups-of-User_Get-All-Groups-of-a-User.html.md)
+- [Get Group from Groups of a User](HUB-REST-API_Users_Groups-of-User_Get-Group-from-Groups-of-a-User.html.md)
+- [Remove Group from Groups of a User](HUB-REST-API_Users_Groups-of-User_Remove-Group-from-Groups-of-a-User.html.md)
+- [Permanent Tokens of User](HUB-REST-API_Users_Permanent-Tokens-of-User.html.md)
+- [Add Permanent Token to Permanent Tokens of a User](HUB-REST-API_Users_Permanent-Tokens-of-User_Add-Permanent-Token-to-Permanent-Tokens-of-a-User.html.md)
+- [Get All Permanent Tokens of a User](HUB-REST-API_Users_Permanent-Tokens-of-User_Get-All-Permanent-Tokens-of-a-User.html.md)
+- [Get Permanent Token from Permanent Tokens of a User](HUB-REST-API_Users_Permanent-Tokens-of-User_Get-Permanent-Token-from-Permanent-Tokens-of-a-User.html.md)
+- [Remove Permanent Token from Permanent Tokens of a User](HUB-REST-API_Users_Permanent-Tokens-of-User_Remove-Permanent-Token-from-Permanent-Tokens-of-a-User.html.md)
+- [Post Confirm](HUB-REST-API_Users_Post-Confirm.html.md)
+- [Post CreateBypassToken](HUB-REST-API_Users_Post-CreateBypassToken.html.md)
+- [Post CreateToken](HUB-REST-API_Users_Post-CreateToken.html.md)
+- [Post EndUserAgreementConsent](HUB-REST-API_Users_Post-EndUserAgreementConsent.html.md)
+- [Post Erase](HUB-REST-API_Users_Post-Erase.html.md)
+- [Post Invite](HUB-REST-API_Users_Post-Invite.html.md)
+- [Post InviteUsers](HUB-REST-API_Users_Post-InviteUsers.html.md)
+- [Post Merge](HUB-REST-API_Users_Post-Merge.html.md)
+- [Post Registration](HUB-REST-API_Users_Post-Registration.html.md)
+- [Post RemoveLocale](HUB-REST-API_Users_Post-RemoveLocale.html.md)
+- [Post TwoFactorAuthentication](HUB-REST-API_Users_Post-TwoFactorAuthentication.html.md)
+- [Post VerifyContact](HUB-REST-API_Users_Post-VerifyContact.html.md)
+- [Project Roles of User](HUB-REST-API_Users_Project-Roles-of-User.html.md)
+- [Add Project Role to Project Roles of a User](HUB-REST-API_Users_Project-Roles-of-User_Add-Project-Role-to-Project-Roles-of-a-User.html.md)
+- [Get All Project Roles of a User](HUB-REST-API_Users_Project-Roles-of-User_Get-All-Project-Roles-of-a-User.html.md)
+- [Get Project Role from Project Roles of a User](HUB-REST-API_Users_Project-Roles-of-User_Get-Project-Role-from-Project-Roles-of-a-User.html.md)
+- [Remove Project Role from Project Roles of a User](HUB-REST-API_Users_Project-Roles-of-User_Remove-Project-Role-from-Project-Roles-of-a-User.html.md)
+- [Refresh Tokens of User](HUB-REST-API_Users_Refresh-Tokens-of-User.html.md)
+- [Get All Refresh Tokens of a User](HUB-REST-API_Users_Refresh-Tokens-of-User_Get-All-Refresh-Tokens-of-a-User.html.md)
+- [Get Refresh Token from Refresh Tokens of a User](HUB-REST-API_Users_Refresh-Tokens-of-User_Get-Refresh-Token-from-Refresh-Tokens-of-a-User.html.md)
+- [Remove Refresh Token from Refresh Tokens of a User](HUB-REST-API_Users_Refresh-Tokens-of-User_Remove-Refresh-Token-from-Refresh-Tokens-of-a-User.html.md)
+- [Sourced Project Roles of User](HUB-REST-API_Users_Sourced-Project-Roles-of-User.html.md)
+- [Get All Sourced Project Roles of a User](HUB-REST-API_Users_Sourced-Project-Roles-of-User_Get-All-Sourced-Project-Roles-of-a-User.html.md)
+- [Get Sourced Project Role from Sourced Project Roles of a User](HUB-REST-API_Users_Sourced-Project-Roles-of-User_Get-Sourced-Project-Role-from-Sourced-Project-Roles-of-a-User.html.md)
+- [Ssh Public Keys of User](HUB-REST-API_Users_Ssh-Public-Keys-of-User.html.md)
+- [Add Ssh Public Key to Ssh Public Keys of a User](HUB-REST-API_Users_Ssh-Public-Keys-of-User_Add-Ssh-Public-Key-to-Ssh-Public-Keys-of-a-User.html.md)
+- [Get All Ssh Public Keys of a User](HUB-REST-API_Users_Ssh-Public-Keys-of-User_Get-All-Ssh-Public-Keys-of-a-User.html.md)
+- [Get Ssh Public Key from Ssh Public Keys of a User](HUB-REST-API_Users_Ssh-Public-Keys-of-User_Get-Ssh-Public-Key-from-Ssh-Public-Keys-of-a-User.html.md)
+- [Remove Ssh Public Key from Ssh Public Keys of a User](HUB-REST-API_Users_Ssh-Public-Keys-of-User_Remove-Ssh-Public-Key-from-Ssh-Public-Keys-of-a-User.html.md)
+- [Transitive Groups of User](HUB-REST-API_Users_Transitive-Groups-of-User.html.md)
+- [Get All Transitive Groups of a User](HUB-REST-API_Users_Transitive-Groups-of-User_Get-All-Transitive-Groups-of-a-User.html.md)
+- [Get Transitive Group from Transitive Groups of a User](HUB-REST-API_Users_Transitive-Groups-of-User_Get-Transitive-Group-from-Transitive-Groups-of-a-User.html.md)
+- [Transitive Project Roles of User](HUB-REST-API_Users_Transitive-Project-Roles-of-User.html.md)
+- [Get All Transitive Project Roles of a User](HUB-REST-API_Users_Transitive-Project-Roles-of-User_Get-All-Transitive-Project-Roles-of-a-User.html.md)
+- [Get Transitive Project Role from Transitive Project Roles of a User](HUB-REST-API_Users_Transitive-Project-Roles-of-User_Get-Transitive-Project-Role-from-Transitive-Project-Roles-of-a-User.html.md)
+- [Update Existing User](HUB-REST-API_Users_Update-Existing-User.html.md)
+- [User Details of User](HUB-REST-API_Users_User-Details-of-User.html.md)
+- [Add User Detail to User Details of a User](HUB-REST-API_Users_User-Details-of-User_Add-User-Detail-to-User-Details-of-a-User.html.md)
+- [Get All User Details of a User](HUB-REST-API_Users_User-Details-of-User_Get-All-User-Details-of-a-User.html.md)
+- [Get User Detail from User Details of a User](HUB-REST-API_Users_User-Details-of-User_Get-User-Detail-from-User-Details-of-a-User.html.md)
+- [Remove User Detail from User Details of a User](HUB-REST-API_Users_User-Details-of-User_Remove-User-Detail-from-User-Details-of-a-User.html.md)

@@ -1,0 +1,535 @@
+{
+  "fetched_at": "2026-09-22 08:34 Asia/Taipei",
+  "ok": 66,
+  "fail": 0,
+  "results": [
+    {
+      "slug": "introduction-to-youtrack-cloud",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 606,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/introduction-to-youtrack-cloud.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/introduction-to-youtrack-cloud.md"
+    },
+    {
+      "slug": "about-youtrack-cloud",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 5491,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/about-youtrack-cloud.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/about-youtrack-cloud.md"
+    },
+    {
+      "slug": "new-youtrack-cloud-instances",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 6918,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/new-youtrack-cloud-instances.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/new-youtrack-cloud-instances.md"
+    },
+    {
+      "slug": "switching-subscription-plans",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 7043,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/switching-subscription-plans.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/switching-subscription-plans.md"
+    },
+    {
+      "slug": "storage-limits",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 1809,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/storage-limits.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/storage-limits.md"
+    },
+    {
+      "slug": "youtrack-cloud-database-backups",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 3025,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/youtrack-cloud-database-backups.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/youtrack-cloud-database-backups.md"
+    },
+    {
+      "slug": "youtrack-cloud-data-center-locations",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 2131,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/youtrack-cloud-data-center-locations.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/youtrack-cloud-data-center-locations.md"
+    },
+    {
+      "slug": "security",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 8742,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/security.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/security.md"
+    },
+    {
+      "slug": "getting-started-with-youtrack",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 8255,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/getting-started-with-youtrack.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/getting-started-with-youtrack.md"
+    },
+    {
+      "slug": "user-quick-start-guide",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 1982,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/user-quick-start-guide.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/user-quick-start-guide.md"
+    },
+    {
+      "slug": "projects-quick-start-guide",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 3028,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/projects-quick-start-guide.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/projects-quick-start-guide.md"
+    },
+    {
+      "slug": "system-admins-quick-start",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 6952,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/system-admins-quick-start.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/system-admins-quick-start.md"
+    },
+    {
+      "slug": "reporting-an-issue",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 4062,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/reporting-an-issue.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/reporting-an-issue.md"
+    },
+    {
+      "slug": "transition-to-youtrack",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 2997,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/transition-to-youtrack.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/transition-to-youtrack.md"
+    },
+    {
+      "slug": "transition-from-github-issues",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 13830,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/transition-from-github-issues.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/transition-from-github-issues.md"
+    },
+    {
+      "slug": "issues",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 1651,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/issues.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/issues.md"
+    },
+    {
+      "slug": "create-and-edit-issues",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 7199,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/create-and-edit-issues.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/create-and-edit-issues.md"
+    },
+    {
+      "slug": "search-for-issues",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 2797,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/search-for-issues.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/search-for-issues.md"
+    },
+    {
+      "slug": "attribute-based-search",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 16113,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/attribute-based-search.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/attribute-based-search.md"
+    },
+    {
+      "slug": "search-and-command-attributes",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 50688,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/search-and-command-attributes.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/search-and-command-attributes.md"
+    },
+    {
+      "slug": "commands",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 9030,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/commands.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/commands.md"
+    },
+    {
+      "slug": "command-reference",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 15361,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/command-reference.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/command-reference.md"
+    },
+    {
+      "slug": "agile-board",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 2827,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/agile-board.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/agile-board.md"
+    },
+    {
+      "slug": "getting-started-with-agile-board",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 1239,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/getting-started-with-agile-board.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/getting-started-with-agile-board.md"
+    },
+    {
+      "slug": "create-new-board",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 6808,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/create-new-board.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/create-new-board.md"
+    },
+    {
+      "slug": "managing-projects",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 2524,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/managing-projects.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/managing-projects.md"
+    },
+    {
+      "slug": "create-new-project",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 4857,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/create-new-project.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/create-new-project.md"
+    },
+    {
+      "slug": "configuring-a-project",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 12180,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/configuring-a-project.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/configuring-a-project.md"
+    },
+    {
+      "slug": "manage-project-access",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 22253,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/manage-project-access.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/manage-project-access.md"
+    },
+    {
+      "slug": "integrate-project-with-github",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 20652,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/integrate-project-with-github.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/integrate-project-with-github.md"
+    },
+    {
+      "slug": "workflow-guide",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 5129,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/workflow-guide.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/workflow-guide.md"
+    },
+    {
+      "slug": "workflow-tutorial",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 17871,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/workflow-tutorial.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/workflow-tutorial.md"
+    },
+    {
+      "slug": "default-workflows",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 2211,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/default-workflows.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/default-workflows.md"
+    },
+    {
+      "slug": "workflow-constructor",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 15230,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/workflow-constructor.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/workflow-constructor.md"
+    },
+    {
+      "slug": "admin-apps",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 1374,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/admin-apps.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/admin-apps.md"
+    },
+    {
+      "slug": "access-management",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 2095,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/access-management.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/access-management.md"
+    },
+    {
+      "slug": "managing-users",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 2336,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/managing-users.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/managing-users.md"
+    },
+    {
+      "slug": "manage-permanent-token",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 5089,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/manage-permanent-token.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/manage-permanent-token.md"
+    },
+    {
+      "slug": "imports",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 1551,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/imports.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/imports.md"
+    },
+    {
+      "slug": "import-from-github",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 10532,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/import-from-github.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/import-from-github.md"
+    },
+    {
+      "slug": "import-from-csv",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 24546,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/import-from-csv.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/import-from-csv.md"
+    },
+    {
+      "slug": "helpdesk-license",
+      "sub": "cloud",
+      "ok": true,
+      "bytes": 1032,
+      "url": "https://www.jetbrains.com/help/youtrack/cloud/helpdesk-license.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/cloud/helpdesk-license.md"
+    },
+    {
+      "slug": "youtrack-rest-api",
+      "sub": "api",
+      "ok": true,
+      "bytes": 3579,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/youtrack-rest-api.md"
+    },
+    {
+      "slug": "api-getting-started",
+      "sub": "api",
+      "ok": true,
+      "bytes": 1643,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/api-getting-started.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/api-getting-started.md"
+    },
+    {
+      "slug": "api-log-in-to-youtrack",
+      "sub": "api",
+      "ok": true,
+      "bytes": 1447,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/api-log-in-to-youtrack.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/api-log-in-to-youtrack.md"
+    },
+    {
+      "slug": "authentication-with-permanent-token",
+      "sub": "api",
+      "ok": true,
+      "bytes": 3251,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/authentication-with-permanent-token.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/authentication-with-permanent-token.md"
+    },
+    {
+      "slug": "api-url-and-endpoints",
+      "sub": "api",
+      "ok": true,
+      "bytes": 4385,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/api-url-and-endpoints.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/api-url-and-endpoints.md"
+    },
+    {
+      "slug": "api-fields-syntax",
+      "sub": "api",
+      "ok": true,
+      "bytes": 4582,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/api-fields-syntax.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/api-fields-syntax.md"
+    },
+    {
+      "slug": "api-query-syntax",
+      "sub": "api",
+      "ok": true,
+      "bytes": 4019,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/api-query-syntax.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/api-query-syntax.md"
+    },
+    {
+      "slug": "api-howto-create-issue",
+      "sub": "api",
+      "ok": true,
+      "bytes": 1978,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/api-howto-create-issue.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/api-howto-create-issue.md"
+    },
+    {
+      "slug": "api-howto-create-issue-with-fields",
+      "sub": "api",
+      "ok": true,
+      "bytes": 6699,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/api-howto-create-issue-with-fields.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/api-howto-create-issue-with-fields.md"
+    },
+    {
+      "slug": "api-how-to-update-custom-fields-values",
+      "sub": "api",
+      "ok": true,
+      "bytes": 4065,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/api-how-to-update-custom-fields-values.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/api-how-to-update-custom-fields-values.md"
+    },
+    {
+      "slug": "api-usecase-commands",
+      "sub": "api",
+      "ok": true,
+      "bytes": 4246,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/api-usecase-commands.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/api-usecase-commands.md"
+    },
+    {
+      "slug": "ai-tools",
+      "sub": "api",
+      "ok": true,
+      "bytes": 3426,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/ai-tools.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/ai-tools.md"
+    },
+    {
+      "slug": "predefined-ai-tools",
+      "sub": "api",
+      "ok": true,
+      "bytes": 9976,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/predefined-ai-tools.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/predefined-ai-tools.md"
+    },
+    {
+      "slug": "custom-ai-tools",
+      "sub": "api",
+      "ok": true,
+      "bytes": 7653,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/custom-ai-tools.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/custom-ai-tools.md"
+    },
+    {
+      "slug": "apps-documentation",
+      "sub": "api",
+      "ok": true,
+      "bytes": 1916,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/apps-documentation.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/apps-documentation.md"
+    },
+    {
+      "slug": "apps-get-started",
+      "sub": "api",
+      "ok": true,
+      "bytes": 4328,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/apps-get-started.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/apps-get-started.md"
+    },
+    {
+      "slug": "youtrack-workflow-reference",
+      "sub": "api",
+      "ok": true,
+      "bytes": 5102,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/youtrack-workflow-reference.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/youtrack-workflow-reference.md"
+    },
+    {
+      "slug": "Quick-Start-Guide-Workflows-JS",
+      "sub": "api",
+      "ok": true,
+      "bytes": 19587,
+      "url": "https://www.jetbrains.com/help/youtrack/devportal/Quick-Start-Guide-Workflows-JS.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/api/Quick-Start-Guide-Workflows-JS.md"
+    },
+    {
+      "slug": "YouTrack-Installation-Guide",
+      "sub": "server",
+      "ok": true,
+      "bytes": 505,
+      "url": "https://www.jetbrains.com/help/youtrack/server/YouTrack-Installation-Guide.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/server/YouTrack-Installation-Guide.md"
+    },
+    {
+      "slug": "youtrack-docker-installation",
+      "sub": "server",
+      "ok": true,
+      "bytes": 23171,
+      "url": "https://www.jetbrains.com/help/youtrack/server/youtrack-docker-installation.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/server/youtrack-docker-installation.md"
+    },
+    {
+      "slug": "Upgrade-YouTrack",
+      "sub": "server",
+      "ok": true,
+      "bytes": 468,
+      "url": "https://www.jetbrains.com/help/youtrack/server/Upgrade-YouTrack.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/server/Upgrade-YouTrack.md"
+    },
+    {
+      "slug": "youtrack-server-vs-youtrack-cloud",
+      "sub": "server",
+      "ok": true,
+      "bytes": 517,
+      "url": "https://www.jetbrains.com/help/youtrack/server/youtrack-server-vs-youtrack-cloud.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/server/youtrack-server-vs-youtrack-cloud.md"
+    },
+    {
+      "slug": "System-Requirements",
+      "sub": "server",
+      "ok": true,
+      "bytes": 483,
+      "url": "https://www.jetbrains.com/help/youtrack/server/System-Requirements.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/server/System-Requirements.md"
+    },
+    {
+      "slug": "Backup-and-Restore",
+      "sub": "server",
+      "ok": true,
+      "bytes": 478,
+      "url": "https://www.jetbrains.com/help/youtrack/server/Backup-and-Restore.html.md",
+      "path": "/workspace/edgar-os/artifacts/youtrack/server/Backup-and-Restore.md"
+    }
+  ]
+}

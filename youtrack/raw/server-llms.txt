@@ -1,0 +1,691 @@
+# YouTrack Server Documentation
+
+## Topics
+
+- [Introduction to YouTrack](introduction-to-youtrack-server.html.md): Introduction to JetBrains YouTrack Server.
+        Overview of features, capabilities, architecture, and getting started guidance.
+- [What's New](whats-new.html.md): Discover the latest updates and features in YouTrack. Stay ahead with powerful tools for agile project management.
+- [About YouTrack Server](youtrack-server-faq.html.md): Find answers to JetBrains YouTrack Server frequently asked questions.
+        Troubleshoot common issues and learn best practices.
+- [Managing Your YouTrack Server License](manage-youtrack-server-license.html.md): Learn how YouTrack Server licensing works, how to renew or update your license key, and what happens when a subscription expires.
+- [Getting Started](getting-started-with-youtrack.html.md): Get started with JetBrains YouTrack.
+        Learn core features, create your first project, and configure basic issue tracking.
+- [Logging in to YouTrack](logging-in-to-youtrack.html.md): Access JetBrains YouTrack login options.
+        Configure authentication methods, set up SSO, and manage user credentials.
+- [Demo Projects](demo-projects.html.md): Learn how demo projects in YouTrack provide a safe way to explore features and test configurations before applying them to real work.
+- [Quick Start Guides](quick-start-guides.html.md): Browse the Quick Start Guides in YouTrack to find role based introductions and practical starting points for common tasks.
+- [New User Quick Start Guide](user-quick-start-guide.html.md): Use the New User Quick Start Guide to learn the basic YouTrack actions for creating, updating, searching, and tracking issues.
+- [Project Admin Quick Start Guide](projects-quick-start-guide.html.md): Use the Project Admin Quick Start Guide to learn the main setup tasks for creating, configuring, and managing a YouTrack project.
+- [System Admin Quick Start Guide](system-admins-quick-start.html.md): Use the System Admin Quick Start Guide to find the key setup and upgrade topics that help you manage a new YouTrack instance.
+- [Issue Quick Start Guide](reporting-an-issue.html.md): Use the Issue Quick Start Guide to learn the basic steps for reporting your first issue quickly and correctly in YouTrack.
+- [Transitioning to YouTrack from Other Tools](transition-to-youtrack.html.md): Learn how to transition to YouTrack from other tools and adapt your existing issue tracking habits to the new environment.
+- [Transition from Asana](transition-from-asana.html.md): Learn how teams moving from Asana can recreate familiar project management patterns, views, and workflows in YouTrack.
+- [Transition from GitHub Issues](transition-from-github-issues.html.md): Learn how teams moving from GitHub Issues can adapt their issue tracking and development workflows to YouTrack more smoothly.
+- [Transition from Jira Software](transition-from-jira.html.md): Learn how teams moving from Jira Software can map familiar issue tracking and agile practices to YouTrack features and workflows.
+- [Transition from Trello](transition-from-trello.html.md): Learn how teams moving from Trello can recreate board-based planning and task management workflows in YouTrack more effectively.
+- [Configuring Notification Channels](configure-notifications.html.md): Learn how to configure YouTrack notifications for email and the Notification Center so updates reach you in the right channel without unnecessary noise.
+- [Email Notifications](manage-email-notifications.html.md): Learn how to manage email notifications in YouTrack so you receive updates for the issue changes and subscriptions that matter to you.
+- [The Notification Center](notification-center.html.md): Stay updated with mentions, reactions, and subscriptions in YouTrack's centralized Notification Center, accessible from any page.
+- [Working with Content in YouTrack](working-with-content.html.md): Explore how to work with content in YouTrack using formatting, media embedding, rich text, Markdown, and AI powered features.
+- [Rich Text Editor](rich-text-editor.html.md): Learn how the rich text editor in YouTrack supports Visual and Markdown modes for formatting issues, articles, and comments.
+- [Markdown Syntax](youtrack-markdown-syntax-issues.html.md): Markdown syntax for issues in JetBrains YouTrack.
+        Formatting guide, syntax examples, and text styling references.
+- [Embedding Content from External Sources](embedding-content.html.md): Learn how YouTrack supports embedding content from external sources into issues and articles so related material stays in context.
+- [AI Assistant](ai-assistant.html.md): Enable AI Assistant to generate issue summaries, suggest solutions, and automate tasks in JetBrains YouTrack.
+- [AI-Powered Writing Assistance](grazie-writing-assistant.html.md): Use Grazie writing assistant for grammar checks and text completion in JetBrains YouTrack issues and articles.
+- [Text Recognition](text-recognition.html.md): Learn how text recognition in YouTrack uses OCR on image attachments so users can search, view, and copy detected text.
+- [Text Selection Toolbar](text-selection-toolbar.html.md): Learn how the text selection toolbar in YouTrack gives quick access to formatting, editing, and AI tools for selected text.
+- [Working with YouTrack in Other Apps](work-with-youtrack-from-other-apps.html.md): Explore how to work with YouTrack from other apps so you can view updates and interact with content outside the main interface.
+- [Working with Issues and Articles in Slack](working-with-issues-slack.html.md): Learn how the YouTrack app for Slack helps users view updates, previews, and issue related activity directly in Slack workspaces.
+- [Working with Issues and Articles in Telegram](working-with-issues-articles-telegram.html.md): Learn how the YouTrack bot for Telegram lets users work with issues and articles directly from the Telegram app and shared chats.
+- [Appearance Menu Options](choose-an-interface.html.md): Use appearance menu options in YouTrack to switch interface themes and visual settings so the UI matches your readability and display preferences.
+- [Getting Help](help.html.md): Learn how the Help menu in YouTrack gives you access to product resources, documentation, and support options when you need help.
+- [Keyboard Shortcuts](keyboard-shortcuts.html.md): Master keyboard shortcuts for faster navigation and issue management in JetBrains YouTrack interface.
+- [Managing Your Profile](managing-your-profile.html.md): Learn how to manage your YouTrack profile so you can update personal preferences and access settings for each profile tab.
+- [General Profile Settings](general-profile-settings.html.md): Review the general profile settings in YouTrack so you can manage your personal details, preferences, and account related actions.
+- [Download Your Personal Data](download-your-personal-data.html.md): Learn how to download your personal data from YouTrack so you can access the account information stored for your user profile.
+- [Workspace Settings](workspace-settings.html.md): Review Workspace Settings in YouTrack to customize your personal experience with options such as theme and interface behavior.
+- [AI Features](youtrack-profile-ai-features.html.md): Manage AI feature settings and permissions in your JetBrains YouTrack user profile for personalized assistance.
+- [Tags and Saved Searches](tags-and-saved-searches.html.md): Learn how to manage tags and saved searches in your YouTrack profile, including items you created and items shared with you.
+- [Comment Templates](profile-comment-templates.html.md): Learn how the Comment Templates tab in your YouTrack profile helps helpdesk agents manage reusable replies for tickets efficiently.
+- [Notifications](notifications.html.md): Learn how to configure personal notification settings in YouTrack so you control the channels and events that reach you.
+- [Use Cases for Subscriptions](use-cases-for-subscriptions.html.md): Explore subscription use cases in YouTrack so you can choose notification settings that keep you informed without extra noise.
+- [Group Memberships](profile-groups.html.md): Learn how the Groups tab in your YouTrack profile shows your group memberships and lets authorized users review or manage them.
+- [Role Assignments](profile-roles.html.md): Learn how the Roles tab in your YouTrack profile shows role assignments and lets authorized users adjust access settings.
+- [Account Security](profile-authentication.html.md): Learn how the Account Security tab in your YouTrack profile lets you manage security settings and create authentication tokens.
+- [Enable Two-factor Authentication](enable-two-factor-authentication.html.md): Learn how to enable two-factor authentication in YouTrack so your account requires an extra verification step at sign in.
+- [App-based Authentication](2fa-with-app.html.md): Set up app-based two-factor authentication in YouTrack by pairing an authenticator app and using time-based one-time codes to protect account sign-in.
+- [Token-based Authentication](2fa-with-token.html.md): Configure token-based two-factor authentication in YouTrack with a compatible security key so users confirm sign-in with a physical hardware token.
+- [Add Credentials to Your Account](add-credentials.html.md): Learn how to add credentials to your YouTrack account so you can sign in with another username and password when needed.
+- [Manage Your Password](manage-your-passwords.html.md): Learn how to manage your password in YouTrack based on whether your credentials are stored in Hub or an external auth provider.
+- [Manage Permanent Tokens](manage-permanent-token.html.md): Manage permanent tokens in JetBrains YouTrack.
+    Generate API credentials, configure access rights, and secure integrations.
+- [Generate Application Passwords](application-passwords.html.md): Learn how to generate application passwords in YouTrack so third-party apps can sign in when your account uses two-factor authentication.
+- [Anonymize Your Personal Data](anonymize-your-personal-data.html.md): Learn how to anonymize your personal data in YouTrack so your account details are sanitized to support GDPR erasure requests.
+- [Delete Your Account](delete-own-account.html.md): Learn how account deletion works in YouTrack and what permissions are required when a user wants to remove their own account.
+- [Issues](issues.html.md): Explore topics that help you find, report, update, and collaborate on issues in YouTrack.
+- [Issue Search](search-for-issues.html.md): Learn how to search for issues in YouTrack using predefined views, custom queries, filters, and project specific search criteria.
+- [Search Context](search-context.html.md): Learn how search context in YouTrack limits a query to projects, saved searches, or tags so results stay focused on the right scope.
+- [Saved Searches](saved-search.html.md): Learn how saved searches in YouTrack help you reuse issue queries, share useful filters, and access watched issue collections quickly.
+- [Simple Search](smart-filters.html.md): Learn how to use simple search in YouTrack to create dynamic issue queries, save filters, and streamline
+        your search experience.
+- [Advanced Search](attribute-based-search.html.md): Use attribute-based search in YouTrack to filter issues precisely with structured queries, fields,
+        operators, and shortcuts.
+- [Text Search](full-text-search.html.md): Learn how text search in YouTrack finds words and phrases across issue content, comments, work items, and other text fields.
+- [Search Query Reference](search-and-command-attributes.html.md): Search and command attributes in JetBrains YouTrack.
+    Query syntax, field references, and command language documentation.
+- [Sample Search Queries](sample-search-queries.html.md): Explore sample search queries for JetBrains YouTrack.
+        Master query syntax, build complex filters, and find issues faster.
+- [Search Terms for Additional System Languages](localized-search-terms.html.md): Find the search terms to use when the YouTrack system language is set to a supported language other than English.
+- [Issue Views](issue-views.html.md): Learn how issue views in YouTrack are optimized for different tasks such as browsing issues, reviewing details, and making updates.
+- [The Issues List](issues-list.html.md): Learn how the Issues list in YouTrack is organized so you can browse results, filter work, and understand the main page controls.
+- [Single Issue View](issue-full-page-view.html.md): Learn how the single issue view in YouTrack displays issue details, sidebar controls, and activity so you can work with one issue in depth.
+- [Create and Update Issues](create-and-edit-issues.html.md): Learn how to create and edit issues in YouTrack, including updating details, adding attachments, and refining existing work items.
+- [New Issue View](new-create-issue-page.html.md): Learn how the new issue view in YouTrack helps you report issues with a focused form that can open as a dialog or full page.
+- [Update Field Values](update-field-values.html.md): Learn how to update field values in YouTrack and how different field types affect the controls and data stored in each issue.
+- [Load Issue Drafts](issue-drafts.html.md): Learn how issue drafts work in YouTrack so unfinished issue reports are saved automatically, preserved safely, and resumed later.
+- [Work with Issue Templates](generate-issue-template-url.html.md): Learn how to work with issue templates in YouTrack so common field values can be prefilled when users report new issues.
+- [Find Similar Issues and Articles](find-similar-issues.html.md): Learn how to find similar issues and articles in YouTrack so you can avoid duplicates and link related requests efficiently.
+- [Set Issue, Comment, and Attachment Visibility](set-visibility-of-issue-or-comment.html.md): Learn how to set visibility for issues, comments, and attachments in YouTrack so access is limited to the right users and groups.
+- [Update Issues with Commands](commands.html.md): Learn how commands in YouTrack let you update issue attributes quickly with a keyboard focused alternative to menus and dialogs.
+- [Apply Commands in VCS Commits](apply-commands-in-vcs-commits.html.md): Learn how to apply YouTrack commands in VCS commit messages so issue updates happen automatically from your repository workflow.
+- [Command Reference](command-reference.html.md): Review the YouTrack command reference to learn the syntax and options for updating one or more issues with commands.
+- [Commands for Additional System Languages](localized-commands.html.md): Find the commands to use when the YouTrack system language is set to a supported language other than English.
+- [Collaborate on Issues](collaborate-on-issues.html.md): Learn how to collaborate on issues in YouTrack by discussing work, posting updates, sharing files, and using related features that support team communication.
+- [Add Comments](add-a-comment.html.md): Learn how to add comments to YouTrack issues so you can ask questions, share updates, and continue work related discussions.
+- [Attach Files](add-an-attachment.html.md): Learn how to attach files to a YouTrack issue or comment so images and documents can provide more context for the work being tracked.
+- [Edit Images](edit-an-image.html.md): Learn how to edit images in YouTrack with built-in annotation tools so screenshots and diagrams can support collaboration.
+- [Mention Other Users](mention-another-user.html.md): Learn how to mention other users in YouTrack descriptions and comments so you can call attention to a person in a discussion.
+- [Use Emoji Reactions](use-emoji-reactions.html.md): Learn how emoji reactions in YouTrack let users respond quickly to comments without posting extra messages in a discussion.
+- [Vote for Issues](vote-for-issues.html.md): Learn how voting works for issues in YouTrack so users can express support for requests and help show issue popularity over time.
+- [Vote Histogram](issue-votes-histogram-widget.html.md): Learn how the Issue Votes Histogram widget helps YouTrack users visualize when votes were added and how often an issue was supported.
+- [Track Issues](track-issues.html.md): Learn how to track issues in YouTrack using features that help you follow important work even when you are not directly involved.
+- [Watch Issues](watching-issues.html.md): Learn how to watch issues in YouTrack so you and other users receive notifications about changes to work you follow closely.
+- [View Issue Updates](view-issue-updates.html.md): Learn how to view issue updates in YouTrack by using the activity stream filters that show changes, comments, and history items.
+- [Show Version History](show-version-history.html.md): Learn how to show version history for a YouTrack issue so readers can review tracked changes and compare earlier revisions.
+- [Resolve Issues](resolve-issues.html.md): Learn how issue resolution works in YouTrack and how resolved states are determined by values stored in state type fields.
+- [Delete Issues](delete-issues.html.md): Learn how to delete issues in YouTrack and when alternatives such as linking duplicates or changing state are a safer choice.
+- [Clone Issues](clone-issues.html.md): Learn how to clone issues in YouTrack so you can create a copy of an existing issue and then adjust the new record as needed.
+- [Tag Issues](using-tags.html.md): Learn how to use tags in YouTrack to group issues across projects and make searching, organizing, and tracking work more flexible.
+- [Link Issues](link-issues.html.md): Learn how to link issues in YouTrack so relationships such as dependencies and duplicates are visible from both connected issues.
+- [Issue Mentions](issue-mentions.html.md): Learn how issue mentions in YouTrack are added automatically when issue IDs are referenced in descriptions, comments, or work items.
+- [Track Spent Time](add-work-items-to-issue.html.md): Learn how to add work items to a YouTrack issue so you can log spent time, describe the work performed, and track effort accurately.
+- [Export Issue Data](export-issues-csv-excel-format.html.md): Learn how to export issue data from YouTrack in XLSX or CSV format so you can analyze and share issue information outside the app.
+- [Reorder Issues Manually](reorder-issues-manually.html.md): Learn how to reorder issues manually in YouTrack so search results can reflect your own saved custom order for a context.
+- [Generate Release Notes](create-release-notes.html.md): Learn how to generate release notes from YouTrack issues by exporting a list of matching issues as an HTML page for publication.
+- [Issue Integrations](issue-integrations.html.md): Explore YouTrack issue integrations to connect with external tools. Enhance productivity by linking issues to your favorite developer tools.
+- [View and Edit VCS Changes](vcs-changes.html.md): Discover how to view and manage VCS changes in YouTrack. Track commits, monitor code activity, and streamline your dev workflow.
+- [Link Issues in VCS Commits](map-issues-to-vcs-change-commit.html.md): Learn how to link YouTrack issues to VCS commits for better traceability.
+        Automate workflows and track code changes effortlessly.
+- [Open Stack Traces in an IDE](open-stacktraces-in-an-ide.html.md): Learn how to open stacktraces directly in your IDE from YouTrack. Debug faster by jumping straight to error locations in your code.
+- [Helpdesk](helpdesk.html.md): Learn how helpdesk projects in YouTrack help support teams manage customer requests, automate processes, and respond efficiently.
+- [Helpdesk License](helpdesk-license.html.md): Learn how YouTrack licensing supports helpdesk projects, reporters, and agent limits across free and paid subscription plans.
+- [Helpdesk Projects](helpdesk-projects.html.md): Learn how helpdesk projects in YouTrack differ from standard projects and which support specific features they include for service teams.
+- [Create a Helpdesk Project](create-helpdesk-project.html.md): Learn how to create a helpdesk project and understand the default roles, team settings, and saved search that YouTrack creates for support work.
+- [Restricted Helpdesk Projects](restrict-a-helpdesk-project.html.md): Learn how restricted helpdesk projects in YouTrack limit ticket access so only authorized reporters and groups can submit requests.
+- [Helpdesk Customer Groups](helpdesk-customer-groups.html.md): Learn how customer groups in YouTrack Helpdesk let reporters from the same organization view and comment on shared tickets.
+- [The Helpdesk Project Template](helpdesk-project-template.html.md): Review the Helpdesk project template in YouTrack to see the default fields, values, and settings used for customer support work.
+- [Helpdesk Notification Templates](helpdesk-notification-templates.html.md): Learn how helpdesk notification templates in YouTrack let teams customize customer messages and keep communication consistent.
+- [Helpdesk Workflows](helpdesk-workflows.html.md): Learn how helpdesk workflows in YouTrack provide predefined automation for support oriented processes and ticket handling.
+- [Helpdesk Agents](manage-agents.html.md): Learn how to manage helpdesk agents in YouTrack by granting users agent access, permissions, and project specific support roles.
+- [Helpdesk Reporters](helpdesk-reporters.html.md): Learn how helpdesk reporters work in YouTrack and how external users differ from standard project users and internal support agents.
+- [Helpdesk Features for Standard Users](helpdesk-standard-users.html.md): Learn how standard users work with helpdesk tickets in YouTrack and how their access differs from reporters and agents.
+- [SLA Policies](service-level-agreements.html.md): Learn how SLA policies in YouTrack define response and resolution goals for helpdesk projects and customer support processes.
+- [Manage SLA Policies](manage-sla-policies.html.md): Learn how to manage SLA policies in YouTrack by creating, attaching, ordering, activating, and updating policies for a project.
+- [JavaScript SLA Policies](javascript-sla-policies.html.md): Learn how to create JavaScript SLA policies in YouTrack when built in policy options do not provide enough flexibility or detail.
+- [Channels](helpdesk-channels.html.md): Learn how helpdesk channels in YouTrack turn customer messages from different sources into tickets managed by support agents.
+- [Email](helpdesk-email-channel.html.md): Learn how the YouTrack helpdesk email channel turns incoming customer messages into tickets and supports detailed communication.
+- [Email Forwarding](email-channel-forwarding.html.md): Learn how email forwarding can send customer messages to a YouTrack helpdesk project using an address your company already owns.
+- [Mail Server Connections](email-channel-server-connection.html.md): Learn how mail server connections support a YouTrack helpdesk email channel when your company uses its own mail infrastructure.
+- [Inbound Message Handling](inbound-message-handling.html.md): Learn how inbound message handling settings in YouTrack control which email messages are retrieved and processed for a channel.
+- [Outbound Message Handling](outbound-message-handling.html.md): Learn how outbound message handling settings in YouTrack control how helpdesk ticket notifications are sent to reporters.
+- [Online Forms](helpdesk-online-forms.html.md): Learn how online forms in YouTrack helpdesk collect customer requests on the web and turn each submission into a tracked ticket.
+- [Prefill Embedded Online Forms](prefill-online-forms.html.md): Use the YouTrack Form API to prefill embedded Helpdesk forms with information from the surrounding web page.
+- [Notification-related Project Settings](email-related-helpdesk-settings.html.md): Learn how notification-related helpdesk settings in YouTrack control email behavior for channels, reporters, and ticket updates.
+- [Tools for Agents](tools-for-agents.html.md): Explore the tools available to helpdesk agents in YouTrack for working with tickets, comments, searches, and support workflows.
+- [Predefined Search Queries for Tickets](default-saved-searches-agents.html.md): Learn which predefined ticket searches YouTrack gives helpdesk agents so they can sort, prioritize, and monitor support work quickly.
+- [Manage a Ticket](manage-a-ticket.html.md): Learn how helpdesk agents manage tickets in YouTrack so customer requests stay organized, assigned, and resolved efficiently.
+- [Pinned Comments](pinned-comments.html.md): Pin important comments in JetBrains YouTrack.
+        Highlight critical information, keep key updates visible, and organize discussions.
+- [Comment Templates](comment-templates.html.md): Learn how helpdesk agents create and use comment templates to insert consistent prewritten replies into tickets and respond faster to common requests.
+- [Typing Indicator for Comments](agents-are-typing.html.md): Enable the helpdesk typing indicator so agents and reporters can see when someone is drafting a comment and avoid duplicate or conflicting replies.
+- [Revise Public Comments](revise-comment-action.html.md): Learn how helpdesk agents can revise public comments in YouTrack shortly after posting to correct text or adjust visibility.
+- [Agent Signatures](default-agent-signatures.html.md): Learn how agent signatures in YouTrack help helpdesk agents append consistent contact information to public ticket comments.
+- [Mark Tickets as Spam](marking-tickets-as-spam.html.md): Learn how YouTrack helpdesk agents can mark tickets as spam using the default workflow attached to new helpdesk projects.
+- [CC Recipients and Customer Groups](helpdesk-add-users-in-cc.html.md): Learn how CC recipients and customer groups in YouTrack helpdesk tickets keep additional people informed, notified, and involved in the conversation.
+- [Create Tickets for Other Users](create-tickets-for-other-users.html.md): Learn how helpdesk agents create tickets on behalf of other users so requests received outside the portal are tracked and visible to reporters.
+- [Reporting Support Tickets](reporting-tickets.html.md): Learn how customers report support tickets in YouTrack Helpdesk and what the ticket submission and follow up experience looks like.
+- [Related Articles](related-articles.html.md): Learn how related articles in YouTrack help ticket reporters discover helpful public knowledge base content while working with tickets.
+- [Reviewing Your Tickets](reviewing-your-tickets.html.md): Learn how ticket reporters can review all of their YouTrack tickets in one place, including active, pending, and closed requests.
+- [Replying to Tickets](replying-to-tickets.html.md): Learn how ticket reporters can reply to YouTrack helpdesk tickets by email or in the application to continue support conversations.
+- [Helpdesk Tutorial](helpdesk-tutorial.html.md): Use the Helpdesk tutorial to learn how to configure the main features available in YouTrack helpdesk projects step by step.
+- [Dashboards](youtrack-live-dashboard.html.md): Learn how dashboards in YouTrack help users monitor tasks, team progress, and shared information from a central start page.
+- [Create and Manage Dashboards](create-and-manage-dashboards.html.md): Create, find, organize, rename, and delete dashboards in YouTrack, and access dashboards shared by other users.
+- [Share a Dashboard](share-a-dashboard.html.md): Learn how to share a dashboard in YouTrack with users and groups so your team can access the same widgets and information.
+- [Clone a Dashboard](clone-dashboard.html.md): Clone dashboards in YouTrack to duplicate layouts, widgets, and sharing settings for new teams or scenarios without rebuilding configuration.
+- [Manage Dashboard Widgets](manage-dashboard-widgets.html.md): Add, edit, refresh, clone, move, share, and remove dashboard widgets in YouTrack.
+- [Quick Notes Widgets](quick-notes-widgets.html.md): Learn how to add and configure a Quick Notes widget on a YouTrack dashboard to display formatted notes and shared messages.
+- [Document List Widgets](document-list-widgets.html.md): Add and configure document list widgets to display knowledge base articles in JetBrains YouTrack dashboards.
+- [Issue List Widgets](issue-widgets.html.md): Learn how to add and configure an Issue List widget on a YouTrack dashboard to display issues that match chosen criteria.
+- [Issue Activity Feed Widgets](issue-activity-feed-widget.html.md): Learn how to add and configure an Issue Activity Feed widget to monitor changes made to matching issues by selected users.
+- [Issue Distribution Report Widgets](issue-distribution-report-widget.html.md): Learn how to add and configure an Issue Distribution Report widget on a YouTrack dashboard to visualize issue counts across selected fields.
+- [Due Date Calendar Widgets](due-date-widget.html.md): Learn how to add and configure a Due Date Calendar widget on a YouTrack dashboard to show issues by due date.
+- [Time Tracking Report Widgets](time-tracking-report-widget.html.md): Learn how to add and configure a Time Tracking Report widget on a YouTrack dashboard to show report or timesheet data.
+- [Personal Time Tracking Widgets](personal-time-tracking-widgets.html.md): Learn how to add and configure a Personal Time Tracking widget on a YouTrack dashboard to monitor your own time entries.
+- [Work Item Exporter Widgets](work-item-exporter-widgets.html.md): Learn how to add and configure a Work Item Exporter widget on a YouTrack dashboard to generate files from time spent data.
+- [Project Team Widgets](project-team-widgets.html.md): Learn how to add and configure a Project Team widget on a YouTrack dashboard to show the project owner and team members.
+- [Agile Chart Widgets](agile-chart-widgets.html.md): Configure the Agile Chart widget to show burndown charts or cumulative flow diagrams from a selected YouTrack agile board and sprint.
+- [Agile Board Status Widgets](agile-board-status-widgets.html.md): Add an Agile Board Status widget to dashboards to display board progress as a bar chart, including current sprint data for sprint-based boards.
+- [Reports Widgets](report-widgets.html.md): Learn how to add Reports widgets to a YouTrack dashboard so existing reports can be displayed and monitored in one place.
+- [Access Eraser Widgets](access-eraser-widgets.html.md): Use the Access Eraser dashboard widget to quickly remove user access to groups, teams, project roles, and logins from one administrative view.
+- [Default Dashboards](default-dashboard.html.md): Learn how the default dashboard works in YouTrack so your organization can share a central set of widgets with all users.
+- [Guest Dashboards](guest-dashboards.html.md): Learn how to configure a guest dashboard in YouTrack so external visitors see useful project information when guest access is enabled.
+- [Dashboard Keyboard Shortcuts](dashboard-keyboard-shortcuts.html.md): Review dashboard keyboard shortcuts in YouTrack so you can navigate and work with dashboards without relying on the mouse.
+- [Agile Boards](agile-board.html.md): Learn how agile boards in YouTrack support Scrum, Kanban, and hybrid processes for planning, visualizing, and managing team work.
+- [Get Started with Agile Boards](getting-started-with-agile-board.html.md): Get started with agile boards in YouTrack by learning the layout, key terms, shortcuts, and tips for working effectively.
+- [Agile Board User Interface](agile-board-ui.html.md): Learn how to use the agile board user interface in YouTrack, including its controls for adding, updating, and organizing cards.
+- [Agile Board Glossary](agile-board-glossary.html.md): Use the agile board glossary to understand the terms and definitions that describe agile work in YouTrack.
+- [Agile Board Tips and Tricks](agile-board-tips-and-tricks.html.md): Review practical agile board tips and tricks that help you get more value from planning and tracking work in YouTrack.
+- [Agile Board Keyboard Shortcuts](agile-module-keyboard-shortcuts.html.md): Review agile board keyboard shortcuts in YouTrack so you can navigate boards and update work with less reliance on the mouse.
+- [Create and Configure a Board](create-and-configure-a-board.html.md): Explore the YouTrack topics that explain how to create, configure, and manage agile boards for your team.
+- [Create an Agile Board](create-new-board.html.md): Learn how to create an agile board in YouTrack and tailor it to Scrum, Kanban, hybrid, team, or personal workflows.
+- [Agile Board Templates](agile-board-templates.html.md): Learn how agile board templates in YouTrack help you start with preconfigured settings for Scrum, Kanban, and other board setups.
+- [Configure an Agile Board](configure-agile-board.html.md): Learn how to configure an agile board in YouTrack by updating its general settings, sprint options, and board behavior.
+- [Clone an Agile Board](clone-agile-board.html.md): Clone an agile board in YouTrack to reuse board settings and structure, then customize the copied board independently from the original.
+- [Agile Board Settings](agile-board-settings.html.md): Review agile board settings in YouTrack so you can manage the board configuration, sprint options, and card behavior.
+- [Board Behavior](sprint-options.html.md): Learn how board behavior settings in YouTrack control how issues are added, assigned, and managed on boards with or without sprints.
+- [Merge Board Columns](merged-columns.html.md): Merge board columns to put cards with different states into one column.
+- [Set up a Personal Board](set-up-personal-board.html.md): Learn how to set up a personal board in YouTrack so you can track your own tasks and focus on assigned issues.
+- [Delete a Board](delete-board.html.md): Learn how to delete an agile board in YouTrack when it is no longer needed and you want to remove it from the system.
+- [Update Issues on an Agile Board](update-issues-on-agile-board.html.md): Learn how to update issues on an agile board in YouTrack as cards move through your workflow and team members apply changes.
+- [Sort Cards on an Agile Board](sort-cards-on-agile-board.html.md): Learn how to sort cards on an agile board in YouTrack manually or with queries so priority and order stay meaningful.
+- [Work with a Backlog](work-with-backlog.html.md): Learn how to work with a backlog on a YouTrack agile board so your team can prioritize and plan unfinished work.
+- [Work with Sprints](work-with-sprints.html.md): Learn how to work with sprints on a YouTrack agile board to plan, schedule, and track a defined set of active tasks.
+- [Create a Sprint](create-a-sprint.html.md): Learn how to create a sprint on a YouTrack agile board so your team can organize work into a defined time period.
+- [Plan and Start a Sprint](plan-a-sprint.html.md): Learn how to plan and start a sprint in YouTrack by filling sprint swimlanes and choosing the tasks your team will deliver.
+- [Manage Sprints](manage-sprints.html.md): Learn how to manage sprints on a YouTrack agile board by creating, editing, and adjusting sprint settings over time.
+- [Monitor Your Progress](monitor-your-progress.html.md): Explore the YouTrack options that help you monitor progress on agile boards with charts, indicators, and visual status cues.
+- [Burndown Chart](use-burndown-chart.html.md): Learn how the burndown chart on a YouTrack agile board tracks remaining effort over time during a sprint.
+- [Cumulative Flow](use-cumulative-flow.html.md): Learn how the cumulative flow diagram on a YouTrack agile board helps teams spot progress patterns and workflow bottlenecks.
+- [Progress Indicators](progress-indicator.html.md): Learn how progress indicators on a YouTrack agile board show card distribution and highlight work in progress limit violations.
+- [Agile Board Tutorials](agile-board-tutorials.html.md): Browse agile board tutorials in YouTrack that show how to use Scrum, Kanban, and time tracking in practical team workflows.
+- [Scrum Boards](doing-scrum-in-youtrack.html.md): Learn how to create and use a Scrum board in YouTrack to plan sprints, manage stories, and track iterative product delivery.
+- [Kanban Boards](set-up-a-kanban-board.html.md): Learn how to set up a Kanban board in YouTrack so your team can manage flow, visualize work, and track tasks on board cards.
+- [Agile Boards for Epics](manage-epics-on-agile-board.html.md): Manage epics on agile boards in JetBrains YouTrack.
+        Organize stories, track progress, and visualize project hierarchies.
+- [Agile Boards with Time Tracking](time-tracking-on-agile-board.html.md): Learn how to use agile boards with time tracking in YouTrack when your team estimates work and measures progress in real time units.
+- [Use Cases for Agile Boards](use-cases-for-agile-boards.html.md): Explore agile board use cases in YouTrack for inspiration when designing board configurations that match your team's needs.
+- [Balance Your Team's Workload](balance-team-workload.html.md): Explore a YouTrack agile board setup that helps teams balance workload across people, products, and shared design requests.
+- [Deviate from Classic Scrum](deviate-from-classic-scrum.html.md): Explore how teams can adapt Scrum in YouTrack by combining practices and workflows that fit their own way of working.
+- [Get an Executive Overview](get-executive-overview.html.md): Explore a YouTrack board setup that gives managers an executive overview of their own tasks and coordinated team activity.
+- [Limit Work in Progress](limit-work-in-progress-kanban.html.md): Explore how teams use YouTrack Kanban boards with work in progress limits to manage flow and avoid overloaded stages.
+- [Link Sprints with Fix Versions](link-sprints-fix-versions.html.md): Explore how YouTrack teams can link sprints with fix versions when releases and iteration planning need to stay connected.
+- [Manage Multiple Projects](manage-multiple-projects.html.md): Explore a YouTrack agile board setup for managing work across multiple projects when teams follow different processes.
+- [Mix Scrum and Kanban](scrumban-agile-board.html.md): Explore how a Scrumban board in YouTrack combines Scrum and Kanban practices to support planning and steady work flow.
+- [Reports](youtrack-reports.html.md): Learn how reports in YouTrack help you analyze project activity, share insights, and monitor team or personal progress over time.
+- [Working with Reports](working-with-reports.html.md): Discover how to create, customize, and share reports in YouTrack to track progress, analyze data, and
+         improve team performance.
+- [Issue Distribution Reports](issue-distribution-reports.html.md): Explore issue distribution reports in YouTrack that show how issues are split across assignees, projects, and other groupings.
+- [Issues per Assignee](issues-per-assignee.html.md): Learn how the Issues per Assignee report shows the number of currently assigned issues for each user in selected projects.
+- [Issues per Project](issues-per-project.html.md): Learn how the Issues per Project report shows the number of issues in each selected project with bar and pie chart views.
+- [Issues per Arbitrary Field](issues-per-arbitrary-field.html.md): Learn how the Issues per Arbitrary Field report shows the distribution of issues for the values stored in a chosen custom field.
+- [Issues per Two Fields](issues-per-two-fields.html.md): Learn how the Issues per Two Fields report compares issue distribution across two attributes using grouped bar charts or a matrix.
+- [Matrix Report](matrix-report.html.md): Learn why the Matrix Report link remains in YouTrack and how it maps to the current Issues per Two Fields report for compatibility.
+- [Advanced Issues per Project](advanced-issues-per-project.html.md): Learn how the Advanced Issues per Project report compares created and resolved issues across projects with grouped bar chart results.
+- [Timeline Reports](timeline-reports.html.md): Explore timeline reports in YouTrack that track progress over time with views such as burndown and cumulative flow charts.
+- [Burndown](burndown.html.md): Learn how the Burndown report compares ideal progress with actual remaining work over time for a selected set of issues.
+- [Cumulative Flow](cumulative-flow.html.md): Learn how the Cumulative Flow report shows the distribution of issue values over time so teams can understand progress and bottlenecks.
+- [Resolution Time](resolution-time-report.html.md): Learn how the Resolution Time report tracks average, minimum, maximum, and trend data between issue creation and resolution.
+- [Average Issue Age](average-issue-age.html.md): Learn how the Average Issue Age report tracks how long issues stay in selected states so teams can monitor response and workflow speed.
+- [Fixed vs Reported Rate](fixed-vs-reported-rate.html.md): Learn how the Fixed vs Reported Rate report compares reported issues to fixed issues over time for one or more projects.
+- [Verified vs Reopened Rate](verified-vs-reopened-rate.html.md): Learn how the Verified vs Reopened Rate report compares issues verified against issues reopened during a selected time frame.
+- [Resolved vs New/Reopened Rate](reported-vs-resolved-rate.html.md): Learn how the Resolved vs New or Reopened Rate report compares incoming issues with resolved work over a selected period.
+- [Time Management Reports](time-management-reports.html.md): Explore time management reports in YouTrack that help teams measure spent time, workload, and schedule related progress.
+- [Time Report](time-report.html.md): Learn how the Time Report shows spent time, work types, and estimation data for issues across one or more selected projects.
+- [Gantt Chart](gantt-chart.html.md): Learn how the Gantt Chart report in YouTrack visualizes issue schedules from stored data and differs from interactive Gantt charts.
+- [Estimation Report](estimation-report.html.md): Learn how the Estimation Report shows total estimation values for selected issues so effort can be compared across groupings.
+- [Timesheet Report](timesheet-report.html.md): Learn how the Timesheet Report in YouTrack shows spent time in a calendar based layout by user or by issue over time.
+- [State Transition Reports](state-transition-reports.html.md): Explore state transition reports in YouTrack that help teams monitor issues moving into important workflow stages over time.
+- [Verified Distribution](verified-distribution.html.md): Learn how the Verified Distribution report tracks issues that transition into a verified state during a selected time frame.
+- [Reopened Distribution](reopened-distribution.html.md): Learn how the Reopened Distribution report tracks issues that moved from resolved back to unresolved states during a time frame.
+- [State Transition](state-transition.html.md): Learn how the State Transition report tracks changes in a custom field value over time and groups results by useful attributes.
+- [Projects](managing-projects.html.md): Learn how projects in YouTrack organize issues, articles, and team members around a shared product, service, or business goal.
+- [The Project List](the-project-list.html.md): Learn how the project list in YouTrack helps you browse projects, mark favorites, search by name, and access project settings.
+- [Standard and Helpdesk Projects](standard-projects-versus-helpdesk-projects.html.md): Learn how standard and helpdesk projects differ in YouTrack so teams can choose the project type that best fits their work.
+- [Project Overviews](project-overview.html.md): Learn how project overviews in YouTrack give teams a home page for project information, activity, and quick access to settings.
+- [Create a Project](create-new-project.html.md): Learn how to create a project in YouTrack and understand the default roles, ownership, team membership, and searches it creates.
+- [Configure a Project](configuring-a-project.html.md): Learn how to configure a YouTrack project from its overview and settings pages after the project, team, and access rules are created.
+- [Manage Project Members and Access](manage-project-access.html.md): Learn how to manage project members and access in YouTrack by controlling team membership, roles, and permissions for the project.
+- [Manage Visibility](manage-default-visibility.html.md): Learn how to manage default and recommended visibility in a YouTrack project so new items start with the right access scope.
+- [Manage Custom Fields](manage-custom-fields-per-project.html.md): Learn how project administrators manage custom fields in YouTrack projects and tailor issue fields to match local workflows.
+- [Manage Assignees](manage-assignees.html.md): Configure assignee fields and manage who can be assigned to issues in JetBrains YouTrack projects.
+- [Integrate with Version Control](integrate-with-version-control.html.md): Learn how to integrate a YouTrack project with version control so repositories can connect commits, branches, and pull requests to issues.
+- [Integrate with a Generic VCS](integrate-project-with-generic-vcs.html.md): Learn how to integrate a YouTrack project with a generic VCS so hosted repositories can attach commits to tracked issues.
+- [Integrate with Azure Repos](integrate-project-with-azure-repos.html.md): Learn how to integrate a YouTrack project with Azure Repos so commit commands and repository activity are linked to issues.
+- [Integrate with Bitbucket](integrate-project-with-bitbucket.html.md): Learn how to integrate a YouTrack project with Bitbucket so commit commands, pull requests, and repository activity stay linked to issues.
+- [Integrate with Bitbucket Server](integrate-project-with-bitbucket-server.html.md): Learn how to integrate a YouTrack project with Bitbucket Server so commits, pull requests, and issue updates stay connected.
+- [Integrate with Gitea](integrate-project-with-gitea.html.md): Learn how to integrate a YouTrack project with Gitea so commits, pull requests, and issue commands are processed automatically.
+- [Integrate with GitHub](integrate-project-with-github.html.md): Learn how to integrate a YouTrack project with GitHub so commit commands, pull requests, and repository changes are linked to issues.
+- [Integrate with GitLab](integrate-project-with-gitlab.html.md): Learn how to integrate a YouTrack project with GitLab so commits, merge requests, and issue commands are connected across both tools.
+- [Integrate with Gogs](integrate-project-with-gogs.html.md): Learn how to integrate a YouTrack project with Gogs so commit activity, pull requests, and issue commands stay connected.
+- [Integrate with JetBrains Space](integrate-project-with-space.html.md): Learn how to integrate a YouTrack project with JetBrains Space so commits, reviews, issue references, and repository data stay linked.
+- [Manage Project Notification Settings](project-notification-templates.html.md): Learn how to manage project notification settings in YouTrack, including project level email addresses and notification templates.
+- [Integrate with a Build Server](configure-build-server-integration-per-project.html.md): Learn how to integrate a YouTrack project with a build server so build data, issue updates, and related automation stay connected.
+- [Integrate with GitHub Actions](integrate-project-with-github-actions.html.md): Learn how to integrate a YouTrack project with GitHub Actions so workflow runs and issue updates connect through GitHub.
+- [Integrate with Jenkins](map-project-to-jenkins.html.md): Learn how to integrate a YouTrack project with Jenkins so build numbers, commit activity, and issue updates stay synchronized.
+- [Integrate with TeamCity](configure-teamcity-integration.html.md): Learn how to integrate a YouTrack project with TeamCity so build numbers, updates, and related development activity stay aligned.
+- [Integrate with GitLab CI/CD](integrate-project-with-gitlab-ci-cd.html.md): Learn how to integrate a YouTrack project with GitLab CI/CD so pipeline data, jobs, and issue updates stay connected.
+- [Integrate with Azure Pipelines](integrate-project-with-azure-pipelines.html.md): Learn how to integrate a YouTrack project with Azure Pipelines so pipeline runs, data, and issue updates stay synchronized.
+- [Enable Time Tracking](enable-and-configure-time-tracking.html.md): Learn how to enable time tracking in a YouTrack project so your team can log work items, measure progress, and build reports.
+- [Manage Work Item Attributes](manage-work-item-attributes-project.html.md): Learn how to manage work item attributes in a YouTrack project so spent time records capture the details your team needs.
+- [Manage Apps](manage-apps.html.md): Learn how project administrators manage apps in YouTrack by attaching existing apps or installing new ones for project use.
+- [Manage Workflows](manage-workflows.html.md): Learn how to manage workflows in a YouTrack project by attaching existing workflows and enabling or disabling rules per project.
+- [Workflow Rule Manager](workflow-rule-manager.html.md): Learn how the Workflow Rule Manager app in YouTrack helps you review, order, activate, and troubleshoot project workflows.
+- [Clone a Project](clone-project.html.md): Learn how to clone an active project so you can reuse its configuration as a starting point for a new project and then customize the copy independently.
+- [Archive a Project](archiving-a-project.html.md): Learn how to archive a project in YouTrack so you can keep its data for reference without keeping the project active in daily work.
+- [Delete a Project](remove-project.html.md): Learn how to delete a project in YouTrack and what permanent data removal means for the issues that belong to that project.
+- [Project Templates](project-templates.html.md): Learn how project templates in YouTrack define the starting configuration when you create a new project from a preset setup.
+- [Task Management Project Template](task-management-project-template.html.md): Review the Task Management project template in YouTrack to see the default fields, values, and settings used for general task work.
+- [Scrum Project Template](scrum-project-template.html.md): Review the Scrum project template in YouTrack to see the default fields, values, and settings used for sprint based work.
+- [Kanban Project Template](kanban-project-template.html.md): Review the Kanban project template in YouTrack to see the default fields, values, and settings used for flow based work.
+- [Helpdesk Project Template](helpdesk-template.html.md): Learn how the helpdesk project template in YouTrack gives teams access to features designed for customer support workflows.
+- [Project Management Project Template](project-management-project-template.html.md): Review the Project Management project template in YouTrack to see the default fields, values, and settings used for project planning.
+- [Default Project Template](default-project-template.html.md): Review the default project template in YouTrack to see which fields, values, and settings are applied when a project is created.
+- [Marketing Project Template](marketing-project-template.html.md): Review the Marketing project template in YouTrack to see the default fields, values, and settings used for marketing work.
+- [Custom Project Templates](custom-project-templates.html.md): Learn how custom project templates in YouTrack let you reuse an existing project configuration as the starting point for new projects.
+- [Private and Public Projects](private-and-public-projects.html.md): Learn how private and public projects work in YouTrack so you can control project access and visibility for different audiences.
+- [Time Tracking Tutorial](time-management-tutorial.html.md): Use the time tracking tutorial to learn how YouTrack records spent time, compares effort to estimates, and supports reporting.
+- [Knowledge Base](knowledge-base.html.md): Learn how the YouTrack knowledge base helps teams store, share, discuss, and organize articles that support project work and collaboration.
+- [Create an Article](create-articles.html.md): Learn how to create a knowledge base article in YouTrack, save it as a draft, and publish it when the content is ready to share with readers.
+- [Manage Article Access](manage-access-to-articles.html.md): Learn how article access is managed in YouTrack through permissions and visibility settings that control who can read or edit content.
+- [Edit an Article](edit-article-content.html.md): Learn how to edit article content in YouTrack so knowledge base drafts and published articles can be revised and improved over time.
+- [Clone an Article](clone-articles.html.md): Clone knowledge base articles in YouTrack to reuse content, tags, visibility rules, and attachments while editing the new copy independently.
+- [Delete an Article](delete-an-article.html.md): Learn how to delete an article in YouTrack and what to consider before removing knowledge base content that readers may still need.
+- [Attach Files to Articles](attach-files-to-articles.html.md): Attach documents and other files to knowledge base articles in YouTrack and understand how article visibility settings control file access for readers.
+- [Embed Content in Articles](embed-content-in-articles.html.md): Learn how to embed content in YouTrack articles by adding images and external material directly into knowledge base content.
+- [Publish an Article](publish-articles.html.md): Learn how to publish an article in YouTrack when your draft is ready to share with the intended audience in the knowledge base.
+- [Organize Articles](organize-project-content.html.md): Learn how to organize articles in the YouTrack knowledge base so users can find the right content quickly and efficiently.
+- [Tag Articles](tag-articles.html.md): Learn how tagging articles in YouTrack helps organize knowledge base content and makes related information easier to find.
+- [Review Version History](review-version-history.html.md): Learn how to review version history for a YouTrack article so readers can see published changes and compare earlier revisions.
+- [Post Comments to Articles](post-comments-to-articles.html.md): Learn how to post comments to YouTrack articles so team members can discuss knowledge base content and share feedback more easily.
+- [Subscribe to Article Updates](subscribe-to-article-updates.html.md): Learn how to subscribe to article updates in YouTrack by favoriting articles and using your Star tag notification settings.
+- [Search for Articles](search-for-articles.html.md): Learn how to search for articles in the YouTrack knowledge base by title or content and find results ranked by relevance.
+- [Viewing Articles](viewing-articles.html.md): Learn how to browse and view articles in the YouTrack knowledge base using the table of contents and article reading controls.
+- [Article Statistics](article-statistics.html.md): View article statistics in YouTrack to measure readership, linking activity, and follow-up issue creation so you can evaluate knowledge base effectiveness.
+- [Article Feedback Widgets](article-feedback-widgets.html.md): Install and use Article Feedback widgets in the knowledge base to collect helpfulness votes and user comments directly beneath published articles.
+- [Export Articles as PDF Files](export-articles-as-pdf.html.md): Learn how to export YouTrack knowledge base articles as PDF files for offline access and easier sharing outside the application.
+- [Export Articles as Markdown Files](export-articles-as-markdown.html.md): Learn how to export YouTrack knowledge base articles as Markdown files while preserving structure, media, and related content.
+- [Timesheets](timesheets.html.md): Learn how timesheets in YouTrack help teams track work activity, record spent time, and analyze effort across projects and clients.
+- [Browse Work Activity](browse-work-activity.html.md): Browse and filter work activity in YouTrack Timesheets using people, project, and workgroup views to inspect and update recorded work items.
+- [Add and Update Work Items](add-edit-work-items.html.md): Track time in YouTrack by adding and updating work items from issue views, agile boards, commands, and integrated tools that sync spent time records.
+- [Gantt Charts](gantt-charts.html.md): Learn how interactive Gantt charts in YouTrack help you plan timelines, manage dependencies, and update project schedules directly.
+- [Create and Use a Gantt Chart](create-and-use-gantt-chart.html.md): Learn how to create a Gantt chart, add issues, schedule work, manage dependencies, and track project progress across initiatives in YouTrack.
+- [Configure a Gantt Chart](configure-gantt-chart.html.md): Review the settings for an interactive Gantt chart, including its name, project scope, scheduling fields, dependencies, and issue creation options.
+- [Migrate a Gantt Chart Report](migrate-gantt-chart-report.html.md): Learn how to migrate a static Gantt Chart report to an interactive chart in YouTrack using the built in migration tool provided.
+- [Whiteboards](whiteboards.html.md): Discover how Whiteboards in JetBrains YouTrack help you brainstorm, plan sprints, map workflows, and collaborate
+    visually on projects.
+- [Get Started with Whiteboards](get-started-with-whiteboards.html.md): Learn JetBrains YouTrack whiteboards basics.
+        Master the interface, work with cards, and use shortcuts to visualize workflows.
+- [Whiteboard Interface](whiteboard-interface.html.md): Navigate JetBrains YouTrack whiteboard interface.
+        Add cards and widgets, create links between issues, search elements, and control canvas views.
+- [Whiteboard Cards and Elements](whiteboard-cards.html.md): Create and manage cards and other elements on YouTrack whiteboards.
+        Add text cards, add issues and articles, or place widgets next to your planning content.
+- [Whiteboard Keyboard Shortcuts](whiteboard-keyboard-shortcuts.html.md): Access keyboard shortcuts for YouTrack whiteboards.
+        Speed up card creation, navigation, and whiteboard management with hotkeys.
+- [Work with Whiteboards](work-with-whiteboards.html.md): Manage YouTrack whiteboards.
+        Create visual workspaces, collaborate with teams, link cards, and convert ideas to issues.
+- [Create Whiteboard](create-whiteboard.html.md): Learn how to create a whiteboard in YouTrack and use it as a visual workspace for planning, brainstorming, and organizing issues and articles.
+- [Collaborate on a Whiteboard](collaborate-on-a-whiteboard.html.md): Learn how to share a whiteboard, manage access permissions, and collaborate with other users in real time while planning work visually in YouTrack.
+- [Link Cards](link-whiteboard-cards.html.md): Link cards on JetBrains YouTrack whiteboards to show relationships and dependencies.
+        Sync connections directly with YouTrack issues.
+- [Add Cards From Existing Items](import-cards-to-whiteboard.html.md): Add existing issues and articles to JetBrains YouTrack whiteboards.
+        Search and add items as cards for visual planning.
+- [Convert Cards](convert-whiteboard-cards.html.md): Learn how to convert whiteboard cards into issues or articles so ideas captured on a whiteboard become tracked work items or knowledge base content.
+- [Delete Whiteboard](delete-whiteboard.html.md): Delete whiteboards in YouTrack to keep workspaces organized.
+        Remove boards while preserving linked issues and articles.
+- [Use Cases for Whiteboards](whiteboard-use-cases.html.md): Explore YouTrack whiteboard use cases.
+        Brainstorm ideas, plan sprints, create roadmaps, and organize team workflows visually.
+- [Brainstorm Ideas](whiteboard-brainstorming.html.md): Brainstorm features using JetBrains YouTrack whiteboards.
+        Capture ideas visually, real-time teamwork, and organize concepts.
+- [Plan Feature](whiteboard-plan-feature.html.md): Plan features on JetBrains YouTrack whiteboards.
+        Break down requirements, create tasks, and convert cards to trackable issues.
+- [Use Personal Whiteboard](personal-whiteboard.html.md): Create personal whiteboards in JetBrains YouTrack to organize individual tasks and goals.
+        Plan work visually in your private workspace.
+- [Administration](administration.html.md): Explore the Administration section of the YouTrack documentation to find setup and configuration procedures for features managed by administrators.
+- [Custom Fields](custom-fields.html.md): Explore how custom fields work in YouTrack and learn how they help you capture the data, structure, and workflows your projects require.
+- [Default Custom Fields](default-custom-fields.html.md): Review the default custom fields that YouTrack attaches to new projects and learn how they support common software development workflows.
+- [Custom Field Types](supported-custom-field-types.html.md): Review the custom field types supported in YouTrack so you can choose formats for text, dates, numbers, and enumerated values.
+- [Custom Field Settings](field-properties.html.md): Learn how custom field settings control allowed values, default behavior, and field behavior when a custom field is attached to projects.
+- [Required Custom Fields](required-custom-fields.html.md): Learn how to require custom fields in YouTrack when users must provide important values instead of leaving the field empty.
+- [Conditional Custom Fields](conditional-custom-fields.html.md): Learn how to configure conditional custom fields so specific fields appear only when selected values in another field make them relevant.
+- [Create and Edit Custom Fields](creating-and-editing-custom-fields.html.md): Learn how administrators create and edit custom fields in YouTrack, define their properties, and prepare them for use in projects.
+- [Replace Custom Fields](replace-custom-fields.html.md): Learn how to replace custom fields in a project with shared fields from other projects so teams can standardize values and reuse the same configuration.
+- [Change Field Type](change-field-type.html.md): Convert supported YouTrack custom field types safely and understand which source and target formats preserve or transform existing field values.
+- [Manage Sets of Values](managing-sets-of-values.html.md): Learn how to manage sets of values for enumerated custom fields so you can create, edit, and organize the options available in YouTrack.
+- [Value-specific Settings](value-specific-properties.html.md): Learn how to manage value-specific settings for enumerated custom fields so each value can store names, descriptions, colors, and related properties.
+- [Manage Fields in Projects](attaching-custom-fields-to-projects.html.md): Learn how to manage fields in projects by attaching custom fields, controlling automatic attachment, and configuring field availability per project.
+- [Change Field Order](changing-fields-order.html.md): Learn how to change the order of custom fields so issue forms and lists display fields in a sequence that fits your workflow.
+- [Private and Public Issue Fields](private-and-public-issue-fields.html.md): Learn how private and public issue fields work in YouTrack so you can control which users are allowed to read or update sensitive field data.
+- [Global Default Settings](advanced-options-of-a-custom-field.html.md): Learn how to manage global default settings for custom fields, including automatic attachment, default visibility, and issues list display options.
+- [Issue Link Types](link-types.html.md): Learn how to create, edit, and delete issue link types in YouTrack so relationships between issues reflect the way your teams track dependencies.
+- [Time Tracking](time-tracking.html.md): Learn how time tracking works in YouTrack so you can configure workday settings, estimate formats, and reporting features for logged work.
+- [Time Tracking Settings](time-tracking-settings.html.md): Learn how system-wide time tracking settings in YouTrack affect period values, estimations, and spent time calculations.
+- [Work Item Attributes](custom-work-item-attributes.html.md): Learn how work item attributes in YouTrack help teams categorize logged time and define project specific tracking details.
+- [Workflows](workflow-guide.html.md): Master workflows in JetBrains YouTrack.
+    Design automation rules, configure actions, and optimize issue handling in default and custom workflow processes.
+- [Workflow Tutorial](workflow-tutorial.html.md): Build workflows in JetBrains YouTrack.
+    Create automation rules, customize triggers, and streamline issue processing steps.
+- [Use Cases for Workflows](workflow-use-cases.html.md): Explore workflow use cases in YouTrack to see how custom rules can automate assignments, policies, reports, notifications, and dependencies.
+- [Restrict Issue Visibility with Workflows](restrict-issue-visibility-workflow.html.md): Explore workflow examples that restrict issue visibility in YouTrack when permissions alone are not enough to enforce your access rules.
+- [Prevent Unwanted Updates](prevent-unwanted-updates-workflows.html.md): Explore workflow examples that prevent unwanted updates in YouTrack by blocking changes that violate field rules, permissions, or process policies.
+- [Streamline Issue Reporting](streamline-issue-reporting-workflows.html.md): Explore workflow examples that streamline issue reporting in YouTrack by automating field behavior and reducing manual data entry.
+- [Generate Issues Automatically](generate-issues-automatically-workflows.html.md): Explore workflow examples that generate issues automatically in YouTrack when events or business rules require new work items to be created.
+- [Update Fields on Issue Update](update-fields-on-issue-update.html.md): Explore workflow examples that update fields on issue changes so YouTrack applies routine data updates automatically as work progresses.
+- [Propagate Values Between Issues](propagate-values-between-issues-workflow.html.md): Explore workflow examples that propagate values between related issues in YouTrack so linked items stay aligned when important fields change.
+- [Track Spent Time](track-spent-time-workflow.html.md): Explore workflow examples that track spent time in YouTrack with automation that supports work logging, timers, and time-based reporting.
+- [Generate Time Reports](generate-time-reports-workflow.html.md): Explore workflow examples that generate time reports in YouTrack by collecting logged work and organizing it for reporting and review.
+- [Enhance Helpdesk Support](enhance-helpdesk-support-workflows.html.md): Explore workflow examples that enhance helpdesk support in YouTrack with automation for ticket assignment, escalation, and support processes.
+- [Send Internal Newsletters](send-internal-newsletters-workflow.html.md): Explore a workflow example that sends internal newsletters from YouTrack by collecting content and delivering updates to selected readers.
+- [Default Workflows](default-workflows.html.md): Explore the default workflows included with YouTrack and learn how these ready-made rules cover common automation scenarios across projects.
+- [Assignee Visibility](workflow-assignee-visibility-group.html.md): Review the Assignee Visibility workflow that warns users when an issue is assigned to someone outside the group that can view the issue.
+- [Clear Fix Versions](workflow-clear-fix-version.html.md): Review the Clear Fix Versions workflow that removes fix version values when an issue moves to a state where that field is no longer relevant.
+- [Clone Article](clone-article-workflow.html.md): Use the Clone Article workflow rule to duplicate knowledge base articles as drafts, including tags, visibility, and attachments, in one action.
+- [Clone Issue](clone-issue.html.md): Review the default Clone Issue workflow in YouTrack and learn how its action rules duplicate issues using the JavaScript editor implementation.
+- [Comments](workflow-prevent-commenting-already-resolved-and-verified-issues.html.md): Review the Comments workflow that prevents new comments from being added after an issue reaches a resolved state in YouTrack.
+- [Default Description](workflow-default-description.html.md): Review the Default Description workflow that inserts predefined text into the description field when a new issue is created in YouTrack.
+- [Dependencies](workflow-dependencies.html.md): Review the Dependencies workflow that blocks issues from being marked fixed while linked dependent issues are still unresolved.
+- [Due Date](workflow-due-date.html.md): Review the Due Date workflow that requires deadlines for submitted issues so teams can track expected resolution dates more consistently.
+- [Duplicates](workflow-duplicates.html.md): Review the Duplicates workflow that helps teams manage duplicate issues by creating links, updating states, and keeping related items aligned.
+- [Forgotten Attachment](workflow-forgotten-attachment.html.md): Review the Forgotten Attachment workflow that reminds users to add a file when their issue text or comment says an attachment is included.
+- [Helpdesk](workflow-helpdesk.html.md): Review the default Helpdesk workflow in YouTrack that automates common support related use cases for helpdesk projects and teams.
+- [Issue Property Combinations](workflow-issue-properties-combinations.html.md): Review the Issue Property Combinations workflow that blocks invalid combinations of field values so issues stay consistent with your process.
+- [In Progress Work Timer](workflow-work-timer.html.md): Review the In Progress Work Timer workflow that records spent time automatically while an issue remains in the In Progress state.
+- [Kanban](workflow-kanban.html.md): Review the Kanban workflow that supports pull-based work management with rules designed for teams that limit work by available capacity.
+- [Notify Reporter to Approve Fix](workflow-notify-reporter-to-approve-fix.html.md): Review the Notify Reporter to Approve Fix workflow that notifies the reporter when an issue is resolved and ready for confirmation.
+- [Notify When Dependency Resolved](workflow-notify-dependant.html.md): Review the Notify When Dependency Resolved workflow that alerts an issue assignee when a linked dependent issue has been resolved.
+- [One Vote Comment](workflow-one-vote-comment.html.md): Review the One Vote Comment workflow that adds a vote automatically when a user leaves a comment containing the text +1.
+- [Pomodoro Timer](workflow-pomodoro-timer.html.md): Review the Pomodoro Timer workflow that supports time-boxed work sessions and synchronized timers based on the Pomodoro Technique.
+- [Process Spam](workflow-process-spam.html.md): Review the Process Spam workflow in YouTrack that helps helpdesk projects identify, close, and manage spam tickets automatically.
+- [Profanity Blocker](workflow-spam-blacklist.html.md): Review the Profanity Blocker workflow that stops descriptions or comments from being submitted when they contain blocked words.
+- [Referred Issues](workflow-referred-issues.html.md): Review the Referred Issues workflow that adds a refers to link automatically when another issue ID is mentioned in a comment or description.
+- [Replace Links](workflow-replace-links.html.md): Review the Replace Links workflow that swaps existing issue links when a new link type should replace the relationship already in place.
+- [Scrum](workflow-scrum.html.md): Review the Scrum workflow that bundles rules supporting scrum practices such as planning, estimation, and issue state management in YouTrack.
+- [Set Fix Versions](workflow-set-fix-version.html.md): Review the Set Fix Versions workflow that requires developers to enter a fix version when they resolve an issue in YouTrack.
+- [SLA Priority](workflow-auto-raise-priority.html.md): Review the SLA Priority workflow that raises issue priority automatically when an unresolved issue exceeds the configured response time.
+- [Slack Notifications](slack-notifications-workflow.html.md): Review the default Slack Notifications workflow that posts issue events to Slack when issues are created, resolved, or reopened in YouTrack.
+- [Stopwatch-style Work Timer](workflow-standalone-work-timer.html.md): Review the Stopwatch-style Work Timer workflow that tracks time spent on an issue with a timer independent from issue state changes.
+- [Subsystem Assignee](workflow-subsystem-assignee.html.md): Review the Subsystem Assignee workflow that assigns an issue automatically based on the user linked to the selected subsystem value.
+- [Subtask Inherit Assignee](workflow-subtask-inherit-assignee.html.md): Review the Subtask Inherit Assignee workflow that copies the parent task&apos;s assignee to a subtask so ownership stays aligned.
+- [Subtask Inherit Fix Versions](workflow-subtask-inherit-fix-versions.html.md): Review the Subtask Inherit Fix Versions workflow that updates subtasks to use the same fix version values as their parent task.
+- [Subtask Inherit Subsystem](workflow-subtask-inherit-subsystem.html.md): Review the Subtask Inherit Subsystem workflow that keeps a subtask&apos;s subsystem in sync with the subsystem set on its parent task.
+- [Subtasks](workflow-subtasks.html.md): Review the Subtasks workflow that updates the state of a parent task based on changes applied to linked issues that are marked as subtasks.
+- [Task Assignee](workflow-task-assignee.html.md): Review the Task Assignee workflow that sets an issue assignee automatically when the issue state changes to In Progress.
+- [Time Management](workflow-time-management.html.md): Review the Time Management workflow that uses state-based timing rules and notifications to help teams manage aging issues.
+- [Untag on Reopen](workflow-untag-on-reopen.html.md): Review the Untag on Reopen workflow that removes a specific tag when an issue moves from a resolved state back to unresolved.
+- [Update Fixed in Build](workflow-update-fixed-in-build.html.md): Review the Update Fixed in Build workflow that automates common updates to the Fixed in build field as issue data changes.
+- [Vote Blocker](workflow-do-not-vote-for-resolved-issue.html.md): Review the Vote Blocker workflow that prevents users from voting for an issue after the issue has already been resolved.
+- [Watcher by Votes](workflow-watcher-by-votes.html.md): Review the Watcher by Votes workflow that adds the project owner as a watcher automatically when an issue receives enough votes.
+- [Won't Fix Build](workflow-wont-fix-build.html.md): Review the Won't Fix Build workflow that sets Fixed in build to Never automatically when an issue state changes to Won't fix.
+- [Workflow Rule Types](workflow-rules.html.md): Learn about the workflow rule types in YouTrack so you can choose the right trigger and behavior for each automation.
+- [On-change Rules](on-change-rules.html.md): Learn how on-change rules in YouTrack run when issues or articles are created or updated in projects where the rule is active.
+- [On-schedule Rules](on-schedule-rules.html.md): Learn how on-schedule rules in YouTrack apply changes on a schedule and use the workflow user to perform automated actions.
+- [State-machine Rules](state-machine-per-issue-type.html.md): Learn how state machine rules in YouTrack regulate transitions between field values to enforce a controlled project workflow.
+- [Action Rules](action-rules.html.md): Create and configure YouTrack action rules that run from commands or menus to automate operations for issues and other supported entities.
+- [Custom Scripts](custom-scripts.html.md): Learn how custom scripts help you organize reusable code in YouTrack workflows when working with the JavaScript editor and shared logic.
+- [Transactions](workflow-transactions.html.md): Learn how workflow transactions work in YouTrack so you can understand when automated changes are applied within database operations.
+- [Workflow Constructor](workflow-constructor.html.md): Learn how to use the Workflow Constructor in YouTrack to build no-code automations with a drag and drop interface for project workflows.
+- [Building Blocks](workflow-constructor-building-blocks.html.md): Learn how Workflow Constructor building blocks in YouTrack combine operators and expressions to define workflow logic and rule behavior.
+- [Conditions](workflow-constructor-conditions.html.md): Learn how Workflow Constructor conditions in YouTrack define the criteria that must be met before a workflow rule runs in a project.
+- [Actions](workflow-constructor-actions.html.md): Learn how Workflow Constructor actions in YouTrack define the changes a rule applies after its prerequisite conditions are satisfied.
+- [State Machines](workflow-constructor-state-machines.html.md): Learn how the Workflow Constructor state machine editor in YouTrack lets you design transitions between field values visually.
+- [Web-based Workflow Editor](web-based-workflow-editor.html.md): Learn how to use the web-based workflow editor in YouTrack to write and edit JavaScript workflows directly in the application.
+- [Create a Workflow](create-workflow.html.md): Learn how to create a workflow in YouTrack using either the Workflow Constructor or the JavaScript editor to automate project behavior.
+- [Edit a Workflow](edit-workflow.html.md): Learn how to edit a workflow in YouTrack so you can customize default rules, update your own workflows, or adapt imported automation.
+- [Upload and Download Workflows](import-export-workflows.html.md): Learn how to upload and download workflows in YouTrack so you can reuse automation across instances or share workflow code with others.
+- [Manage Workflows for Multiple Projects](attach-workflow-to-projects.html.md): Learn how to manage workflows for multiple projects by attaching available workflows to the projects where their rules should run.
+- [Apps](admin-apps.html.md): Manage YouTrack apps from JetBrains Marketplace or custom uploads to extend functionality with widgets, integrations, and workflow sharing across the system.
+- [Manage Apps](manage-apps-admin.html.md): Explore the Apps page in YouTrack administration to review installed apps, manage their status, and access settings for each extension.
+- [JetBrains Marketplace](jetbrains-plugin-repository-custom-widgets.html.md): Learn how JetBrains Marketplace works with YouTrack so you can browse and install compatible shared apps and widgets from the integrated catalog.
+- [Custom Apps](custom-widgets.html.md): Learn how custom apps extend YouTrack with your own widgets and embedded functionality for dashboards, issues, and other areas of the interface.
+- [Access Management](access-management.html.md): Explore the Access Management section in YouTrack administration to understand how users, groups, roles, teams, and organizations control access.
+- [Users](managing-users.html.md): Explore the Users section in YouTrack administration to manage accounts, review access, and perform common user-related operations across projects.
+- [Create User Accounts](create-user-accounts.html.md): Create and configure user accounts with proper access rights and authentication in JetBrains YouTrack.
+- [Search for Users](search-users.html.md): Learn how to search for users in YouTrack with the attributes supported by the Users page filter and search interface.
+- [Manage User Access](configure-access-for-user-account.html.md): Learn how to manage access for a user account by reviewing assigned roles, permissions, and project access from the Roles tab in YouTrack.
+- [Manage Group Memberships](configure-group-membership-for-an-account.html.md): Learn how to manage a user's group memberships so you can grant access through existing groups and review the permissions those memberships provide.
+- [Merge User Accounts](merge-user-accounts.html.md): Learn how to merge user accounts in YouTrack so roles, group memberships, assignments, and account references are consolidated under one user.
+- [Ban User Accounts](ban-user-accounts.html.md): Learn how to ban user accounts in YouTrack to block access without deleting the account and to free active seats under license limits.
+- [Manage User Accounts for Agents](manage-user-accounts-for-agents.html.md): Learn how to manage user accounts for agents in YouTrack so licensing and helpdesk access are aligned with actual support roles.
+- [Manage the Guest User Account](managing-guest-users.html.md): Learn how to manage the guest user account in YouTrack, including anonymous access, visibility implications, and restrictions in different plans.
+- [Update YouTrack Profiles](update-youtrack-profiles.html.md): Learn how administrators update YouTrack profiles for registered users, including account settings that are specific to the YouTrack service.
+- [Manage User Types](manage-user-types.html.md): Learn how user types in YouTrack affect helpdesk access and pricing so administrators can manage accounts more effectively.
+- [Manage Custom Attributes](manage-custom-attributes.html.md): Learn how to manage custom attributes in YouTrack so user profiles can store additional information such as IDs, titles, or locations.
+- [Request Password Changes](request-password-change.html.md): Learn how to require password changes for specific users so they must reset their YouTrack credentials the next time they sign in.
+- [Disable Two-factor Authentication](disable-two-factor-authentication.html.md): Learn how administrators can disable two-factor authentication for a user who has lost access to recovery codes or the paired authentication app.
+- [Add Credentials to a User Account](add-credentials-user.html.md): Learn how to add a username and password to an existing user account so the user can sign in with new credentials managed in YouTrack.
+- [Manage Authentication Tokens](manage-authentication-tokens.html.md): Learn how to manage authentication tokens in YouTrack so external applications can access your account through secure token based auth.
+- [Delete User Accounts](delete-user-accounts.html.md): Learn how to delete user accounts in YouTrack and when alternatives like banning or anonymizing an account are a better fit for the situation.
+- [Download User Data](download-user-data.html.md): Learn how users and administrators can download personal data from YouTrack to satisfy access requests under GDPR and similar privacy requirements.
+- [Anonymize User Data](anonymize-user-data.html.md): Learn how to anonymize user data in YouTrack to support GDPR erasure requests while preserving account references needed for system history.
+- [Organizations](organizations.html.md): Learn how organizations in YouTrack group projects and resources so teams can add structure and manage access more uniformly.
+- [Create an Organization](create-organization.html.md): Learn how to create an organization to group related projects and add structure to project management across your YouTrack environment.
+- [Manage Project Assignments](add-project-to-organization.html.md): Assign projects to an organization in YouTrack and manage project membership from organization settings while respecting one-organization-per-project rules.
+- [Manage Organization Access](manage-organization-permissions.html.md): Learn how to manage organization access in YouTrack so users and groups receive consistent permissions across related projects.
+- [Delete an Organization](delete-organization.html.md): Learn how to delete an organization in YouTrack when it is no longer needed without deleting the projects and resources assigned to it.
+- [Groups](manage-user-groups.html.md): Explore the Groups page to view group details, review assigned roles, and manage collections of user accounts from the sidebar in YouTrack.
+- [Default Groups](default-user-groups.html.md): Learn which groups YouTrack creates by default, how auto-join works for All Users and Registered Users, and what access these groups provide.
+- [System-generated Groups](system-generated-groups.html.md): Learn how system generated groups in YouTrack preserve access when permission model changes are migrated automatically for users.
+- [Create a Group](create-user-group.html.md): Learn how to create a group in YouTrack, assign roles to define its access rights, and use it to manage permissions for multiple users at once.
+- [Search for Groups](search-groups.html.md): Learn how to search for groups in YouTrack using the attributes supported on the Groups page filter and search box interface.
+- [Add and Remove Members](configure-group-members.html.md): Learn how to add and remove users on the Members tab of the group sidebar so membership and inherited access stay aligned with current needs.
+- [Edit Basic Group Settings](edit-basic-settings-of-a-group.html.md): Learn how to edit a group's basic settings, including its name, description, and update restrictions, from the group sidebar in YouTrack.
+- [Require Two-factor Authentication](require-two-factor-authentication.html.md): Learn how to require two-factor authentication for a group in YouTrack so members must enable 2FA to keep access rights.
+- [Manage Group Access](configure-access-for-a-user-group.html.md): Learn how to manage roles for a group from the group sidebar so you can review permissions, scopes, and project or organization access granted to its members.
+- [Nest a Group under Another Group](nest-group-under-group.html.md): Learn how to nest one group under another in YouTrack so membership and inherited roles can be organized more effectively.
+- [Merge Groups](merge-groups.html.md): Learn how to merge groups in YouTrack to consolidate overlapping memberships, roles, and access settings without losing important group associations.
+- [Merge a Group into a Project Team](merge-group-into-team.html.md): Learn how legacy project groups were merged into project teams and when you might still need to clean up redundant team-related groups.
+- [Delete Groups](delete-user-groups.html.md): Learn how to delete unused groups, choose replacement groups for affected references, and clean up obsolete access settings safely.
+- [Roles](manage-roles.html.md): Explore the Roles page in YouTrack to review available roles, understand how permission sets work, and manage role definitions across the system.
+- [Default Roles](default-roles.html.md): Review the default roles that YouTrack provides, what each role is used for, and how to customize behavior by cloning a predefined role.
+- [Permission Comparison for Default Roles](permissions-comparison-for-default-roles.html.md): Compare the permissions included in YouTrack default roles so you can understand their scopes and choose the right baseline for access management.
+- [Create and Edit Roles](create-and-edit-roles.html.md): Learn how to create and edit roles in YouTrack so you can define custom permission sets for users, groups, and project teams.
+- [Merge Roles](merge-roles.html.md): Learn how to merge roles in YouTrack so overlapping permission sets and assignments are consolidated into a single target role.
+- [Clone a Role](clone-role.html.md): Learn how to clone a role in YouTrack so you can copy an existing permission set and customize the new role without changing the original.
+- [Permissions](youtrack-permissions-reference.html.md): Browse the YouTrack permissions reference to understand what each permission allows and how permission scopes affect access across the application.
+- [Permission Updates](permission-updates-2026.html.md): Learn how permission updates in YouTrack 2026 simplify access management and change how report and group permissions are handled system-wide.
+- [OAuth Clients](oauth-clients.html.md): Learn how to register and manage OAuth clients in YouTrack for applications that access YouTrack on behalf of users or with their own credentials.
+- [Auth Modules](managing-auth-modules.html.md): Explore the Auth Modules page to manage authentication providers in YouTrack and access the actions and settings available for each module.
+- [User Import and Sync](user-import-and-synchronization.html.md): Learn how user import and sync in YouTrack brings users and groups from supported identity providers through auth modules.
+- [Common Settings for Auth Modules](auth-module-common-settings.html.md): Review the shared settings for auth modules, including token and session timeouts, login throttling, trusted logins, and reCAPTCHA protection.
+- [Hub Auth Module](hub-auth-module.html.md): The Hub authentication module is the default authorization scheme for managing user account credentials in YouTrack.
+- [Set a Password Policy](set-a-password-policy.html.md): Learn how to set a Hub password policy in YouTrack so new and updated passwords meet your security requirements and resist common attacks.
+- [Require New Passwords for Hub Logins](request-password-reset.html.md): Learn how to require new passwords for Hub logins so every user resets their Hub account password the next time they sign in to YouTrack.
+- [Active Directory Auth Module](active-directory-auth-module.html.md): Learn how to configure the Active Directory auth module so users can sign in with directory credentials and YouTrack can match or create accounts on first login.
+- [Amazon Auth Module](amazon-auth-module.html.md): Learn how to configure the Amazon auth module so users can sign in to YouTrack with Amazon credentials and match existing accounts automatically.
+- [Atlassian Jira Auth Module](atlassian-jira-auth-module.html.md): Learn how to enable the Jira auth module for Jira Server accounts so users can sign in to YouTrack and existing accounts can be matched on first login.
+- [Bitbucket Cloud Auth Module](bitbucket-cloud-auth-module.html.md): Learn how to configure the Bitbucket Cloud auth module so users can sign in to YouTrack with Bitbucket credentials and link matching accounts automatically.
+- [Facebook Auth Module](facebook-auth-module.html.md): Learn how to configure the Facebook auth module so users can sign in with Facebook accounts, including the required app settings and regional availability limits.
+- [GitHub Auth Module](github-authentication-module.html.md): Learn how to configure the GitHub auth module so users can sign in to YouTrack with GitHub credentials and match existing accounts automatically.
+- [GitLab Auth Module](gitlab-auth-module.html.md): Learn how to configure the GitLab auth module so users can sign in to YouTrack with GitLab credentials and link matching accounts automatically.
+- [Google Auth Module](google-authentication-module.html.md): Learn how to configure the Google auth module so users can sign in to YouTrack with Google accounts and connect matching users on first login.
+- [JetBrains Account Auth Module](jetbrains-account-auth-module.html.md): Learn how to configure the JetBrains Account auth module so users can sign in to YouTrack with JetBrains Account credentials and link existing users.
+- [Keycloak Auth Module](keycloak-auth-module.html.md): Learn how to configure the Keycloak auth module so users can sign in to YouTrack with Keycloak credentials and link matching accounts automatically.
+- [LDAP Auth Module](ldap-authentication-module.html.md): Learn how to configure the LDAP auth module so users can sign in with directory credentials and YouTrack can match or create accounts on first login.
+- [Microsoft Account Auth Module](microsoft-live-auth-module.html.md): Learn how to configure the Microsoft Account auth module so users can sign in to YouTrack with Microsoft credentials and link matching accounts automatically.
+- [Microsoft Entra ID Auth Module](azure-ad-auth-module.html.md): Learn how to configure the Microsoft Entra ID auth module so users can sign in to YouTrack with Microsoft credentials and link matching accounts automatically.
+- [OAuth 2.0 Auth Module](oauth2-authentication-module.html.md): Learn how to configure a generic OAuth 2.0 auth module so users can sign in with supported third-party services beyond the built-in providers.
+- [Okta Auth Module](okta-auth-module.html.md): Learn how to configure the Okta auth module so users can sign in to YouTrack with Okta credentials and link matching accounts automatically.
+- [OpenID 2.0 Auth Module](openid-authentication-module.html.md): Learn when legacy OpenID 2.0 auth modules still apply, why new ones are replaced by OpenID Connect, and how sign-in works in YouTrack.
+- [OpenID Connect Auth Module](openid-connect-authentication-module.html.md): Learn how to configure the OpenID Connect auth module and understand how it replaces new OpenID 2.0 modules in YouTrack.
+- [OpenLDAP Auth Module](open-ldap-auth-module.html.md): Learn how to configure the OpenLDAP auth module so users can sign in with directory credentials and YouTrack can match or create accounts on first login.
+- [PayPal Auth Module](paypal-auth-module.html.md): Learn how to configure the PayPal auth module so users can sign in to YouTrack with PayPal credentials and connect matching accounts automatically.
+- [SAML 2.0 Auth Module](saml-authentication-module.html.md): Learn how to configure a SAML 2.0 auth module so YouTrack works as a service provider and users can sign in through your identity provider.
+- [SAML 2.0](saml-2-0.html.md): Learn how SAML 2.0 support in YouTrack lets the service act as an identity provider for connected applications and enable single sign-on.
+- [Set Up SSL Keys for SAML 2.0](set-up-ssl-keys-for-saml-2-0.html.md): Learn how to generate SSL keys and a PKCS #12 keystore for SAML so YouTrack can encrypt connections when acting as an identity provider.
+- [Parameters of YouTrack as SAML 2.0 Identity Provider](parameters-of-youtrack-as-saml-2-0-identity-provider.html.md): Find the YouTrack SAML 2.0 identity provider parameters you need to configure sign-in, sign-out, and metadata in a connected service provider.
+- [Register a Service Provider](register-service-provider.html.md): Learn how to register a service provider in YouTrack after configuring SAML so the external service can use YouTrack as its identity provider.
+- [YouTrack as SAML Identity Provider for Zendesk](youtrack-as-saml-identity-provider-for-zendesk.html.md): Learn how to configure Zendesk to use YouTrack as a SAML identity provider so users can sign in with shared credentials through single sign-on.
+- [YouTrack as SAML Identity Provider for Google Apps for Work](youtrack-as-saml-identity-provider-for-google.html.md): Learn how to configure Google Apps to use YouTrack as a SAML identity provider and enable single sign-on for connected users and services.
+- [YouTrack as SAML Identity Provider for Artifactory](youtrack-as-saml-identity-provider-for-artifactory.html.md): Learn how to configure Artifactory to use YouTrack as a SAML identity provider so users can sign in with YouTrack-managed credentials.
+- [Restrict Issue Visibility with Permissions](how-to-make-users-see-only-their-own-submitted-issues.html.md): Learn how to restrict issue visibility with permissions so users can see only the issues they reported while authorized staff retain broader access.
+- [Integrations](integrations.html.md): Explore the Integrations section in YouTrack administration to find and manage the built-in connections available for supported external services.
+- [Imports](imports.html.md): Learn how to import data into YouTrack from other tools. Migrate issues, projects, and users seamlessly to streamline your workflow.
+- [Import from Asana](import-from-asana.html.md): Import Asana projects, tasks, subtasks, project briefs, users, comments, attachments, history, and related data into YouTrack.
+- [Import from Bugzilla](new-import-from-bugzilla.html.md): Migrate from Bugzilla to YouTrack effortlessly. Follow our step-by-step guide to import issues, users, and project data today.
+- [Import from ClickUp](import-from-clickup.html.md): Import ClickUp spaces, tasks, docs, users, comments, attachments, and related data into YouTrack.
+- [Import from Confluence](import-from-confluence.html.md): Import Confluence content into YouTrack seamlessly. Transfer your knowledge base articles and documentation to centralize your project resources.
+- [Import from CSV](import-from-csv.html.md): Import issues from CSV files into YouTrack quickly. Map fields, transform data, and migrate your project information with ease.
+- [Import from XLSX](import-from-xlsx.html.md): Import issues from Excel files into YouTrack with ease. Map columns to fields and migrate your spreadsheet data seamlessly.
+- [Import from GitHub](import-from-github.html.md): Import GitHub issues into YouTrack effortlessly. Migrate your issues, labels, and milestones to enhance your project management workflow.
+- [Import from GitLab](import-from-gitlab.html.md): Import GitLab issues into YouTrack seamlessly. Transfer issues, labels, and milestones to boost your project tracking capabilities.
+- [Import from Google Sheets](import-from-google-sheets.html.md): Import data from Google Sheets to JetBrains YouTrack.
+        Map fields, transfer issues, and migrate spreadsheet information.
+- [Import from JetBrains Space](import-from-space.html.md): Import issues from JetBrains Space into YouTrack smoothly. Migrate your projects and issues to consolidate your team's workflow.
+- [Import from Jira](new-import-from-jira.html.md): Migrate from Jira to YouTrack with ease. Import issues, workflows, and project data to streamline your agile project management.
+- [Import from Jira Service Management](import-from-jira-service-management.html.md): Import Jira Service Management data into YouTrack seamlessly. Migrate tickets, queues, and workflows to enhance your helpdesk operations.
+- [Import from Mantis Bug Tracker](new-import-from-mantis.html.md): Migrate from MantisBT to YouTrack easily. Import issues, categories, and user data to modernize your bug tracking workflow.
+- [Import from monday.com](import-from-monday.html.md): Import monday.com data into YouTrack effortlessly. Migrate boards, items, and workflows to upgrade your project management experience.
+- [Import from Redmine](new-import-from-redmine.html.md): Migrate from Redmine to YouTrack seamlessly. Import issues, trackers, and project data to elevate your issue tracking workflow.
+- [Import from YouTrack](import-from-youtrack.html.md): Import data from another YouTrack instance with ease. Transfer projects, issues, and configurations to consolidate your workflows.
+- [Import from Zendesk](import-from-zendesk.html.md): Import Zendesk tickets into YouTrack smoothly. Migrate support requests and customer data to unify your helpdesk management.
+- [Custom Imports](custom-imports.html.md): Create custom imports in YouTrack to migrate data from any source. Build tailored import scripts for your unique project needs.
+- [Delete an Import](delete-import.html.md): Learn what happens to imported content when you delete an import configuration in YouTrack.
+- [Mailbox Integration](mailbox-integration.html.md): Learn how mailbox integration connects YouTrack to a mail server so incoming messages become tickets, issues, or comments and replies are sent by email.
+- [View Original Email Messages](view-original-email-messages.html.md): Learn how to view original email messages in YouTrack so you can inspect the plain text and HTML content processed by mailbox integrations.
+- [View Processed Emails](view-processed-emails.html.md): Learn how to view processed emails in YouTrack to troubleshoot mailbox integrations and inspect messages that were transformed into issues or comments.
+- [Mailbox Integrations with Standard Issue Tracking Projects](mailbox-integration-issue-tracking.html.md): Learn how mailbox integrations worked with standard issue tracking projects before YouTrack introduced dedicated helpdesk support.
+- [Build Server Integration](build-server-integration.html.md): Learn how build server integrations work in YouTrack so build data, issue commands, and automation can stay connected across development tools.
+- [Azure Pipelines Integration](azure-pipelines-integration.html.md): Set up Azure Pipelines integration with YouTrack to update build-related fields and execute issue commands from pipeline jobs tied to commits.
+- [GitHub Actions Integration](github-actions-integration.html.md): Learn how to integrate YouTrack with GitHub Actions so pipeline data and issue updates stay connected through your repository setup.
+- [Jenkins Integration](jenkins-integration.html.md): Learn how to integrate Jenkins with YouTrack so build numbers, commit activity, and issue commands are processed automatically across connected projects.
+- [TeamCity Integration](integration-with-teamcity.html.md): Learn how to integrate TeamCity with YouTrack so build numbers, issue updates, and related development activity stay synchronized across projects.
+- [GitLab CI/CD Integration](integration-with-gitlab-ci-cd.html.md): Learn how GitLab CI or CD integration in YouTrack connects pipeline data to issues after your GitLab repository is linked.
+- [VCS Integration](integration-with-version-control-systems.html.md): Learn how VCS integrations work in YouTrack so repositories can process commit commands, show development activity, and connect code changes to issues.
+- [Generic VCS Integration](generic-vcs-integration.html.md): Learn how generic VCS integration in YouTrack lets you connect hosted repositories and attach commits to issues programmatically.
+- [Azure Repos Integration](azure-repos-integration.html.md): Integrate Azure Repos with YouTrack to process commit commands, link issue activity to commits, and show pull request status in referenced issues.
+- [Bitbucket Integration](integration-with-bitbucket.html.md): Learn how to integrate Bitbucket with YouTrack so commit commands, repository activity, and pull request status are linked to referenced issues.
+- [Bitbucket Server Integration](integration-with-bitbucket-server.html.md): Learn how Bitbucket Server integration in YouTrack links commits, pull requests, and issue updates for self hosted repositories.
+- [Gitea Integration](integration-with-gitea.html.md): Learn how to integrate a self-hosted Gitea repository with YouTrack so commits, pull requests, and issue commands are processed automatically.
+- [GitHub Integration](github-integration.html.md): Integrate GitHub with JetBrains YouTrack.
+    Sync commits, link pull requests, and automate issue updates from repositories.
+- [GitLab Integration](integration-with-gitlab.html.md): Integrate GitLab with JetBrains YouTrack.
+    Sync commits, link merge requests, and automate issue updates from repositories.
+- [Gogs Integration](integration-with-gogs.html.md): Learn how to integrate a YouTrack project with Gogs so commits, pull requests, and issue commands are synchronized with tracked work.
+- [JetBrains Space Integration](integration-with-space.html.md): Learn how JetBrains Space integration in YouTrack connects repository activity, issue references, and related development data.
+- [Edit Repository Settings](edit-repository-settings.html.md): Learn how to edit repository settings for a YouTrack VCS integration and understand the risks of changing a repository URL later.
+- [Monitor Branches](monitor-branches.html.md): Learn how to monitor branches in a VCS integration so YouTrack includes or excludes repository changes based on branch names or patterns.
+- [Match Change Authors and YouTrack Users](match-commit-authors-and-youtrack-users.html.md): Learn how YouTrack matches commit authors to user accounts so VCS changes and commands are applied with the correct permissions.
+- [Zendesk Integration](integration-with-zendesk.html.md): Learn how to integrate Zendesk with YouTrack so tickets, comments, and updates stay synchronized between support workflows in both systems.
+- [JetBrains AI](jetbrains-ai.html.md): Configure JetBrains AI Service integration for enhanced productivity features in JetBrains YouTrack.
+- [Server Settings](server-settings.html.md): Explore the Server Settings section in YouTrack administration to find configuration options for system behavior, security, data, and integrations.
+- [Global Settings](managing-global-settings.html.md): Explore the Global Settings page in YouTrack to manage system-wide options for branding, availability, communication, and other core behavior.
+- [Server Configuration](server-configuration-settings.html.md): Review the Server Configuration settings in YouTrack to manage system behavior, updates, identity, availability, and status.
+- [Display a System-wide Banner](add-system-wide-banner-to-youtrack.html.md): Learn how to display a system-wide banner in YouTrack so all users see important notices such as maintenance warnings or service announcements.
+- [Monitor REST API Traffic](monitor-rest-api-traffic.html.md): Learn how to monitor deprecated REST API traffic in YouTrack so you can identify and update clients using old endpoints.
+- [Hub Integration](hub-integration.html.md): Learn how Hub integration works in YouTrack and how connected Hub services support authentication, authorization, and centralized user management.
+- [Server Metrics](admin-statistics.html.md): Learn how to use server metrics in YouTrack to monitor performance and expose operational statistics for external monitoring tools and dashboards.
+- [Deleted Items](deleted-items.html.md): Learn how Deleted Items in YouTrack let administrators restore recently removed issues, tickets, and articles before permanent removal.
+- [License Details](license-details.html.md): Review the License Details page in YouTrack to see subscription information, limits, and settings associated with your plan.
+- [Internationalization](internationalization-settings.html.md): Learn how internationalization settings in YouTrack define default time, date, and language preferences for your installation.
+- [Community-based Language Support](translating-youtrack-ui.html.md): Learn how community-based language support works in YouTrack and how Crowdin helps extend the interface to additional languages.
+- [Keyboard Shortcuts](customize-keyboard-shortcuts.html.md): Learn how administrators choose the keyboard shortcut scheme in YouTrack so users see the commands and key mappings that fit their layout.
+- [Search-optimized Languages](text-index.html.md): Learn how search-optimized language settings affect indexing in YouTrack so stemming and full-text search work correctly for supported languages.
+- [Notifications](notification-settings.html.md): Learn how global notification settings in YouTrack control email delivery and other notification behavior for issues and articles.
+- [Critical Updates for Microsoft Exchange Online over SMTP](critical-updates-microsoft-exchange-online-smtp.html.md): Learn what changes Microsoft Exchange Online requires for SMTP connections, when the migration deadline applies, and how this affects YouTrack mail setup.
+- [Connect YouTrack to an Email Service](enable-email-notifications.html.md): Learn how to enable email notifications in YouTrack by connecting a mail service and configuring the settings required for reliable message delivery.
+- [From and Reply-to Addresses](email-from-addresses.html.md): Learn how from and reply-to addresses are configured in YouTrack so outgoing emails use the correct sender identity across notifications and messages.
+- [Notification Templates](notification-templates.html.md): Learn how to customize notification templates in YouTrack so email messages use the subjects, language, and content that fit your communication needs.
+- [Notification Template Language Reference](notification-template-language-reference.html.md): Reference for notification template variables, local variable properties and methods, adapter types, directives, and utility methods that are available when customizing notification templates in YouTrack.
+- [Optional Features](experimental-features.html.md): Learn how system-wide optional features in YouTrack can be activated or deactivated to match the needs and business logic of your teams.
+- [User Agreement](user-agreement.html.md): Learn how to configure a user agreement in YouTrack so users must review and accept your terms, notice, or privacy policy when signing in.
+- [Database Backup](back-up-the-database.html.md): Learn how to back up the YouTrack database so you can protect your installation against failures, ransomware, and other data loss scenarios.
+- [SSL Certificates](ssl-certificates.html.md): Learn how to upload SSL certificates in YouTrack so external integrations can trust and connect securely to third-party services.
+- [SSL Keys](ssl-key-stores.html.md): Learn how to import SSL keystores into YouTrack so the application can present trusted client certificates when connecting to external services.
+- [Audit Events](audit-events.html.md): Learn how audit events work in YouTrack so you can review logged changes to administrative entities and investigate system-level activity.
+- [External Integrations](external-integrations.html.md): Explore external integrations for YouTrack that connect the application with services configured outside the standard integrations pages.
+- [YouTrack App for Slack](slack-app-integration.html.md): Integrate YouTrack with Slack to receive notifications, create issue drafts, and manage tasks directly within your Slack workspace.
+- [YouTrack Bot for Telegram](telegram-integration.html.md): Connect Telegram to JetBrains YouTrack.
+        Send notifications, receive updates, and manage issues through chat messages.
+- [Webhook Triggers App](webhook-triggers.html.md): Configure webhook triggers in JetBrains YouTrack to send HTTP POST requests. Automate external workflows and integrate systems.
+- [Search on Administration Pages](access-management-search.html.md): Learn how search works on YouTrack administration pages using simplified filters and attribute-based queries to find users, groups, roles, and settings.
+- [Installation and Upgrade](installation-and-upgrade.html.md): Complete guide to installing and upgrading JetBrains YouTrack Server.
+        Covers system requirements, setup steps, and migration paths.
+- [Supported Environments](youtrack-supported-environments.html.md): System requirements and supported environments for JetBrains YouTrack Server. Details OS, browsers, databases,
+        and hardware specs.
+- [Installation](youtrack-docker-installation.html.md): Install JetBrains YouTrack Server using Docker.
+    Complete setup guide with commands, container configuration, and deployment steps.
+- [Upgrade](upgrade-with-docker-image.html.md): Upgrade JetBrains YouTrack Server using Docker images.
+    Steps for updating containers, migrating data, and version compatibility.
+- [Restore a YouTrack Installation](restore-docker-image-installation.html.md): Restore JetBrains YouTrack Server Docker installations from backups.
+        Recovery procedures, data import, and container setup steps.
+- [Run Docker Container as a Service](run-docker-container-as-service.html.md): Run JetBrains YouTrack Server Docker container as a system service. Configure automatic startup and service
+        management settings.
+- [Stop and Restart YouTrack](stop-and-start-youtrack.html.md): Stop and start JetBrains YouTrack Server safely. Commands for service management, shutdown procedures,
+        and restart instructions.
+- [Change Database Location](changing-database-location.html.md): Change database location for JetBrains YouTrack Server.
+    Migration steps, path configuration, and data directory relocation guide.
+- [Change the Base URL or Listen Port](change-base-url-listen-port.html.md): Learn how to change the YouTrack Server base URL or listen port so users can reach the service at the correct address after network or host changes.
+- [Configure the Network Interface Binding](configure-network-interface-binding.html.md): Learn how to configure network interface binding in YouTrack Server so the service listens on the correct address for your environment and security needs.
+- [Secure the Connections to Your YouTrack Server](secure-connection-for-youtrack-server.html.md): Set up secure HTTPS connections for JetBrains YouTrack Server.
+        SSL/TLS configuration, certificate setup, and encryption settings.
+- [Configure TLS in the Web-based Configuration Wizard](configure-server-tls-configuration-wizard.html.md): Configure TLS for JetBrains YouTrack Server using the setup wizard.
+        Step-by-step SSL certificate installation and HTTPS setup.
+- [Configure TLS from the Command Line](configure-server-tls-from-command-line.html.md): Configure TLS for JetBrains YouTrack Server via command line.
+        SSL certificate setup commands and HTTPS configuration options.
+- [TLS Server Certificates and Keystores](tls-keystores-and-certificates-for-server.html.md): Manage TLS keystores and certificates for JetBrains YouTrack Server.
+            Create self-signed certificate, certificate and private key installation, and security requirements.
+- [Reverse Proxy Configuration](reverse-proxy-configuration.html.md): Configure a reverse proxy for JetBrains YouTrack Server.
+        Review the product requirements and find configuration examples for Apache HTTP Server, HAProxy, IIS, NGINX, and Traefik.
+- [Proxy Configuration](proxy-configuration.html.md): Configure proxy settings for JetBrains YouTrack Server.
+        HTTP proxy setup, authentication, and network connection requirements.
+- [Switch Between Third-party Proxy and Built-in TLS](switch-between-third-party-proxy-and-built-in-tls.html.md): Switch between third-party proxy and built-in TLS for JetBrains YouTrack Server.
+        Configuration steps and connection mode changes.
+- [Safeguard Your Installation](secure-your-installation.html.md): Review security best practices for YouTrack so you can harden access, authentication, and system configuration in cloud or server setups.
+- [Protect Personal Data](youtrack-personal-data-protection-gdpr.html.md): GDPR compliance and personal data protection in JetBrains YouTrack.
+            Privacy controls, data handling, and regulation settings.
+- [Manage Your Database Size](manage-your-database-size.html.md): Manage database size in JetBrains YouTrack.
+        Storage optimization tips, estimates, cleanup strategies, and space usage monitoring.
+- [Configure JVM Options](configure-jvm-options.html.md): Configure JVM options for JetBrains YouTrack Server.
+        Memory settings, performance tuning, and Java Virtual Machine parameters.
+- [Configuration Parameters](youtrack-java-start-parameters.html.md): Java startup parameters for JetBrains YouTrack Server.
+        JVM configuration, memory allocation, and runtime option settings.
+- [Manage or Restore the Default Administrator Account](changing-or-restoring-password-and-permissions-for-root.html.md): Learn how to manage or restore the default administrator account when you need to recover access, reset credentials, or repair root permissions.
+- [Deploy YouTrack with Kubernetes](deploy-youtrack-kubernetes.html.md): Deploy JetBrains YouTrack Server on Kubernetes.
+        Container orchestration setup, pod configuration, and cluster deployment guide.
+- [Uninstall YouTrack](uninstall-youtrack.html.md): Uninstall JetBrains YouTrack Server completely.
+        Removal procedures, data cleanup, and service deletion instructions.
+- [Working with External Hub](working-with-external-hub.html.md): Configure JetBrains YouTrack Server with external Hub.
+        Authentication integration, user management, and connection setup guide.
+- [Migrate to a Built-in Hub Service](migration-to-built-in-hub.html.md): Migrate JetBrains YouTrack Server to built-in Hub.
+        Data transfer steps, user migration, and authentication system transition.
+- [Update the URL for your Hub Server](update-hub-server-url.html.md): Update Hub server URL in JetBrains YouTrack Server.
+        Connection reconfiguration, address changes, and integration settings.
+- [Update the Certificate for Your Hub Server](update-hub-server-certificate.html.md): Update Hub server certificate in JetBrains YouTrack Server.
+        SSL certificate renewal, trust configuration, and security updates.
+- [YouTrack to YouTrack Migration](migrating-to-youtrack.html.md): Migrate between JetBrains YouTrack Cloud and Server editions.
+        Data transfer steps, migration process, and deployment transition guide.
+- [Migrate from Server to Cloud](migrate-from-server-to-cloud.html.md): Migrate from JetBrains YouTrack Server to Cloud.
+        Data export process, cloud setup, and transition requirements guide.
+- [Migrate from Cloud to Server](migrate-from-cloud-to-server.html.md): Migrate from JetBrains YouTrack Cloud to Server.
+        Data export process, on-premises setup, and transition requirements guide.
+- [Split a YouTrack Installation](split-youtrack-installation.html.md): Split one JetBrains YouTrack installation into multiple separate installations while preserving users, groups, agile boards, articles, and other data.
+- [Migration from Jira to YouTrack](migrate-from-jira-to-youtrack.html.md): Migrate from Jira to JetBrains YouTrack.
+        Import process, data mapping, field conversion, and transition planning guide.
+- [Migration from Zendesk to YouTrack](migrate-from-zendesk-to-youtrack.html.md): Migrate from Zendesk to JetBrains YouTrack.
+        Ticket import process, data mapping, and help desk transition guide.
+- [Resources for Developers](resources-for-developers.html.md): Developer resources for JetBrains YouTrack.
+    API documentation, integration tools, SDK guides, and development references.
+- [Extending YouTrack](extending-youtrack.html.md): Explore the ways you can extend YouTrack with plugins, browser extensions, IDE integrations, and other supported add-ons.
+- [JetBrains IDE Integrations](integration-with-ide.html.md): Learn how JetBrains IDE integrations connect YouTrack with your development environment so issue work can stay inside the IDE.
+- [YouTrack Integration Plugin](youtrack-integration-plugin.html.md): Configure JetBrains YouTrack integration plugin.
+        Connect external tools, set up authentication, and enable data synchronization.
+- [Issue Navigation](issue-navigation.html.md): Learn how issue navigation in JetBrains IDEs turns YouTrack issue IDs in change lists and commits into direct tracker links.
+- [Task Management](task-management-plugin.html.md): Learn how the Task Management plugin in JetBrains IDEs integrates with YouTrack so developers can work with tasks more efficiently.
+- [Remote MCP Server](model-context-protocol-server.html.md): Learn how to connect remote and local AI tools to YouTrack using the Model Context Protocol (MCP) server.
+- [YouTrack Integration with n8n](youtrack-integration-with-n8n.html.md): Integrate YouTrack with n8n to trigger automated workflows from YouTrack events and perform API actions
+        using secure webhooks, tokens, and triggers.
+- [Browser Extensions](browser-extensions.html.md): Review browser extensions for YouTrack that add capabilities such as issue card printing, time tracking, and third-party workflow enhancements.
+- [Monitor YouTrack Performance](monitor-youtrack-performance.html.md): Learn how to monitor YouTrack performance metrics and use them for troubleshooting.
+- [YouTrack Mobile](youtrack-mobile.html.md): Access JetBrains YouTrack on mobile devices.
+    Track issues, update tasks, and collaborate from iOS and Android apps.
+- [Third-Party Software Used by YouTrack](third-party-software-used-by-youtrack.html.md): Review the third-party software and libraries used by YouTrack and find where JetBrains publishes the complete licensing information.
