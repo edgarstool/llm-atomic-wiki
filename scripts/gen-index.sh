@@ -12,19 +12,15 @@ INDEX="$WIKI_DIR/../index.md"
 # Edit this array for your branches. Leave empty (declare -a BRANCHES=())
 # to auto-discover by filename prefix and capitalize display names automatically.
 #
-# Reference implementation uses these 11 branches in this order:
+# EDGAR / Hermes-Wiki branches (see SCHEMA.md)
 declare -a BRANCHES=(
-  "harness-engineering|Harness Engineering"
+  "edgar-os|EDGAR-OS"
+  "hermes|Hermes"
   "mcp|MCP"
-  "ai-skills|AI Skills"
-  "vibe-coding|Vibe Coding"
-  "ai-agent|AI Agent"
-  "self-media|Self-Media"
-  "product-business|Product & Business"
-  "claude-code|Claude Code"
-  "context-engineering|Context Engineering"
-  "career-mindset|Career & Mindset"
-  "developer-workflow|Developer Workflow"
+  "infrastructure|Infrastructure"
+  "agent-ops|Agent Ops"
+  "product|Product"
+  "identity|Identity"
 )
 
 # ─── Auto-discover branches if not overridden ───
@@ -86,7 +82,7 @@ for entry in "${BRANCHES[@]}"; do
   echo "| Slug | Title |" >> "$INDEX"
   echo "|------|-------|" >> "$INDEX"
 
-  for f in $(printf '%s\n' "${FILES[@]}" | sort); do
+  for f in $(printf '%s\n' "${FILES[@]}" | /usr/bin/sort); do
     slug=$(basename "$f" .md)
     title=$(head -1 "$f" | sed 's/^# //')
     echo "| [[$slug]] | $title |" >> "$INDEX"
