@@ -5,6 +5,8 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 import importlib.util
+import threading
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 MODULE = Path(__file__).resolve().parents[1] / 'scripts' / 'knowledge_raw_import.py'
 
@@ -48,6 +50,36 @@ class KnowledgeRawImportTests(unittest.TestCase):
             mod.materialize_raw(text, expected, 'knowledge://hermes-wiki/a', Path(temp))
             with self.assertRaisesRegex(ValueError, 'different source'):
                 mod.materialize_raw(text, expected, 'knowledge://hermes-wiki/b', Path(temp))
+
+    def test_loopback_mcp_http_read_exact_source(self):
+        mod = load()
+        uri = 'knowledge://hermes-wiki/incoming/qmd.md'
+        requests = []
+        class Handler(BaseHTTPRequestHandler):
+            def do_POST(self):
+                request = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+                requests.append(request)
+                content = json.dumps({'result': {'structuredContent': {
+                    'uri': uri, 'content': '# QMD\n',
+                }}}).encode('utf-8')
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.send_header('Content-Length', str(len(content)))
+                self.end_headers()
+                self.wfile.write(content)
+            def log_message(self, *_):
+                return
+        with ThreadingHTTPServer(('127.0.0.1', 0), Handler) as server:
+            worker = threading.Thread(target=server.serve_forever, daemon=True)
+            worker.start()
+            try:
+                result = mod.read_knowledge(uri, f'http://127.0.0.1:{server.server_port}/internal/mcp')
+            finally:
+                server.shutdown()
+                worker.join(2)
+        self.assertEqual(result, '# QMD\n')
+        self.assertEqual(requests[0]['params']['name'], 'read')
+        self.assertEqual(requests[0]['params']['arguments']['uri'], uri)
 
     def test_public_http_mcp_fails_closed(self):
         mod = load()
