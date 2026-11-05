@@ -117,3 +117,9 @@ chmod +x scripts/*.sh
 ```
 
 Windows users: run under Git Bash, WSL, or adapt the scripts to PowerShell.
+
+---
+
+## Edgar's Knowledge RAW bridge (optional)
+
+`knowledge_raw_import.py` reads a single already-authorized Knowledge MCP document, independently verifies its expected SHA-256, and saves the original into the private gitignored `raw/knowledge/` directory. It **does not** compile atoms/wiki or contact Honcho. See [Knowledge RAW importer instructions](KNOWLEDGE-RAW-IMPORT.md) and run `python3 -m unittest discover -s tests -p 'test_knowledge_raw_import.py' -v` before use.

@@ -1,0 +1,29 @@
+name: Knowledge RAW importer tests
+on:
+  push:
+    branches:
+      - feat/knowledge-raw-import-20261102
+  pull_request:
+    paths:
+      - "scripts/knowledge_raw_import.py"
+      - "tests/test_knowledge_raw_import.py"
+      - ".github/workflows/knowledge-raw-import-tests.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  isolated-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout exact PR source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Python version
+        run: python3 --version
+      - name: Python syntax check
+        run: python3 -m compileall -q scripts/knowledge_raw_import.py tests/test_knowledge_raw_import.py
+      - name: Run RAW importer tests
+        run: python3 -m unittest discover -s tests -p 'test_knowledge_raw_import.py' -v
